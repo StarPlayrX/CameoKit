@@ -1,3 +1,3 @@
 # CameoKit
 
-A description of this package.
+This is the engine for StarPlayrX
