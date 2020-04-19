@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+options: "dc0e117295403e48c134894561a2f4ac"
+build_time: [1587277022, 134614000]
+inputs:
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Bytes.swift": [1587274719, 411757541]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Dir.swift": [1587274719, 411867707]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/File.swift": [1587274719, 412106774]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/JSONConvertible.swift": [1587274719, 412301534]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Log.swift": [1587274719, 412435584]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/PerfectError.swift": [1587274719, 412537884]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/PerfectServer.swift": [1587274719, 412654106]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/SysProcess.swift": [1587274719, 412781533]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Utilities.swift": [1587274719, 412972575]

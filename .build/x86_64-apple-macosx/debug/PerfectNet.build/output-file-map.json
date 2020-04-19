@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/master.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/Net.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/Net.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/Net.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/Net~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/Net.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetAddress.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetAddress.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetAddress.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetAddress~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetAddress.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetEvent.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetEvent.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetEvent.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetEvent~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetEvent.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetNamedPipe.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetNamedPipe.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetNamedPipe.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetNamedPipe~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetNamedPipe.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetTCP.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCP.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCP.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCP~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCP.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetTCPSSL.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCPSSL.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCPSSL.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCPSSL~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetTCPSSL.swiftdeps"
+  },
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetUDP.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetUDP.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetUDP.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetUDP~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/NetUDP.swiftdeps"
+  }
+}

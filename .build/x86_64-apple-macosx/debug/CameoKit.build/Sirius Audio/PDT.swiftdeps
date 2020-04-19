@@ -1,0 +1,1163 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "lock"
+- "PDT_"
+- "MD5"
+- "NewPDT"
+provides-nominal:
+- "8CameoKit6NewPDTV"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV18ModuleListResponseV"
+- "8CameoKit6NewPDTV7MessageV"
+- "8CameoKit6NewPDTV10ModuleListV"
+- "8CameoKit6NewPDTV6ModuleV"
+- "8CameoKit6NewPDTV14ModuleResponseV"
+- "8CameoKit6NewPDTV13ModuleDetailsV"
+- "8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV10MarkerListV"
+- "8CameoKit6NewPDTV5LayerO"
+- "8CameoKit6NewPDTV6MarkerV"
+- "8CameoKit6NewPDTV3CutV"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV5AlbumV"
+- "8CameoKit6NewPDTV6ArtistV"
+- "8CameoKit6NewPDTV14CutContentTypeO"
+- "8CameoKit6NewPDTV10ExternalIDV"
+- "8CameoKit6NewPDTV2IDO"
+- "8CameoKit6NewPDTV9LegacyIDSV"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV7EpisodeV"
+- "8CameoKit6NewPDTV4ShowV"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9TimestampV"
+provides-member:
+- ["8CameoKit6NewPDTV", ""]
+- ["8CameoKit6NewPDTV10CodingKeysO", ""]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", ""]
+- ["8CameoKit6NewPDTV7MessageV", ""]
+- ["8CameoKit6NewPDTV10ModuleListV", ""]
+- ["8CameoKit6NewPDTV6ModuleV", ""]
+- ["8CameoKit6NewPDTV14ModuleResponseV", ""]
+- ["8CameoKit6NewPDTV13ModuleDetailsV", ""]
+- ["8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV", ""]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", ""]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", ""]
+- ["8CameoKit6NewPDTV10MarkerListV", ""]
+- ["8CameoKit6NewPDTV5LayerO", ""]
+- ["8CameoKit6NewPDTV6MarkerV", ""]
+- ["8CameoKit6NewPDTV3CutV", ""]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", ""]
+- ["8CameoKit6NewPDTV5AlbumV", ""]
+- ["8CameoKit6NewPDTV6ArtistV", ""]
+- ["8CameoKit6NewPDTV14CutContentTypeO", ""]
+- ["8CameoKit6NewPDTV10ExternalIDV", ""]
+- ["8CameoKit6NewPDTV2IDO", ""]
+- ["8CameoKit6NewPDTV9LegacyIDSV", ""]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", ""]
+- ["8CameoKit6NewPDTV7EpisodeV", ""]
+- ["8CameoKit6NewPDTV4ShowV", ""]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", ""]
+- ["8CameoKit6NewPDTV9TimestampV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "*"
+- !private "+"
+- !private "+="
+- "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Codable"
+- "CodingKey"
+- !private "Data"
+- !private "Date"
+- "Double"
+- !private "FloatLiteralType"
+- !private "GetPDTX"
+- !private "Insecure"
+- "Int"
+- !private "IntegerLiteralType"
+- "MD5"
+- !private "MemBase"
+- !private "NSNumber"
+- "NewPDT"
+- "PDT_"
+- "String"
+- "StringLiteralType"
+- !private "_findStringSwitchCase"
+- "lock"
+- !private "nowPlayingLive"
+- !private "user"
+- !private "~="
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- ["8CameoKit6NewPDTV5AlbumV", "String"]
+- ["8CameoKit6NewPDTV5AlbumV", "deinit"]
+- ["8CameoKit6NewPDTV5AlbumV", "encode"]
+- ["8CameoKit6NewPDTV5AlbumV", "init"]
+- ["8CameoKit6NewPDTV5AlbumV", "title"]
+- !private ["Sa", "first"]
+- ["8CameoKit6NewPDTV6ArtistV", "String"]
+- ["8CameoKit6NewPDTV6ArtistV", "deinit"]
+- ["8CameoKit6NewPDTV6ArtistV", "encode"]
+- ["8CameoKit6NewPDTV6ArtistV", "init"]
+- ["8CameoKit6NewPDTV6ArtistV", "name"]
+- !private ["SK", "data"]
+- !private ["SK", "first"]
+- !private ["SK", "init"]
+- !private ["SK", "isEmpty"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "subscript"]
+- ["s9CodingKeyP", "=="]
+- ["s9CodingKeyP", "RawValue"]
+- ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_Default_RawValue"]
+- !private ["s9CodingKeyP", "_findStringSwitchCase"]
+- ["s9CodingKeyP", "_rawHashValue"]
+- ["s9CodingKeyP", "debugDescription"]
+- ["s9CodingKeyP", "description"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- ["s9CodingKeyP", "rawValue"]
+- ["s9CodingKeyP", "stringValue"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "=="]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "=="]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "=="]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "=="]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "=="]
+- ["8CameoKit6NewPDTV10CodingKeysO", "RawValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "RawValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "RawValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "RawValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "RawValue"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "_Default_RawValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "_Default_RawValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "_Default_RawValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "_Default_RawValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "_Default_RawValue"]
+- !private ["8CameoKit6NewPDTV10CodingKeysO", "_findStringSwitchCase"]
+- !private ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "_findStringSwitchCase"]
+- !private ["8CameoKit6NewPDTV3CutV10CodingKeysO", "_findStringSwitchCase"]
+- !private ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "_findStringSwitchCase"]
+- !private ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "album"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "aodEpisodeCount"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "aodEpisodeCount"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "artists"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "channelID"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "clipGUID"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "contentInfo"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "cutContentType"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "debugDescription"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "debugDescription"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "debugDescription"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "debugDescription"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "debugDescription"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "deinit"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "deinit"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "deinit"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "deinit"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "deinit"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "description"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "description"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "description"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "description"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "description"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "externalIDS"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "firstCutOfSpotBlock"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "galaxyAssetID"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "guid"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "hash"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "hash"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "hash"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "hash"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "hash"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "hashValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "hashValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "hashValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "hashValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "hashValue"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "init"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "init"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "init"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "init"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "init"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "intValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "intValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "intValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "intValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "intValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "isLiveVideoEligible"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "isPlaceholderShow"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "legacyIDS"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "longTitle"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "markerLists"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "memberOfSpotBlock"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "moduleListResponse"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "mref"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "newVODEpisodeCountFamilyFriendly"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "pid"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "programType"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "rawValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "rawValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "rawValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "rawValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "rawValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "showGUID"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "siriusXMID"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "spotBlockID"]
+- ["8CameoKit6NewPDTV10CodingKeysO", "stringValue"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO", "stringValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "stringValue"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "stringValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO", "stringValue"]
+- ["8CameoKit6NewPDTV3CutV10CodingKeysO", "title"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "vodEpisodeCount"]
+- ["8CameoKit6NewPDTV4ShowV10CodingKeysO", "vodEpisodeCountFamilyFriendly"]
+- !private ["Sl", "data"]
+- !private ["Sl", "first"]
+- !private ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "data"]
+- !private ["SL", "init"]
+- !private ["SL", "isEmpty"]
+- !private ["SL", "timeIntervalSince1970"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince1970"]
+- !private ["s17CustomReflectableP", "data"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "timeIntervalSince1970"]
+- ["s23CustomStringConvertibleP", "=="]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "timeIntervalSince1970"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- ["8CameoKit6NewPDTV3CutV", "Album"]
+- ["8CameoKit6NewPDTV3CutV", "Artist"]
+- ["8CameoKit6NewPDTV3CutV", "Bool"]
+- ["8CameoKit6NewPDTV3CutV", "CodingKey"]
+- ["8CameoKit6NewPDTV3CutV", "CodingKeys"]
+- ["8CameoKit6NewPDTV3CutV", "CutContentType"]
+- ["8CameoKit6NewPDTV3CutV", "ExternalID"]
+- ["8CameoKit6NewPDTV3CutV", "LegacyIDS"]
+- ["8CameoKit6NewPDTV3CutV", "String"]
+- !private ["8CameoKit6NewPDTV3CutV", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV3CutV", "album"]
+- ["8CameoKit6NewPDTV3CutV", "artists"]
+- ["8CameoKit6NewPDTV3CutV", "clipGUID"]
+- ["8CameoKit6NewPDTV3CutV", "contentInfo"]
+- ["8CameoKit6NewPDTV3CutV", "cutContentType"]
+- ["8CameoKit6NewPDTV3CutV", "deinit"]
+- ["8CameoKit6NewPDTV3CutV", "encode"]
+- ["8CameoKit6NewPDTV3CutV", "externalIDS"]
+- ["8CameoKit6NewPDTV3CutV", "firstCutOfSpotBlock"]
+- ["8CameoKit6NewPDTV3CutV", "galaxyAssetID"]
+- ["8CameoKit6NewPDTV3CutV", "init"]
+- ["8CameoKit6NewPDTV3CutV", "legacyIDS"]
+- ["8CameoKit6NewPDTV3CutV", "memberOfSpotBlock"]
+- ["8CameoKit6NewPDTV3CutV", "mref"]
+- ["8CameoKit6NewPDTV3CutV", "spotBlockID"]
+- ["8CameoKit6NewPDTV3CutV", "title"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "=="]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "RawValue"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "_Default_RawValue"]
+- !private ["8CameoKit6NewPDTV14CutContentTypeO", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "deinit"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "encode"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "exp"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "fill"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "hash"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "hashValue"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "init"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "link"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "link_"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "mpds"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "pgmSegement"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "pgmSegment"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "promo"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "rawValue"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "song"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "spot"]
+- ["8CameoKit6NewPDTV14CutContentTypeO", "talk"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation4DateV", "timeIntervalSince1970"]
+- ["Se", "=="]
+- ["Se", "Codable"]
+- ["Se", "RawValue"]
+- ["Se", ""]
+- ["Se", "_Default_RawValue"]
+- !private ["Se", "_findStringSwitchCase"]
+- ["Se", "_rawHashValue"]
+- !private ["Se", "absolute"]
+- !private ["Se", "album"]
+- !private ["Se", "aodEpisodeCount"]
+- !private ["Se", "artists"]
+- !private ["Se", "assetGUID"]
+- !private ["Se", "channelID"]
+- !private ["Se", "clipGUID"]
+- !private ["Se", "code"]
+- !private ["Se", "consumptionInfo"]
+- !private ["Se", "containerGUID"]
+- !private ["Se", "contentInfo"]
+- !private ["Se", "cut"]
+- !private ["Se", "cutContentType"]
+- !private ["Se", "data"]
+- !private ["Se", "duration"]
+- ["Se", "encode"]
+- !private ["Se", "episode"]
+- !private ["Se", "externalIDS"]
+- !private ["Se", "first"]
+- !private ["Se", "firstCutOfSpotBlock"]
+- !private ["Se", "galaxyAssetID"]
+- !private ["Se", "guid"]
+- ["Se", "hash"]
+- ["Se", "hashValue"]
+- !private ["Se", "id"]
+- ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "isLiveVideoEligible"]
+- !private ["Se", "isPlaceholderShow"]
+- !private ["Se", "layer"]
+- !private ["Se", "legacyIDS"]
+- !private ["Se", "liveChannelResponse"]
+- !private ["Se", "liveChannelResponses"]
+- !private ["Se", "longTitle"]
+- !private ["Se", "markerLists"]
+- !private ["Se", "markers"]
+- !private ["Se", "memberOfSpotBlock"]
+- !private ["Se", "message"]
+- !private ["Se", "messages"]
+- !private ["Se", "moduleArea"]
+- !private ["Se", "moduleDetails"]
+- !private ["Se", "moduleList"]
+- !private ["Se", "moduleListResponse"]
+- !private ["Se", "moduleResponse"]
+- !private ["Se", "moduleType"]
+- !private ["Se", "modules"]
+- !private ["Se", "mref"]
+- !private ["Se", "name"]
+- !private ["Se", "newVODEpisodeCountFamilyFriendly"]
+- !private ["Se", "pid"]
+- !private ["Se", "programType"]
+- ["Se", "rawValue"]
+- !private ["Se", "show"]
+- !private ["Se", "showGUID"]
+- !private ["Se", "siriusXMID"]
+- !private ["Se", "spotBlockID"]
+- !private ["Se", "status"]
+- !private ["Se", "subscript"]
+- !private ["Se", "time"]
+- !private ["Se", "timeIntervalSince1970"]
+- !private ["Se", "timestamp"]
+- !private ["Se", "title"]
+- !private ["Se", "updateFrequency"]
+- !private ["Se", "value"]
+- !private ["Se", "vodEpisodeCount"]
+- !private ["Se", "vodEpisodeCountFamilyFriendly"]
+- !private ["Se", "wallClockRenderTime"]
+- !private ["s7DecoderP", "container"]
+- !private ["SD", "init"]
+- !private ["SD", "subscript"]
+- ["SE", "=="]
+- ["SE", "Codable"]
+- ["SE", "RawValue"]
+- ["SE", ""]
+- ["SE", "_Default_RawValue"]
+- !private ["SE", "_findStringSwitchCase"]
+- ["SE", "_rawHashValue"]
+- !private ["SE", "absolute"]
+- !private ["SE", "album"]
+- !private ["SE", "aodEpisodeCount"]
+- !private ["SE", "artists"]
+- !private ["SE", "assetGUID"]
+- !private ["SE", "channelID"]
+- !private ["SE", "clipGUID"]
+- !private ["SE", "code"]
+- !private ["SE", "consumptionInfo"]
+- !private ["SE", "containerGUID"]
+- !private ["SE", "contentInfo"]
+- !private ["SE", "cut"]
+- !private ["SE", "cutContentType"]
+- !private ["SE", "data"]
+- !private ["SE", "duration"]
+- ["SE", "encode"]
+- !private ["SE", "episode"]
+- !private ["SE", "externalIDS"]
+- !private ["SE", "first"]
+- !private ["SE", "firstCutOfSpotBlock"]
+- !private ["SE", "galaxyAssetID"]
+- !private ["SE", "guid"]
+- ["SE", "hash"]
+- ["SE", "hashValue"]
+- !private ["SE", "id"]
+- ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "isLiveVideoEligible"]
+- !private ["SE", "isPlaceholderShow"]
+- !private ["SE", "layer"]
+- !private ["SE", "legacyIDS"]
+- !private ["SE", "liveChannelResponse"]
+- !private ["SE", "liveChannelResponses"]
+- !private ["SE", "longTitle"]
+- !private ["SE", "markerLists"]
+- !private ["SE", "markers"]
+- !private ["SE", "memberOfSpotBlock"]
+- !private ["SE", "message"]
+- !private ["SE", "messages"]
+- !private ["SE", "moduleArea"]
+- !private ["SE", "moduleDetails"]
+- !private ["SE", "moduleList"]
+- !private ["SE", "moduleListResponse"]
+- !private ["SE", "moduleResponse"]
+- !private ["SE", "moduleType"]
+- !private ["SE", "modules"]
+- !private ["SE", "mref"]
+- !private ["SE", "name"]
+- !private ["SE", "newVODEpisodeCountFamilyFriendly"]
+- !private ["SE", "pid"]
+- !private ["SE", "programType"]
+- ["SE", "rawValue"]
+- !private ["SE", "show"]
+- !private ["SE", "showGUID"]
+- !private ["SE", "siriusXMID"]
+- !private ["SE", "spotBlockID"]
+- !private ["SE", "status"]
+- !private ["SE", "subscript"]
+- !private ["SE", "time"]
+- !private ["SE", "timeIntervalSince1970"]
+- !private ["SE", "timestamp"]
+- !private ["SE", "title"]
+- !private ["SE", "updateFrequency"]
+- !private ["SE", "value"]
+- !private ["SE", "vodEpisodeCount"]
+- !private ["SE", "vodEpisodeCountFamilyFriendly"]
+- !private ["SE", "wallClockRenderTime"]
+- !private ["s7EncoderP", "container"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- ["8CameoKit6NewPDTV7EpisodeV", "Bool"]
+- ["8CameoKit6NewPDTV7EpisodeV", "Show"]
+- ["8CameoKit6NewPDTV7EpisodeV", "deinit"]
+- ["8CameoKit6NewPDTV7EpisodeV", "encode"]
+- ["8CameoKit6NewPDTV7EpisodeV", "init"]
+- ["8CameoKit6NewPDTV7EpisodeV", "isLiveVideoEligible"]
+- ["8CameoKit6NewPDTV7EpisodeV", "show"]
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "data"]
+- ["SQ", "debugDescription"]
+- ["SQ", "description"]
+- ["SQ", "encode"]
+- !private ["SQ", "first"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- !private ["SQ", "isEmpty"]
+- ["SQ", "rawValue"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "timeIntervalSince1970"]
+- !private ["SQ", "utf8"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "data"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s26ExpressibleByStringLiteralP", "data"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "ID"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "String"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "deinit"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "encode"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "id"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "init"]
+- ["8CameoKit6NewPDTV10ExternalIDV", "value"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["9CryptoKit12HashFunctionP", "hash"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "data"]
+- ["SH", "debugDescription"]
+- ["SH", "description"]
+- ["SH", "encode"]
+- !private ["SH", "first"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- !private ["SH", "isEmpty"]
+- ["SH", "rawValue"]
+- ["SH", "stringValue"]
+- !private ["SH", "subscript"]
+- !private ["SH", "timeIntervalSince1970"]
+- !private ["SH", "utf8"]
+- !private ["s6HasherV", "combine"]
+- ["8CameoKit6NewPDTV2IDO", "=="]
+- ["8CameoKit6NewPDTV2IDO", "RawValue"]
+- ["8CameoKit6NewPDTV2IDO", "_Default_RawValue"]
+- !private ["8CameoKit6NewPDTV2IDO", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV2IDO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV2IDO", "deinit"]
+- ["8CameoKit6NewPDTV2IDO", "encode"]
+- ["8CameoKit6NewPDTV2IDO", "hash"]
+- ["8CameoKit6NewPDTV2IDO", "hashValue"]
+- ["8CameoKit6NewPDTV2IDO", "iTunes"]
+- ["8CameoKit6NewPDTV2IDO", "init"]
+- ["8CameoKit6NewPDTV2IDO", "rawValue"]
+- !private ["9CryptoKit8InsecureO", "MD5"]
+- !private ["Si", "init"]
+- !private ["10PerfectLib15JSONConvertibleP", "data"]
+- !private ["10PerfectLib15JSONConvertibleP", "first"]
+- !private ["10PerfectLib15JSONConvertibleP", "init"]
+- !private ["10PerfectLib15JSONConvertibleP", "isEmpty"]
+- !private ["10PerfectLib15JSONConvertibleP", "subscript"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s22KeyedDecodingContainerV", "decodeIfPresent"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decodeIfPresent"]
+- !private ["s22KeyedEncodingContainerV", "encode"]
+- !private ["s22KeyedEncodingContainerV", "encodeIfPresent"]
+- !private ["s30KeyedEncodingContainerProtocolP", "encode"]
+- !private ["s30KeyedEncodingContainerProtocolP", "encodeIfPresent"]
+- ["8CameoKit6NewPDTV5LayerO", "=="]
+- ["8CameoKit6NewPDTV5LayerO", "RawValue"]
+- ["8CameoKit6NewPDTV5LayerO", "_Default_RawValue"]
+- !private ["8CameoKit6NewPDTV5LayerO", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV5LayerO", "_rawHashValue"]
+- ["8CameoKit6NewPDTV5LayerO", "cut"]
+- ["8CameoKit6NewPDTV5LayerO", "deinit"]
+- ["8CameoKit6NewPDTV5LayerO", "encode"]
+- ["8CameoKit6NewPDTV5LayerO", "episode"]
+- ["8CameoKit6NewPDTV5LayerO", "hash"]
+- ["8CameoKit6NewPDTV5LayerO", "hashValue"]
+- ["8CameoKit6NewPDTV5LayerO", "init"]
+- ["8CameoKit6NewPDTV5LayerO", "rawValue"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "CodingKey"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "CodingKeys"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "String"]
+- !private ["8CameoKit6NewPDTV9LegacyIDSV", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "deinit"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "encode"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "init"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "pid"]
+- ["8CameoKit6NewPDTV9LegacyIDSV", "siriusXMID"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "CodingKey"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "CodingKeys"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "Int"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "MarkerList"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "String"]
+- !private ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "aodEpisodeCount"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "channelID"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "deinit"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "encode"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "init"]
+- ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "markerLists"]
+- !private ["s25LosslessStringConvertibleP", "data"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- !private ["9CryptoKit8InsecureO3MD5V", "hash"]
+- ["8CameoKit6NewPDTV6MarkerV", "Cut"]
+- ["8CameoKit6NewPDTV6MarkerV", "Double"]
+- ["8CameoKit6NewPDTV6MarkerV", "Episode"]
+- ["8CameoKit6NewPDTV6MarkerV", "Int"]
+- ["8CameoKit6NewPDTV6MarkerV", "Layer"]
+- ["8CameoKit6NewPDTV6MarkerV", "String"]
+- ["8CameoKit6NewPDTV6MarkerV", "Timestamp"]
+- ["8CameoKit6NewPDTV6MarkerV", "assetGUID"]
+- ["8CameoKit6NewPDTV6MarkerV", "consumptionInfo"]
+- ["8CameoKit6NewPDTV6MarkerV", "containerGUID"]
+- ["8CameoKit6NewPDTV6MarkerV", "cut"]
+- ["8CameoKit6NewPDTV6MarkerV", "deinit"]
+- ["8CameoKit6NewPDTV6MarkerV", "duration"]
+- ["8CameoKit6NewPDTV6MarkerV", "encode"]
+- ["8CameoKit6NewPDTV6MarkerV", "episode"]
+- ["8CameoKit6NewPDTV6MarkerV", "init"]
+- ["8CameoKit6NewPDTV6MarkerV", "layer"]
+- ["8CameoKit6NewPDTV6MarkerV", "time"]
+- ["8CameoKit6NewPDTV6MarkerV", "timestamp"]
+- ["8CameoKit6NewPDTV10MarkerListV", "Layer"]
+- ["8CameoKit6NewPDTV10MarkerListV", "Marker"]
+- ["8CameoKit6NewPDTV10MarkerListV", "deinit"]
+- ["8CameoKit6NewPDTV10MarkerListV", "encode"]
+- ["8CameoKit6NewPDTV10MarkerListV", "init"]
+- ["8CameoKit6NewPDTV10MarkerListV", "layer"]
+- ["8CameoKit6NewPDTV10MarkerListV", "markers"]
+- ["8CameoKit6NewPDTV7MessageV", "Int"]
+- ["8CameoKit6NewPDTV7MessageV", "String"]
+- ["8CameoKit6NewPDTV7MessageV", "code"]
+- ["8CameoKit6NewPDTV7MessageV", "deinit"]
+- ["8CameoKit6NewPDTV7MessageV", "encode"]
+- ["8CameoKit6NewPDTV7MessageV", "init"]
+- ["8CameoKit6NewPDTV7MessageV", "message"]
+- !private ["s10MirrorPathP", "data"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- ["8CameoKit6NewPDTV6ModuleV", "Int"]
+- ["8CameoKit6NewPDTV6ModuleV", "ModuleResponse"]
+- ["8CameoKit6NewPDTV6ModuleV", "String"]
+- ["8CameoKit6NewPDTV6ModuleV", "deinit"]
+- ["8CameoKit6NewPDTV6ModuleV", "encode"]
+- ["8CameoKit6NewPDTV6ModuleV", "init"]
+- ["8CameoKit6NewPDTV6ModuleV", "moduleArea"]
+- ["8CameoKit6NewPDTV6ModuleV", "moduleResponse"]
+- ["8CameoKit6NewPDTV6ModuleV", "moduleType"]
+- ["8CameoKit6NewPDTV6ModuleV", "updateFrequency"]
+- ["8CameoKit6NewPDTV6ModuleV", "wallClockRenderTime"]
+- ["8CameoKit6NewPDTV13ModuleDetailsV", "ModuleDetailsLiveChannelResponse"]
+- ["8CameoKit6NewPDTV13ModuleDetailsV", "deinit"]
+- ["8CameoKit6NewPDTV13ModuleDetailsV", "encode"]
+- ["8CameoKit6NewPDTV13ModuleDetailsV", "init"]
+- ["8CameoKit6NewPDTV13ModuleDetailsV", "liveChannelResponse"]
+- ["8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV", "LiveChannelResponseElement"]
+- ["8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV", "deinit"]
+- ["8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV", "encode"]
+- ["8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV", "init"]
+- ["8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV", "liveChannelResponses"]
+- ["8CameoKit6NewPDTV10ModuleListV", "Module"]
+- ["8CameoKit6NewPDTV10ModuleListV", "deinit"]
+- ["8CameoKit6NewPDTV10ModuleListV", "encode"]
+- ["8CameoKit6NewPDTV10ModuleListV", "init"]
+- ["8CameoKit6NewPDTV10ModuleListV", "modules"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "Int"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "Message"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "ModuleList"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "deinit"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "encode"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "init"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "messages"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "moduleList"]
+- ["8CameoKit6NewPDTV18ModuleListResponseV", "status"]
+- ["8CameoKit6NewPDTV14ModuleResponseV", "ModuleDetails"]
+- ["8CameoKit6NewPDTV14ModuleResponseV", "deinit"]
+- ["8CameoKit6NewPDTV14ModuleResponseV", "encode"]
+- ["8CameoKit6NewPDTV14ModuleResponseV", "init"]
+- ["8CameoKit6NewPDTV14ModuleResponseV", "moduleDetails"]
+- !private ["SM", "first"]
+- !private ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["So8NSCodingP", "data"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So9NSCopyingP", "data"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So21NSItemProviderReadingP", "data"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "data"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "data"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "isEmpty"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "data"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So8NSStringC", "data"]
+- !private ["So8NSStringC", "isEmpty"]
+- ["8CameoKit6NewPDTV", "Album"]
+- ["8CameoKit6NewPDTV", "Artist"]
+- ["8CameoKit6NewPDTV", "Bool"]
+- ["8CameoKit6NewPDTV", "Codable"]
+- ["8CameoKit6NewPDTV", "CodingKey"]
+- ["8CameoKit6NewPDTV", "CodingKeys"]
+- ["8CameoKit6NewPDTV", "Cut"]
+- ["8CameoKit6NewPDTV", "CutContentType"]
+- ["8CameoKit6NewPDTV", "Double"]
+- ["8CameoKit6NewPDTV", "Episode"]
+- ["8CameoKit6NewPDTV", "ExternalID"]
+- ["8CameoKit6NewPDTV", "ID"]
+- ["8CameoKit6NewPDTV", "Int"]
+- ["8CameoKit6NewPDTV", "Layer"]
+- ["8CameoKit6NewPDTV", "LegacyIDS"]
+- ["8CameoKit6NewPDTV", "LiveChannelResponseElement"]
+- ["8CameoKit6NewPDTV", "Marker"]
+- ["8CameoKit6NewPDTV", "MarkerList"]
+- ["8CameoKit6NewPDTV", "Message"]
+- ["8CameoKit6NewPDTV", "Module"]
+- ["8CameoKit6NewPDTV", "ModuleDetails"]
+- ["8CameoKit6NewPDTV", "ModuleDetailsLiveChannelResponse"]
+- ["8CameoKit6NewPDTV", "ModuleList"]
+- ["8CameoKit6NewPDTV", "ModuleListResponse"]
+- ["8CameoKit6NewPDTV", "ModuleResponse"]
+- ["8CameoKit6NewPDTV", "Show"]
+- ["8CameoKit6NewPDTV", "String"]
+- ["8CameoKit6NewPDTV", "Timestamp"]
+- !private ["8CameoKit6NewPDTV", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV", "deinit"]
+- ["8CameoKit6NewPDTV", "encode"]
+- ["8CameoKit6NewPDTV", "init"]
+- ["8CameoKit6NewPDTV", "moduleListResponse"]
+- !private ["Sj", "init"]
+- !private ["Sk", "first"]
+- !private ["Sk", "init"]
+- !private ["Sm", "data"]
+- !private ["Sm", "first"]
+- !private ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- ["SY", "debugDescription"]
+- ["SY", "description"]
+- ["SY", "encode"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "intValue"]
+- ["SY", "rawValue"]
+- ["SY", "stringValue"]
+- !private ["SY", "utf8"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince1970"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "data"]
+- !private ["ST", "first"]
+- !private ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "subscript"]
+- ["8CameoKit6NewPDTV4ShowV", "Bool"]
+- ["8CameoKit6NewPDTV4ShowV", "CodingKey"]
+- ["8CameoKit6NewPDTV4ShowV", "CodingKeys"]
+- ["8CameoKit6NewPDTV4ShowV", "Int"]
+- ["8CameoKit6NewPDTV4ShowV", "String"]
+- !private ["8CameoKit6NewPDTV4ShowV", "_findStringSwitchCase"]
+- ["8CameoKit6NewPDTV4ShowV", "aodEpisodeCount"]
+- ["8CameoKit6NewPDTV4ShowV", "deinit"]
+- ["8CameoKit6NewPDTV4ShowV", "encode"]
+- ["8CameoKit6NewPDTV4ShowV", "guid"]
+- ["8CameoKit6NewPDTV4ShowV", "init"]
+- ["8CameoKit6NewPDTV4ShowV", "isLiveVideoEligible"]
+- ["8CameoKit6NewPDTV4ShowV", "isPlaceholderShow"]
+- ["8CameoKit6NewPDTV4ShowV", "longTitle"]
+- ["8CameoKit6NewPDTV4ShowV", "newVODEpisodeCountFamilyFriendly"]
+- ["8CameoKit6NewPDTV4ShowV", "programType"]
+- ["8CameoKit6NewPDTV4ShowV", "showGUID"]
+- ["8CameoKit6NewPDTV4ShowV", "vodEpisodeCount"]
+- ["8CameoKit6NewPDTV4ShowV", "vodEpisodeCountFamilyFriendly"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["SS", "data"]
+- !private ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- !private ["Sy", "data"]
+- !private ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
+- !private ["s16TextOutputStreamP", "data"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- !private ["s20TextOutputStreamableP", "data"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- ["8CameoKit6NewPDTV9TimestampV", "String"]
+- ["8CameoKit6NewPDTV9TimestampV", "absolute"]
+- ["8CameoKit6NewPDTV9TimestampV", "deinit"]
+- ["8CameoKit6NewPDTV9TimestampV", "encode"]
+- ["8CameoKit6NewPDTV9TimestampV", "init"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "data"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince1970"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s19_HasContiguousBytesP", "data"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "data"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "8CameoKit6NewPDTV5AlbumV"
+- !private "Sa"
+- "8CameoKit6NewPDTV6ArtistV"
+- !private "SK"
+- !private "Sz"
+- !private "s7CVarArgP"
+- "s9CodingKeyP"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- !private "8CameoKit6NewPDTV10CodingKeysO"
+- !private "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- !private "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- !private "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- !private "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV10CodingKeysO"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- "8CameoKit6NewPDTV9LegacyIDSV10CodingKeysO"
+- "8CameoKit6NewPDTV3CutV10CodingKeysO"
+- "8CameoKit6NewPDTV4ShowV10CodingKeysO"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "8CameoKit6NewPDTV3CutV"
+- "8CameoKit6NewPDTV14CutContentTypeO"
+- !private "10Foundation4DataV"
+- !private "10Foundation12DataProtocolP"
+- !private "10Foundation4DateV"
+- "Se"
+- !private "s7DecoderP"
+- !private "SD"
+- "SE"
+- !private "s7EncoderP"
+- !private "SS10FoundationE8EncodingV"
+- "8CameoKit6NewPDTV7EpisodeV"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "8CameoKit6NewPDTV10ExternalIDV"
+- !private "s17FixedWidthIntegerP"
+- !private "9CryptoKit12HashFunctionP"
+- "SH"
+- !private "s6HasherV"
+- "8CameoKit6NewPDTV2IDO"
+- !private "9CryptoKit8InsecureO"
+- !private "Si"
+- !private "10PerfectLib15JSONConvertibleP"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- !private "s22KeyedEncodingContainerV"
+- !private "s30KeyedEncodingContainerProtocolP"
+- "8CameoKit6NewPDTV5LayerO"
+- "8CameoKit6NewPDTV9LegacyIDSV"
+- "8CameoKit6NewPDTV26LiveChannelResponseElementV"
+- !private "s25LosslessStringConvertibleP"
+- !private "9CryptoKit8InsecureO3MD5V"
+- "8CameoKit6NewPDTV6MarkerV"
+- "8CameoKit6NewPDTV10MarkerListV"
+- "8CameoKit6NewPDTV7MessageV"
+- !private "s10MirrorPathP"
+- "8CameoKit6NewPDTV6ModuleV"
+- "8CameoKit6NewPDTV13ModuleDetailsV"
+- "8CameoKit6NewPDTV32ModuleDetailsLiveChannelResponseV"
+- "8CameoKit6NewPDTV10ModuleListV"
+- "8CameoKit6NewPDTV18ModuleListResponseV"
+- "8CameoKit6NewPDTV14ModuleResponseV"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "8CameoKit6NewPDTV"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- "8CameoKit6NewPDTV4ShowV"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "8CameoKit6NewPDTV9TimestampV"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTP.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectLib.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectThread.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectCrypto.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTPServer.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Network.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/os.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.swiftmodule"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../asn1.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../tls1.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../dtls1.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl2.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pem2.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../e_os2.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl23.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl3.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../x509v3.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../md5.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pkcs7.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../x509.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../sha.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../dsa.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ecdsa.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../rsa.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../zlib.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/czlib.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../obj_mac.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../hmac.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ec.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../rand.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pqueue.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../conf.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../opensslconf.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../zconf.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../dh.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ecdh.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../lhash.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../stack.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../safestack.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../zutil.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../kssl.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/openssl.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pem.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../bn.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../bio.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../crypto.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../comp.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../srtp.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../evp.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ossl_typ.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../buffer.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/http_parser.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../err.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../inftrees.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../symhacks.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../cms.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../objects.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../opensslv.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../x509_vfy.h"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTP.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectLib.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectThread.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectCrypto.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTPServer.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a89207a564edfdc3304e79bac2f14fbe"

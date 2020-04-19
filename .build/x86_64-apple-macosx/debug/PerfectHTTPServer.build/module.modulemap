@@ -1,0 +1,4 @@
+module PerfectHTTPServer {
+    header "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTPServer.build/PerfectHTTPServer-Swift.h"
+    requires objc
+}

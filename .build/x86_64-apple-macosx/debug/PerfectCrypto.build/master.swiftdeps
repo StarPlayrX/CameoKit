@@ -1,0 +1,12 @@
+version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+options: "a5d26bbdaaadb78e1165d832ac432594"
+build_time: [1587277028, 988902000]
+inputs:
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Algorithms.swift": [1587274718, 974540299]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/ByteIO.swift": [1587274718, 974684785]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Extensions.swift": [1587274718, 974868723]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/JWK.swift": [1587274718, 975061197]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/JWT.swift": [1587274718, 975143433]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Keys.swift": [1587274718, 975240145]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/OpenSSLInternal.swift": [1587274718, 975443231]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/PerfectCrypto.swift": [1587274718, 975559815]

@@ -1,0 +1,373 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "routes"
+- "storeCookiesX"
+- "restoreCookiesX"
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private ">"
+- !private "??"
+- !private "AnyObject"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "CKNetworkability"
+- "CastingPrecedence"
+- !private "Config"
+- !private "Dictionary"
+- !private "FloatLiteralType"
+- !private "HTTPCookie"
+- !private "HTTPCookiePropertyKey"
+- !private "HTTPCookieStorage"
+- !private "IntegerLiteralType"
+- !private "LoginData"
+- !private "NSURL"
+- !private "PDTRoute"
+- "Routes"
+- !private "String"
+- !private "StringLiteralType"
+- !private "URL"
+- !private "UserDefaults"
+- !private "audioRoute"
+- !private "autoLoginRoute"
+- !private "channelsRoute"
+- !private "keyOneRoute"
+- !private "loginRoute"
+- !private "pingRoute"
+- !private "playlistRoute"
+- !private "print"
+- "restoreCookiesX"
+- "routes"
+- !private "sessionRoute"
+- "storeCookiesX"
+- !private "user"
+depends-member:
+- !private ["8CameoKit16CKNetworkabilityC", "init"]
+- !private ["8CameoKit16CKNetworkabilityC", "start"]
+- !private ["s7CVarArgP", "bool"]
+- !private ["s7CVarArgP", "cookies"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dictionary"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "properties"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "setCookie"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "standard"]
+- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", "count"]
+- !private ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "bool"]
+- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "cookies"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "properties"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "setCookie"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "callAsFunction"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "bool"]
+- !private ["s23CustomStringConvertibleP", "cookies"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "dictionary"]
+- !private ["s23CustomStringConvertibleP", "get"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "post"]
+- !private ["s23CustomStringConvertibleP", "properties"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "setCookie"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "standard"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "callAsFunction"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "count"]
+- !private ["SD", "init"]
+- !private ["SD", "subscript"]
+- !private ["SE", "callAsFunction"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "bool"]
+- !private ["SQ", "callAsFunction"]
+- !private ["SQ", "cookies"]
+- !private ["SQ", "count"]
+- !private ["SQ", "dictionary"]
+- !private ["SQ", "get"]
+- !private ["SQ", "init"]
+- !private ["SQ", "name"]
+- !private ["SQ", "post"]
+- !private ["SQ", "properties"]
+- !private ["SQ", "set"]
+- !private ["SQ", "setCookie"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "standard"]
+- !private ["SQ", "string"]
+- !private ["SQ", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "count"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
+- !private ["11PerfectHTTP10HTTPCookieV", "init"]
+- !private ["So12NSHTTPCookieC", "init"]
+- !private ["So12NSHTTPCookieC", "name"]
+- !private ["So12NSHTTPCookieC", "properties"]
+- !private ["So19NSHTTPCookieStorageC", "cookies"]
+- !private ["So19NSHTTPCookieStorageC", "setCookie"]
+- !private ["So19NSHTTPCookieStorageC", "shared"]
+- !private ["11PerfectHTTP10HTTPMethodO", "get"]
+- !private ["11PerfectHTTP10HTTPMethodO", "post"]
+- !private ["SH", "bool"]
+- !private ["SH", "callAsFunction"]
+- !private ["SH", "cookies"]
+- !private ["SH", "count"]
+- !private ["SH", "dictionary"]
+- !private ["SH", "get"]
+- !private ["SH", "init"]
+- !private ["SH", "name"]
+- !private ["SH", "post"]
+- !private ["SH", "properties"]
+- !private ["SH", "set"]
+- !private ["SH", "setCookie"]
+- !private ["SH", "shared"]
+- !private ["SH", "standard"]
+- !private ["SH", "string"]
+- !private ["SH", "subscript"]
+- !private ["10PerfectLib15JSONConvertibleP", "callAsFunction"]
+- !private ["10PerfectLib15JSONConvertibleP", "count"]
+- !private ["10PerfectLib15JSONConvertibleP", "init"]
+- !private ["10PerfectLib15JSONConvertibleP", "subscript"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So8NSObjectC", "bool"]
+- !private ["So8NSObjectC", "cookies"]
+- !private ["So8NSObjectC", "dictionary"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "properties"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "setCookie"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "standard"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectP", "bool"]
+- !private ["So8NSObjectP", "cookies"]
+- !private ["So8NSObjectP", "dictionary"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "properties"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "setCookie"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "standard"]
+- !private ["So8NSObjectP", "string"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So5NSURLC", "init"]
+- !private ["Sq", "callAsFunction"]
+- !private ["11PerfectHTTP14RouteNavigatorP", "description"]
+- !private ["11PerfectHTTP6RoutesV", "add"]
+- !private ["11PerfectHTTP6RoutesV", "init"]
+- !private ["11PerfectHTTP6RoutesV", "navigator"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["So14NSUserDefaultsC", "bool"]
+- !private ["So14NSUserDefaultsC", "dictionary"]
+- !private ["So14NSUserDefaultsC", "set"]
+- !private ["So14NSUserDefaultsC", "standard"]
+- !private ["So14NSUserDefaultsC", "string"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bool"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cookies"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "properties"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setCookie"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bool"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cookies"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dictionary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "properties"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setCookie"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "string"]
+- !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "8CameoKit16CKNetworkabilityC"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SD"
+- !private "SE"
+- !private "SQ"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "11PerfectHTTP10HTTPCookieV"
+- !private "So12NSHTTPCookieC"
+- !private "So19NSHTTPCookieStorageC"
+- !private "11PerfectHTTP10HTTPMethodO"
+- !private "SH"
+- !private "10PerfectLib15JSONConvertibleP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So5NSURLC"
+- !private "Sq"
+- !private "11PerfectHTTP14RouteNavigatorP"
+- !private "11PerfectHTTP6RoutesV"
+- !private "ST"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "So14NSUserDefaultsC"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTP.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectLib.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectThread.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectCrypto.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTPServer.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/os.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.swiftmodule"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../asn1.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../tls1.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../dtls1.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl2.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pem2.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../e_os2.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl23.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl3.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../x509v3.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../md5.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pkcs7.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../x509.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../sha.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../dsa.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ecdsa.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../rsa.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../zlib.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/czlib.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../obj_mac.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../hmac.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ec.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../rand.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pqueue.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../conf.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../opensslconf.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../zconf.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../dh.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ecdh.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../lhash.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../stack.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../safestack.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../zutil.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ssl.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../kssl.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/openssl.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../pem.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../bn.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../bio.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../crypto.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../comp.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../srtp.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../evp.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../ossl_typ.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../buffer.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/http_parser.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../err.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/../inftrees.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../symhacks.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../cms.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../objects.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../opensslv.h"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../x509_vfy.h"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTP.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectLib.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectThread.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectCrypto.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectHTTPServer.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/module.modulemap"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap"
+- "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "17682ca875805992ab716e63d8abde13"

@@ -1,0 +1,4 @@
+module CameoKit {
+    header "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/CameoKit-Swift.h"
+    requires objc
+}
