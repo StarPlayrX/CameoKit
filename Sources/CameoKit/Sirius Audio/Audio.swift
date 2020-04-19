@@ -1,12 +1,11 @@
 //PlayList
 import Foundation
 
-func Audio(data: String, channelId: String, userid: String) -> Data {
+func Audio(data: String, channelId: String ) -> Data {
     
-    var prefix : String? = ""
-    var audio : Data?
+    var prefix = ""
+    var audio = Data()
     var bitrate = "64k"
-    //Get Network Info, so we know what to do with the stream
     
     if ( CKnetworkIsWiFi && CKnetworkIsConnected ) {
         bitrate = "256k"
@@ -16,18 +15,19 @@ func Audio(data: String, channelId: String, userid: String) -> Data {
         bitrate = "32k"
     }
 
-    let rootUrl = "/AAC_Data/" + channelId + "/HLS_" + channelId + "_" + bitrate + "_v3/"
+    let rootUrl = "/AAC_Data/" + channelId +
+        "/HLS_" + channelId + "_" + bitrate + "_v3/"
     
-    if usePrime {
-        prefix = hls_sources["Live_Primary_HLS"]! + rootUrl
-    } else {
-        prefix = hls_sources["Live_Secondary_HLS"]! + rootUrl
+    if usePrime, let hls = hls_sources["Live_Primary_HLS"] {
+        prefix = hls + rootUrl
+    } else if let hls = hls_sources["Live_Secondary_HLS"] {
+        prefix = hls + rootUrl
     }
     
     let suffix = user.consumer  + "&token=" + user.token
-    let endpoint = prefix! + data + suffix
-    audio = DataSync(endpoint: endpoint, method: "AAC")
+    let endpoint = prefix + data + suffix
+    
+    audio = DataSyncX(endpoint: endpoint, method: "AAC")
 
-    prefix = nil
-    return audio!
+    return audio
 }

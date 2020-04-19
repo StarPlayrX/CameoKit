@@ -8,8 +8,8 @@
 import Foundation
 
 //Cached verison of Playlist
-func Playlist(channelid: String, userid: String ) -> String {
-    var playlist : String? = ""
+func Playlist(channelid: String) -> String {
+    var playlist = ""
     var bitrate = "64k"
     
     //Get Network Info, so we know what to do with the stream
@@ -27,41 +27,45 @@ func Playlist(channelid: String, userid: String ) -> String {
     let ext = ".m3u8"
     
     let tail = channelid + underscore + bitrate + underscore + size + underscore + version + ext
-    var source : String? = user.keyurl
-
+    var source = user.keyurl
+    
+    let primary = String(hls_sources["Live_Primary_HLS"] ?? "")
+    let secondary = String(hls_sources["Live_Secondary_HLS"] ?? "")
     
     if usePrime {
-        source = source!.replacingOccurrences(of: "%Live_Primary_HLS%", with: hls_sources["Live_Primary_HLS"]!)
+        source = source.replacingOccurrences(of: "%Live_Primary_HLS%", with: primary)
     } else {
-        source = source!.replacingOccurrences(of: "%Live_Primary_HLS%", with: hls_sources["Live_Secondary_HLS"]!)
+        source = source.replacingOccurrences(of: "%Live_Primary_HLS%", with: secondary)
     }
     
-    source = source!.replacingOccurrences(of: "32k", with: bitrate)
-    
+    source = source.replacingOccurrences(of: "32k", with: bitrate)
+
     
     ///currently using a originating key/1 URL as a base
     ///reduces having to call the Variant
-    ///we may start including the Variant call as part of the config in the future
-    source = source!.replacingOccurrences(of: "key/1", with: tail)
+    source = source.replacingOccurrences(of: "key/1", with: tail)
     
-    source = source! + user.consumer + "&token=" + user.token
-    playlist = TextSync(endpoint: source!, method: "variant")
+    source = source + user.consumer + "&token=" + user.token
+    playlist = TextSync(endpoint: source, method: "variant")
     
     //fix key path
-    playlist = playlist?.replacingOccurrences(of: "key/1", with: "/key/1/" + userid)
+    playlist = playlist.replacingOccurrences(of:
+        "key/1", with: "/key/1")
     
-    //add audio and userid prefix (used for internal multi user or multi service setup)
-    playlist = playlist?.replacingOccurrences(of: channelid, with: "/audio/" + userid + "/" + channelid)
+    //add audio and userid prefix
+    //(used for internal multi user or multi service setup)
+    playlist = playlist.replacingOccurrences(of:
+        channelid, with: "/audio/" + channelid)
     
-    //is insync with PDT
-    playlist = playlist?.replacingOccurrences(of: "#EXTINF:10,", with: "#EXTINF:1," + userid)
-
-    source = nil
+    playlist = playlist.replacingOccurrences(of:
+    "#EXT-X-TARGETDURATION:10", with: "#EXT-X-TARGETDURATION:9") //+ userid)
     
-    if let pl = playlist {
-        return pl
-    }
+ 
+    //this keeps the PDF in sync
+    playlist = playlist.replacingOccurrences(of:
+        "#EXTINF:10,", with: "#EXTINF:1,") //+ userid)
     
-    return ""
+    
+    return playlist
 
 }

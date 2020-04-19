@@ -67,8 +67,12 @@ internal func xtraTuneData(channelGuid: String) -> Data {
          }
         
         do {
-            print(channelDict)
-            returnData = try NSKeyedArchiver.archivedData(withRootObject: channelDict, requiringSecureCoding: false)
+            //print(channelDict)
+            if #available(OSX 10.13, *) {
+                returnData = try NSKeyedArchiver.archivedData(withRootObject: channelDict, requiringSecureCoding: false)
+            } else {
+                // Fallback on earlier versions
+            }
             return returnData
         } catch {
             print(error)

@@ -27,7 +27,7 @@ func xtraPlaylist( item: NSDictionary, assetGuid: String ) -> String {
     var keyUrl = streamUrl!.replacingOccurrences(of: "%AIC_Primary_HLS%" , with: "https://player.siriusxm.com/rest/streaming")
     keyUrl = keyUrl.replacingOccurrences(of: "variant_small_v3.m3u8" , with: bitrate + "_v3/key/4")
     
-    keyData = DataSync(endpoint: keyUrl, method: "key")
+    keyData = DataSyncX(endpoint: keyUrl, method: "key")
     
     var baseStreamUrl = streamUrl!.replacingOccurrences(of: "%AIC_Primary_HLS%" , with: "/xtraAudio")
     

@@ -9,20 +9,16 @@ import Foundation
 
 func xtraAudio(data: String) -> Data {
     
-    var prefix : String? = ""
-    
-  
-    
+    var prefix = ""
+
     if usePrime {
         prefix = "https://priprodtracks.mountain.siriusxm.com"
     } else {
         prefix = "https://priprodtracks.mountain.siriusxm.com"
     }
     
-    //let suffix = user[userid]!.consumer  + "&token=" + user[userid]!.token
-    let endpoint = prefix! + data 
-    let audio = DataSync(endpoint: endpoint, method: "AAC")
+    let endpoint = prefix + data
+    let audio = DataSyncX(endpoint: endpoint, method: "AAC")
     
-    //prefix = nil
     return audio
 }

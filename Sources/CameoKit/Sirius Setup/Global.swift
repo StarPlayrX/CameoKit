@@ -12,7 +12,6 @@ import Foundation
     
     //local
     public let ipaddress: String = "127.0.0.1"
-    public var port: UInt16 = 9999
     //source
     public var usePrime: Bool = false
     public let http: String = "https://"
@@ -22,12 +21,12 @@ import Foundation
     public var connectionInt = 1
 
     public var hls_sources = Dictionary<String, String>()
-    public var MemBase = Dictionary<String, Any>()
+    internal var MemBase = Dictionary<String, String>()
     public var largeChannelLineUp = Data()
     public var smallChannelLineUp = Data()
 
-    public typealias LoginData = ( email:String, pass:String, channels:  Dictionary<String, Any>, channel: String, token: String, loggedin: Bool,  gupid: String, consumer: String, key: String, keyurl: String )
-    public var user = ( email:"", pass:"", channels:  [:], channel: "", token: "", loggedin: false,  gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
+    public typealias LoginData = ( email:String, pass:String, channels:  Dictionary<String, Any>,
+         ids:  Dictionary<String, Any>, channel: String, token: String, loggedin: Bool,  gupid: String, consumer: String, key: String, keyurl: String )
+	public var user = ( email:"", pass:"", channels:  [:], ids: [:], channel: "", token: "", loggedin: false,  gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
  
-    internal var lastChannel = ""
 

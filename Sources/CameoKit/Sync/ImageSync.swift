@@ -12,48 +12,42 @@ internal func ImageSync(endpoint: String, method: String ) -> Data {
     //MARK - for Sync
     let semaphore = DispatchSemaphore(value: 0)
     
-    var syncData : Data? = Data()
+    var syncData = Data()
     
     let http_method = "GET"
     let time_out = 30
     
-    let url = URL(string: endpoint)
-    var urlReq : URLRequest? = URLRequest(url: url!)
-    
-    urlReq!.httpMethod = http_method
-    urlReq!.timeoutInterval = TimeInterval(time_out)
-    urlReq!.cachePolicy = .returnCacheDataElseLoad
-    
-    let task = URLSession.shared.dataTask(with: urlReq! ) { ( data, response, error ) in
-        
-        var status : Int? = 400
-        
-        if response != nil {
-            let result = response as! HTTPURLResponse
-            status = result.statusCode
+    func getURLRequest() -> URLRequest? {
+        if let url = URL(string: endpoint) {
+            var urlReq = URLRequest(url: url)
+            urlReq.httpMethod = http_method
+            urlReq.timeoutInterval = TimeInterval(time_out)
+            urlReq.cachePolicy = .returnCacheDataElseLoad
+
+            return urlReq
         }
         
-        
-        if status == 200  {
-            syncData = data!
-            
-        }
-        
-        //MARK - for Sync
-        semaphore.signal()
+        return nil
     }
     
-    task.resume()
-    
+    if let request = getURLRequest() {
+        let task = URLSession.shared.dataTask(with: request ) { ( data, response, error ) in
+        
+            if  let result = response as! HTTPURLResponse?, result.statusCode == 200, let data = data  {
+                syncData = data
+            }
+            
+            //MARK - for Sync
+            semaphore.signal()
+        }
+        
+        task.resume()
+    }
+
+
     //MARK - for Sync
     _ = semaphore.wait(timeout: .distantFuture)
     
-    urlReq = nil
-    
-    if syncData != nil {
-        return syncData!
-    }
-    
-    return Data()
-    
+
+	return syncData
 }

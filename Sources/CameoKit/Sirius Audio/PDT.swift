@@ -6,151 +6,259 @@
 //
 
 import Foundation
-import CommonCrypto
+import CryptoKit
 
 var lock = false;
-internal func PDT(MemBase: Dictionary<String, Any>) -> [String: Any] {
+internal func PDT_() -> [String: Any] {
     lock = true
     var ArtistSongData = [String : Any ]()
-
-    var localMemBase = Dictionary<String, Any>()
     
-    if MemBase.count > 0 {
-        localMemBase = MemBase
+    if !user.channel.isEmpty {
+        _ = nowPlayingLive(channelid: user.channel)
+    } else {
+        _ = nowPlayingLive(channelid: "siriushits1")
+
     }
-    
-    let timeInterval = NSDate().timeIntervalSince1970
-    let convert = timeInterval * 1000000 as NSNumber
-    let intTime = ((Int(truncating: convert) / 1000) - 1000) + 10000
+
+    let timeInterval = Date().timeIntervalSince1970
+    let convert = timeInterval * 1000 as NSNumber
+    let intTime = (Int(truncating: convert))
     let time = String(intTime)
-
-    //print (time)
-    // let dateFormatter = DateFormatter()
-    // let timeZone = TimeZone(identifier: "EST")
-    // dateFormatter.dateFormat =   "yyyy-MM-dd'T'HH:mm.sss+SSSS"
-    // dateFormatter.timeZone = timeZone
-    // let timeStamp = dateFormatter.string(from: Date())
-    // print(timeStamp)
     
-    //             https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=1556584493540
-    let endoint = "https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=" + time
-    
-    let data = GetSync(endpoint: endoint, method: "PDT")
-    
-    if let s = data.value( forKeyPath: "ModuleListResponse.moduleList.modules" ) {
-        let p = s as? NSArray
-        let x = p?[0] as? NSDictionary
-        if let liveChannelResponses = x?.value( forKeyPath: "moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses" ) as? NSArray {
-            for j in liveChannelResponses {
+    let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=" + time
+    let data = GetPDTX(endpoint: endpoint, method: "PDT")
+        
+    let status = data?.moduleListResponse.status
+    if status == 100 {
+        
+        if let live = data?.moduleListResponse.moduleList.modules.first?.moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses {
+            for i in live {
+                let channelid = i.channelID
+                let markerLists = i.markerLists
+                let cutlayer = markerLists.first
                 
-                let i = j as? NSDictionary
-                let channelid = i?.value( forKeyPath: "channelId" ) as? String
-                let markerLists = i?.value( forKeyPath: "markerLists" ) as? NSArray
-                let cutlayer = markerLists?.firstObject as? NSDictionary
-                if let markers = cutlayer?.value( forKeyPath: "markers" ) as? NSArray {
-
-                    for g in markers {
-                        if let gather = g as? NSDictionary {
-                            //grabs the album art code number
-                            if let art = gather.value( forKeyPath: "cut.album.creativeArts" ) as? NSArray {
-                                
-                                let thumbnail = art.firstObject as? NSDictionary
-                                let thumb = thumbnail?.value( forKeyPath: "url" ) as? String ?? ""
-                                let large = art.lastObject as? NSDictionary
-                                let image = large?.value( forKeyPath: "url" ) as? String ?? ""
-                                if let cut = gather.value( forKeyPath: "cut" ) as? NSDictionary {
-                                    var song = cut.value( forKeyPath: "title" ) as? String ?? ""
-                                    
-                                    song = song.replacingOccurrences(of: "SiriusXM", with: "Sirius") // We do not allow XM to be mentioned in text.
-                                    
-                                    let artists = cut.value( forKeyPath: "artists" ) as? NSArray
-                                    if let a = artists?[0] as? NSDictionary {
-                                        if let artiste = a.value( forKeyPath: "name" ) as? String  {
-                                            let artist = artiste.replacingOccurrences(of: "SiriusXM", with: "Sirius") // We do not allow XM to be mentioned in text.
-                                            
-                                            if let key = MD5(artist + song) {
-                                                if image != "" {
-                                                    localMemBase[key] = ["thumb": thumb, "image" : image, "artist": artist, "song" : song]
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                if let markers = cutlayer?.markers {
+                    let item = markers.first
+                   
+                    if let song = item?.cut?.title, let artist = item?.cut?.artists.first?.name, let getchannelbyId = user.ids[channelid] as? [String: Any],
+                       let channelNo = getchannelbyId["channelNumber"] as? String {
+                        
+                        if let key = MD5(artist + song), let image = MemBase[key] {
+                            ArtistSongData[channelNo] = ["image" : image, "artist": artist, "song" : song]
+                        } else {
+                            ArtistSongData[channelNo] = ["image" : "", "artist": artist, "song" : song]
                         }
-                    }
-                }
-            
-                if let markers = cutlayer?.value( forKeyPath: "markers" ) as? NSArray {
-                    let item = markers.firstObject as? NSDictionary
-
-                    if let cut = item?.value( forKeyPath: "cut" ) as? NSDictionary {
-                        var song = cut.value( forKeyPath: "title" ) as? String ?? ""
-                        
-                        song = song.replacingOccurrences(of: "SiriusXM", with: "Sirius") // We do not allow XM to be mentioned in text.
-                        
-                        let artists = cut.value( forKeyPath: "artists" ) as? NSArray
-                        let a = artists?.firstObject as? NSDictionary
-                        var artist = a?.value( forKeyPath: "name" ) as? String ?? ""
-                        
-                        artist = artist.replacingOccurrences(of: "SiriusXM", with: "Sirius") // We do not allow XM to be mentioned in text.
                         
                         
-                        if let key = MD5(artist + song) {
-                            var image = ""
-                            var thumb = ""
-                            
-                            do {
-                                if localMemBase.keys.contains(key) {
-                                    if let art = localMemBase[key] as? NSDictionary  {
-                                        image = art["image"] as? String ?? ""
-                                        thumb = art["thumb"] as? String ?? ""
-                                    }
-                                }
-                                
-                            }
-                            
-                            // let episodelayer = markerLists[1]
-                            
-                            for i in user.channels {
-                                let k = i.value as? [String: String]
-                                let j = k?["channelId"]
-                                
-                                if j == channelid {
-                                    if let n = k?["channelNumber"] {
-                                        ArtistSongData[n] = ["thumb": thumb, "image" : image, "artist": artist, "song" : song]
-                                    }
-                                    break
-                                }
-                            }
-                        }
                     }
                 }
             }
         }
     }
-    lock = false
+    
     return ArtistSongData
-    
+
 }
 
-//MD5 hash
-fileprivate func extractedFunc(_ d: Data, _ digest: inout [UInt8]) {
-    _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
-        CC_MD5(body, CC_LONG(d.count), &digest)
+//MARK: New and Improved MD5
+func MD5(_ d: String) -> String? {
+    
+    var str = String()
+    
+    for byte in Insecure.MD5.hash(data: d.data(using: .utf8) ?? Data() ) {
+         str += String(format: "%02x", byte)
     }
+    
+    return str
 }
 
-func MD5(_ string: String) -> String? {
-    let length = Int(CC_MD5_DIGEST_LENGTH)
-    var digest = [UInt8](repeating: 0, count: length)
+
+
+// MARK: - NewPDT
+struct NewPDT: Codable {
+    let moduleListResponse: ModuleListResponse
     
-    if let d = string.data(using: String.Encoding.utf8) {
+    enum CodingKeys: String, CodingKey {
+        case moduleListResponse = "ModuleListResponse"
+    }
+    
+    // MARK: - ModuleListResponse
+    struct ModuleListResponse: Codable {
+        let status: Int
+        let moduleList: ModuleList
+        let messages: [Message]
+    }
+    
+    // MARK: - Message
+    struct Message: Codable {
+        let message: String
+        let code: Int
+    }
+    
+    // MARK: - ModuleList
+    struct ModuleList: Codable {
+        let modules: [Module]
+    }
+    
+    // MARK: - Module
+    struct Module: Codable {
+        let wallClockRenderTime, moduleArea, moduleType: String
+        let updateFrequency: Int
+        let moduleResponse: ModuleResponse
+    }
+    
+    // MARK: - ModuleResponse
+    struct ModuleResponse: Codable {
+        let moduleDetails: ModuleDetails
+    }
+    
+    // MARK: - ModuleDetails
+    struct ModuleDetails: Codable {
+        let liveChannelResponse: ModuleDetailsLiveChannelResponse
+    }
+    
+    // MARK: - ModuleDetailsLiveChannelResponse
+    struct ModuleDetailsLiveChannelResponse: Codable {
+        let liveChannelResponses: [LiveChannelResponseElement]
+    }
+    
+    // MARK: - LiveChannelResponseElement
+    struct LiveChannelResponseElement: Codable {
+        let channelID: String
+        let markerLists: [MarkerList]
+        let aodEpisodeCount: Int
         
-        extractedFunc(d, &digest)
+        enum CodingKeys: String, CodingKey {
+            case channelID = "channelId"
+            case markerLists, aodEpisodeCount
+        }
     }
     
-    return (0..<length).reduce("") {
-        $0 + String(format: "%02x", digest[$1])
+    // MARK: - MarkerList
+    struct MarkerList: Codable {
+        let layer: Layer?
+        let markers: [Marker]
+    }
+    
+    enum Layer: String, Codable {
+        case cut = "cut"
+        case episode = "episode"
+    }
+    
+    // MARK: - Marker
+    struct Marker: Codable {
+        let cut: Cut?
+        let time: Int?
+        let layer: Layer?
+        let assetGUID: String?
+        let consumptionInfo: String?
+        let duration: Double?
+        let timestamp: Timestamp?
+        let containerGUID: String?
+        let episode: Episode?
+    }
+    
+    // MARK: - Cut
+    struct Cut: Codable {
+        let cutContentType: CutContentType?
+        let galaxyAssetID: String?
+        let legacyIDS: LegacyIDS?
+        let title: String?
+        let memberOfSpotBlock: Bool?
+        let artists: [Artist]
+        let mref: String?
+        let externalIDS: [ExternalID]?
+        let clipGUID: String?
+        let album: Album?
+        let firstCutOfSpotBlock: Bool?
+        let spotBlockID, contentInfo: String?
+        
+        enum CodingKeys: String, CodingKey {
+            case cutContentType
+            case galaxyAssetID = "galaxyAssetId"
+            case legacyIDS = "legacyIds"
+            case title, memberOfSpotBlock, artists, mref
+            case externalIDS = "externalIds"
+            case clipGUID, album, firstCutOfSpotBlock
+            case spotBlockID = "spotBlockId"
+            case contentInfo
+        }
+    }
+    
+    // MARK: - Album
+    struct Album: Codable {
+        let title: String?
+    }
+    
+    // MARK: - Artist
+    struct Artist: Codable {
+        let name: String
+    }
+    
+    enum CutContentType: String, Codable {
+        case exp = "Exp"
+        case fill = "Fill"
+        case link = "Link"
+        case link_ = "Link "
+        case mpds = "mpds"
+        case pgmSegement = "PGM_Segement"
+        case pgmSegment = "PGM_Segment"
+        case promo = "Promo"
+        case song = "Song"
+        case spot = "Spot"
+        case talk = "Talk"
+    }
+    
+    // MARK: - ExternalID
+    struct ExternalID: Codable {
+        let id: ID
+        let value: String
+    }
+    
+    enum ID: String, Codable {
+        case iTunes = "iTunes"
+    }
+    
+    // MARK: - LegacyIDS
+    struct LegacyIDS: Codable {
+        let siriusXMID: String
+        let pid: String?
+        
+        enum CodingKeys: String, CodingKey {
+            case siriusXMID = "siriusXMId"
+            case pid
+        }
+    }
+    
+    // MARK: - Episode
+    struct Episode: Codable {
+        let show: Show
+        let isLiveVideoEligible: Bool
+    }
+    
+    // MARK: - Show
+    struct Show: Codable {
+        let aodEpisodeCount, vodEpisodeCount: Int
+        let isPlaceholderShow: Bool
+        let showGUID: String
+        let isLiveVideoEligible: Bool
+        let programType: String
+        let newVODEpisodeCountFamilyFriendly: Int
+        let guid: String
+        let vodEpisodeCountFamilyFriendly: Int
+        let longTitle: String
+        
+        enum CodingKeys: String, CodingKey {
+            case aodEpisodeCount, vodEpisodeCount, isPlaceholderShow, showGUID, isLiveVideoEligible, programType
+            case newVODEpisodeCountFamilyFriendly = "newVodEpisodeCountFamilyFriendly"
+            case guid, vodEpisodeCountFamilyFriendly, longTitle
+        }
+    }
+    
+    // MARK: - Timestamp
+    struct Timestamp: Codable {
+        let absolute: String
     }
 }
+
+
