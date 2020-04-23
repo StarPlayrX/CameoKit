@@ -57,10 +57,13 @@ internal func Session(channelid: String) -> String {
                         if cookie.name == "SXMAKTOKEN" {
                             
                             let t = cookie.value as String
-                            let startIndex = t.index(t.startIndex, offsetBy: 3)
-                            let endIndex = t.index(t.startIndex, offsetBy: 45)
-                            user.token = String(t[startIndex...endIndex])
-                            break
+                            if t.count > 44 {
+                                let startIndex = t.index(t.startIndex, offsetBy: 3)
+                                let endIndex = t.index(t.startIndex, offsetBy: 45)
+                                user.token = String(t[startIndex...endIndex])
+                                break
+                            }
+                           
                         }
                     }
                     

@@ -681,17 +681,9 @@
 			remoteGlobalIDString = "CameoKit::CameoKitTests";
 			remoteInfo = CameoKitTests;
 		};
-		5F597B41244C1F7600C03C88 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F597B3D244C1F7600C03C88 /* StarPlayrX.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5F597AC9244C103600C03C88;
-			remoteInfo = StarPlayrX;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5F597B3D244C1F7600C03C88 /* StarPlayrX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StarPlayrX.xcodeproj; path = ../StarPlayrX/StarPlayrX/StarPlayrX.xcodeproj; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CameoKit::CameoKit::Product" /* CameoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CameoKit::CameoKitTests::Product" /* CameoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CameoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1174,14 +1166,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F597B3E244C1F7600C03C88 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F597B42244C1F7600C03C88 /* StarPlayrX.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		OBJ_10 /* Sirius Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -1707,7 +1691,6 @@
 				OBJ_41 /* Dependencies */,
 				OBJ_386 /* Products */,
 				OBJ_398 /* LICENSE */,
-				5F597B3D244C1F7600C03C88 /* StarPlayrX.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2192,12 +2175,6 @@
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_386 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5F597B3E244C1F7600C03C88 /* Products */;
-					ProjectRef = 5F597B3D244C1F7600C03C88 /* StarPlayrX.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				"COpenSSL::COpenSSL" /* COpenSSL */,
@@ -2224,16 +2201,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5F597B42244C1F7600C03C88 /* StarPlayrX.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = StarPlayrX.app;
-			remoteRef = 5F597B41244C1F7600C03C88 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_403 /* Sources */ = {
@@ -2935,6 +2902,7 @@
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
@@ -2943,6 +2911,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
@@ -2960,13 +2929,16 @@
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -2986,7 +2958,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/COpenSSL_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3016,7 +2988,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/COpenSSL_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3037,7 +3009,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.0.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3047,7 +3019,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.0.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3069,7 +3041,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/CameoKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -3080,8 +3052,10 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = CameoKit;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -3106,7 +3080,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/CameoKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -3117,8 +3091,10 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = CameoKit;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -3292,7 +3268,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectCZlib_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3322,7 +3298,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectCZlib_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3343,7 +3319,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.0.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3353,7 +3329,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.0.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3371,7 +3347,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectCrypto_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3382,7 +3358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectCrypto;
 			};
 			name = Debug;
@@ -3401,7 +3377,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectCrypto_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3412,7 +3388,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectCrypto;
 			};
 			name = Release;
@@ -3423,7 +3399,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3433,7 +3409,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3451,7 +3427,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectHTTP_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3462,7 +3438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectHTTP;
 			};
 			name = Debug;
@@ -3481,7 +3457,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectHTTP_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3492,7 +3468,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectHTTP;
 			};
 			name = Release;
@@ -3503,7 +3479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3513,7 +3489,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3532,7 +3508,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectHTTPServer_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3543,7 +3519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectHTTPServer;
 			};
 			name = Debug;
@@ -3563,7 +3539,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectHTTPServer_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3574,7 +3550,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectHTTPServer;
 			};
 			name = Release;
@@ -3585,7 +3561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3595,7 +3571,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3610,7 +3586,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectLib_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3621,7 +3597,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectLib;
 			};
 			name = Debug;
@@ -3637,7 +3613,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectLib_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3648,7 +3624,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectLib;
 			};
 			name = Release;
@@ -3659,7 +3635,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3669,7 +3645,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3687,7 +3663,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectNet_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3698,7 +3674,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectNet;
 			};
 			name = Debug;
@@ -3717,7 +3693,7 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include",
 				);
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectNet_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3728,7 +3704,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectNet;
 			};
 			name = Release;
@@ -3739,7 +3715,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3749,7 +3725,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.1.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3764,7 +3740,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectThread_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3775,7 +3751,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectThread;
 			};
 			name = Debug;
@@ -3791,7 +3767,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CameoKit.xcodeproj/PerfectThread_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "$(inherited)";
@@ -3802,7 +3778,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectThread;
 			};
 			name = Release;
@@ -3812,7 +3788,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.0.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3821,7 +3797,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 4.0.0";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

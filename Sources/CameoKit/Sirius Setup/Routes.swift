@@ -109,24 +109,13 @@ internal func playlistRoute(request: HTTPRequest, _ response: HTTPResponse) {
         
         user.channel = channelid
         
-        let now = Date()
-        let then = Date().adding(3)
+        //let now = Date()
+       // let then = Date().adding(3)
         
-        var s = String()
-     
-        while(s.isEmpty && now < then) {
-            s = Session(channelid: channelid)
-        }
-        
-        //Fetch the playlist for the AVPlayer
-        var playlist = String()
-        
-        while (playlist.isEmpty && now < then) {
-            playlist = Playlist(channelid: channelid)
+        _ = Session(channelid: channelid)
+
             
-        }
-        
-        response.setBody(string: playlist).setHeader(.contentType, value:"application/x-mpegURL").completed()
+        response.setBody(string:  Playlist(channelid: channelid) ).setHeader(.contentType, value:"application/x-mpegURL").completed()
         
     } else {
         response.setBody(string: "The channel does not exist.\n\r").setHeader(.contentType, value:"text/plain").completed()
@@ -146,11 +135,12 @@ internal func audioRoute(request: HTTPRequest, _ response: HTTPResponse) {
     if let audio = audio {
         
         let now = Date()
-        let then = Date().adding(3)
-        
+      
         let filename = String(audio.dropFirst())
         
         var data = [UInt8]()
+        
+        let then = Date().adding(5)
         
         //check and make sure we have some data
         while (data.isEmpty && now < then) {
