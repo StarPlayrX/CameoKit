@@ -22,7 +22,7 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
     let result = PostSync(request: loginReq, endpoint: endpoint, method: method )
     
     
-    
+	
     if (result.response.statusCode) == 403 {
         success = false
         message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
