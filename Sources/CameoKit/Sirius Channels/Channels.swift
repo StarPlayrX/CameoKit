@@ -121,9 +121,6 @@ internal func Channels() -> ChannelsTuple {
                             let cl = [ "channelId": channelId, "channelNumber": channelNumber, "name": name,
                                        "mediumImage": mediumImage, "category": category, "preset": false ] as [String : Any]
                             
-                            if channelNumber == "2" {
-                                print(cl)
-                            }
                             let ids = ["channelNumber": channelNumber] as [String : String]
                             
                             ChannelDict[channelNumber] = cl

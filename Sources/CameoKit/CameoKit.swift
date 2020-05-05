@@ -11,7 +11,7 @@ public func routes() -> Routes {
     
     Config()
     
-    print("Config Success")
+    //print("Config Success")
     //process cached data in the background
     
     let logindata = (email:"", pass:"", channels: [:], ids: [:], channel: "", token: "", loggedin: false, gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
@@ -85,7 +85,7 @@ public func routes() -> Routes {
     routes.add(method: .post, uri:"/api/v2/autologin",handler:autoLoginRoute)
     
     // Check the console to see the logical structure of what was installed.
-    print("\(routes.navigator.description)")
+    //print("\(routes.navigator.description)")
     
     return routes
     
