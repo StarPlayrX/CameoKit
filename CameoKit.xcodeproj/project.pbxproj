@@ -282,11 +282,6 @@
 		OBJ_663 /* ImageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* ImageSync.swift */; };
 		OBJ_664 /* PostSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* PostSync.swift */; };
 		OBJ_665 /* TextSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* TextSync.swift */; };
-		OBJ_666 /* XtraAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* XtraAudio.swift */; };
-		OBJ_667 /* XtraPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* XtraPlaylist.swift */; };
-		OBJ_668 /* XtraRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* XtraRoutes.swift */; };
-		OBJ_669 /* XtraSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* XtraSession.swift */; };
-		OBJ_670 /* XtraTune.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* XtraTune.swift */; };
 		OBJ_703 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_714 /* CameoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CameoKitTests.swift */; };
 		OBJ_715 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* LinuxMain.swift */; };
@@ -907,7 +902,6 @@
 		OBJ_307 /* rc2cfb64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rc2cfb64.c; sourceTree = "<group>"; };
 		OBJ_308 /* rc2ofb64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rc2ofb64.c; sourceTree = "<group>"; };
 		OBJ_309 /* rc4_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rc4_.c; sourceTree = "<group>"; };
-		OBJ_31 /* XtraAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtraAudio.swift; sourceTree = "<group>"; };
 		OBJ_310 /* read2pwd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = read2pwd.c; sourceTree = "<group>"; };
 		OBJ_311 /* rmd_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rmd_.c; sourceTree = "<group>"; };
 		OBJ_312 /* rpc_enc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rpc_enc.c; sourceTree = "<group>"; };
@@ -918,7 +912,6 @@
 		OBJ_317 /* s3_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = s3_.c; sourceTree = "<group>"; };
 		OBJ_318 /* seed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seed.c; sourceTree = "<group>"; };
 		OBJ_319 /* seed_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seed_.c; sourceTree = "<group>"; };
-		OBJ_32 /* XtraPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtraPlaylist.swift; sourceTree = "<group>"; };
 		OBJ_320 /* set_key.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = set_key.c; sourceTree = "<group>"; };
 		OBJ_321 /* sha1_one.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha1_one.c; sourceTree = "<group>"; };
 		OBJ_322 /* sha1dgst.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha1dgst.c; sourceTree = "<group>"; };
@@ -929,7 +922,6 @@
 		OBJ_327 /* ssl_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ssl_.c; sourceTree = "<group>"; };
 		OBJ_328 /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		OBJ_329 /* str2key.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = str2key.c; sourceTree = "<group>"; };
-		OBJ_33 /* XtraRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtraRoutes.swift; sourceTree = "<group>"; };
 		OBJ_330 /* t1_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = t1_.c; sourceTree = "<group>"; };
 		OBJ_331 /* t_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = t_.c; sourceTree = "<group>"; };
 		OBJ_332 /* tasn_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tasn_.c; sourceTree = "<group>"; };
@@ -940,7 +932,6 @@
 		OBJ_337 /* tb_dsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tb_dsa.c; sourceTree = "<group>"; };
 		OBJ_338 /* tb_ecdh.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tb_ecdh.c; sourceTree = "<group>"; };
 		OBJ_339 /* tb_ecdsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tb_ecdsa.c; sourceTree = "<group>"; };
-		OBJ_34 /* XtraSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtraSession.swift; sourceTree = "<group>"; };
 		OBJ_340 /* tb_pkmeth.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tb_pkmeth.c; sourceTree = "<group>"; };
 		OBJ_341 /* tb_rand.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tb_rand.c; sourceTree = "<group>"; };
 		OBJ_342 /* tb_rsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tb_rsa.c; sourceTree = "<group>"; };
@@ -951,7 +942,6 @@
 		OBJ_347 /* txt_db.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = txt_db.c; sourceTree = "<group>"; };
 		OBJ_348 /* ui_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ui_.c; sourceTree = "<group>"; };
 		OBJ_349 /* uid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uid.c; sourceTree = "<group>"; };
-		OBJ_35 /* XtraTune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtraTune.swift; sourceTree = "<group>"; };
 		OBJ_350 /* v3_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = v3_.c; sourceTree = "<group>"; };
 		OBJ_351 /* v3_lib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = v3_lib.c; sourceTree = "<group>"; };
 		OBJ_352 /* v3err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = v3err.c; sourceTree = "<group>"; };
@@ -1510,18 +1500,6 @@
 			path = Sync;
 			sourceTree = "<group>";
 		};
-		OBJ_30 /* Xtra Channels */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_31 /* XtraAudio.swift */,
-				OBJ_32 /* XtraPlaylist.swift */,
-				OBJ_33 /* XtraRoutes.swift */,
-				OBJ_34 /* XtraSession.swift */,
-				OBJ_35 /* XtraTune.swift */,
-			);
-			path = "Xtra Channels";
-			sourceTree = "<group>";
-		};
 		OBJ_36 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1761,7 +1739,6 @@
 				OBJ_15 /* Sirius Channels */,
 				OBJ_19 /* Sirius Setup */,
 				OBJ_24 /* Sync */,
-				OBJ_30 /* Xtra Channels */,
 			);
 			name = CameoKit;
 			path = Sources/CameoKit;
@@ -2472,11 +2449,6 @@
 				OBJ_663 /* ImageSync.swift in Sources */,
 				OBJ_664 /* PostSync.swift in Sources */,
 				OBJ_665 /* TextSync.swift in Sources */,
-				OBJ_666 /* XtraAudio.swift in Sources */,
-				OBJ_667 /* XtraPlaylist.swift in Sources */,
-				OBJ_668 /* XtraRoutes.swift in Sources */,
-				OBJ_669 /* XtraSession.swift in Sources */,
-				OBJ_670 /* XtraTune.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
