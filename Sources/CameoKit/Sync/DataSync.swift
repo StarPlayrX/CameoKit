@@ -8,44 +8,26 @@
 import Foundation
 
 internal func DataSyncX(endpoint: String, method: String ) -> Data {
-    
+    guard let url = URL(string: endpoint) else {return Data() }
+
     //MARK: for Sync
     let semaphore = DispatchSemaphore(value: 0)
+    
     var syncData : Data? = Data()
-    let http_method = "GET"
-    let time_out = 30
+
+    var urlReq = URLRequest(url: url)
+    urlReq.httpMethod = "GET"
+    urlReq.timeoutInterval = TimeInterval(10)
     
-    func getURLRequest() -> URLRequest? {
-        if let url = URL(string: endpoint) {
-            var urlReq = URLRequest(url: url)
-            urlReq.httpMethod = http_method
-            urlReq.timeoutInterval = TimeInterval(time_out)
-            return urlReq
-        }
+    let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
         
-        return nil
+        if let data = data { syncData = data }
+        
+        //MARK: for Sync
+        semaphore.signal()
     }
     
-    if let urlReq = getURLRequest() {
-        
-        let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
-            var status : Int? = 400
-            
-            if let response = response, let data = data {
-                let result = response as? HTTPURLResponse
-                status = result?.statusCode
-                
-                if status == 200  {
-                    syncData = data
-                }
-            }
-            
-            //MARK: for Sync
-            semaphore.signal()
-        }
-        
-        task.resume()
-    }
+    task.resume()
     
     //MARK: for Sync
     _ = semaphore.wait(timeout: .distantFuture)

@@ -20,8 +20,6 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
     
     
     let result = PostSync(request: loginReq, endpoint: endpoint, method: method )
-    
-    
 	
     if (result.response.statusCode) == 403 {
         success = false
@@ -30,40 +28,60 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
     }
     
     if result.success {
-        let r = result.data as NSDictionary
-        let d = r.value(forKeyPath: "ModuleListResponse.messages")!
-        let a = d as? NSArray
-        let cm = a?[0] as! NSDictionary
+       
+        
+        let login = { () -> (code: Int, msg: String) in
+            if let r = result.data as NSDictionary?,
+                let d = r.value(forKeyPath: "ModuleListResponse.messages"),
+                let a = d as? NSArray,
+                let cm = a[0] as? NSDictionary,
+                let code = cm.value(forKeyPath: "code") as? Int,
+                let msg = cm.value(forKeyPath: "message") as? String {
+                
+                return (code: code, msg: msg)
+            } else {
+                return (code: 101, msg: "Bad username/password")
+            }
+        }
 
-        let code = cm.value(forKeyPath: "code")! as! Int
-        let msg = cm.value(forKeyPath: "message")! as! String
+        let loginRef = login() //Use Reference so this runs once not twice
+        
+        let code = loginRef.code
+        let msg = loginRef.msg
 
         if code == 101 || msg == "Bad username/password" {
             success = false
-            message = "Bad username or password/"
+            message = "Bad username or password."
             return (success: success, message: message, data: "")
 
         } else {
             success = true
             message = "Login successful"
-            let s = r.value(forKeyPath: "ModuleListResponse.moduleList.modules")!
-            let p = s as? NSArray
-            let x = p?[0] as! NSDictionary
-            let y = x.value(forKeyPath: "moduleResponse.authenticationData.username") as! String
-            email = y
             
-            //get the GupId Cookie
-            let fields = result.response.allHeaderFields as? [String : String]
-            let cookies = HTTPCookie.cookies(withResponseHeaderFields: fields!, for: result.response.url!)
-            HTTPCookieStorage.shared.setCookies(cookies, for: result.response.url!, mainDocumentURL: nil)
-            
-            //SiriusXM changed this key
-            if let gupid = fields?["gupid"] {
-                user.gupid = gupid
-            } else if let gupid = fields?["GupId"] {
-                user.gupid = gupid
+            if  let r = result.data as NSDictionary?,
+                let s = r.value(forKeyPath: "ModuleListResponse.moduleList.modules"),
+                let p = s as? NSArray,
+                let x = p[0] as? NSDictionary,
+                let y = x.value(forKeyPath: "moduleResponse.authenticationData.username") as? String {
+                
+                //Get Email
+                email = y
             }
             
+            if let fields = result.response.allHeaderFields as? [String : String],
+                let url = result.response.url {
+                let cookies = HTTPCookie.cookies(withResponseHeaderFields: fields, for: url)
+                HTTPCookieStorage.shared.setCookies(cookies, for: url, mainDocumentURL: URL(string:http + root) )
+                
+                //SiriusXM changed this key
+                if let gupid = fields["gupid"] {
+                    user.gupid = gupid
+                } else if let gupid = fields["GupId"] {
+                    user.gupid = gupid
+                }
+            }
+            
+        
             user.email = email
             
             /*saveKeys for AutoLogin */

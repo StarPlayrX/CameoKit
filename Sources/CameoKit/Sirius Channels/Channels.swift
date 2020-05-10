@@ -22,14 +22,13 @@ internal func Channels() -> ChannelsTuple {
     
     if result.success {
         let result = result.data as NSDictionary
-        if let r = result.value(forKeyPath: "ModuleListResponse.moduleList.modules") {
-            let m = r as? NSArray
-            let o = m![0] as! NSDictionary
-            let d = o.value( forKeyPath: "moduleResponse.contentData.channelListing.channels") as! NSArray
-            
+        if let r = result.value(forKeyPath: "ModuleListResponse.moduleList.modules"),
+            let m = r as? NSArray,
+            let o = m[0] as? NSDictionary,
+            let d = o.value( forKeyPath: "moduleResponse.contentData.channelListing.channels") as? NSArray {
+           
             var ChannelDict : Dictionary = Dictionary<String, Any>()
             var ChannelIdDict : Dictionary = Dictionary<String, Any>()
-            
             
             for i in d {
                 if let dict = i as? NSDictionary,
@@ -71,7 +70,7 @@ internal func Channels() -> ChannelsTuple {
                             case 9,21,33,34,35,36,173,359,714,758:
                                 category = "Alternative"
                             case 37,39,40,41:
-                                category = "Heavy Metal"
+                                category = "Metal"
                             case 5,6,701,703,776:
                                 category = "Oldies"
                             case 314,712,713:
@@ -120,15 +119,12 @@ internal func Channels() -> ChannelsTuple {
                             
                             let cl = [ "channelId": channelId, "channelNumber": channelNumber, "name": name,
                                        "mediumImage": mediumImage, "category": category, "preset": false ] as [String : Any]
-                            
                             let ids = ["channelNumber": channelNumber] as [String : String]
                             
                             ChannelDict[channelNumber] = cl
                             ChannelIdDict[channelId] = ids
                             
                         }
-                        
-                        
                     }
                 }
             }
@@ -146,7 +142,6 @@ internal func Channels() -> ChannelsTuple {
                 
                 return (success: success, message: message, data: ChannelDict, recordCategories)
             }
-            
         }
     }
     

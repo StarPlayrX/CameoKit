@@ -19,40 +19,40 @@ internal func Session(channelid: String) -> String {
     let endpoint = http + root + "/resume?channelId=" + channelid + "&contentType=live&timestamp=" + time + "&cacheBuster=" + time
     let request =  ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "clientDeviceType": "web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": "US", "deviceModel": "K2WebClient", "player": "html5", "clientDeviceId": "null"]]]]]] as Dictionary
     
+    guard let url = URL(string: endpoint) else { return "305" }
+
     //MARK: - for Sync
     let semaphore = DispatchSemaphore(value: 0)
-    let http_method = "POST"
-    let time_out = 30
     
-    func getURLRequest() -> URLRequest! {
-        if let url = URL(string: endpoint) {
-            var urlReq = URLRequest(url: url)
-            urlReq.httpMethod = http_method
-            urlReq.httpBody = try? JSONSerialization.data(withJSONObject: request, options: .prettyPrinted)
-            urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            urlReq.httpMethod = http_method
-            urlReq.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15", forHTTPHeaderField: "User-Agent")
-            urlReq.timeoutInterval = TimeInterval(time_out)
-            return urlReq
-        }
-        
-        return nil
-    }
+    var urlReq = URLRequest(url: url)
+    urlReq.httpBody = try? JSONSerialization.data(withJSONObject: request, options: .prettyPrinted)
+    urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    urlReq.httpMethod = "POST"
+    urlReq.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15", forHTTPHeaderField: "User-Agent")
+    urlReq.timeoutInterval = TimeInterval(10)
     
-    let task = URLSession.shared.dataTask(with: getURLRequest() ) { ( rData, resp, error ) in
+    let task = URLSession.shared.dataTask(with: urlReq ) { ( data, resp, error ) in
     
-        if let r = resp as? HTTPURLResponse {
+        if let r = resp as? HTTPURLResponse, let d = data {
             if r.statusCode == 200 {
                 
                 do { let result =
-                    try JSONSerialization.jsonObject(with: rData!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
+                    try JSONSerialization.jsonObject(with: d, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
                     
-                    let fields = r.allHeaderFields as? [String : String]
-                    let cookies = HTTPCookie.cookies(withResponseHeaderFields: fields!, for: r.url!)
-                    HTTPCookieStorage.shared.setCookies(cookies, for: r.url!, mainDocumentURL: nil)
+                    let getCookies = { () -> [HTTPCookie] in
+                        
+                    	 if let fields = r.allHeaderFields as? [String : String], let url = r.url {
+                    	    let cookies = HTTPCookie.cookies(withResponseHeaderFields: fields, for: url)
+                    	    HTTPCookieStorage.shared.setCookies(cookies, for: url, mainDocumentURL: URL(string:http + root))
+                            return(cookies)
+                    	}
+                        
+                        return [HTTPCookie()]
+                    }
+                   
+                    let cookies = getCookies()
                     
                     for cookie in cookies {
-                        
                         //This token changes on every pull and expires in about 480 seconds or less
                         if cookie.name == "SXMAKTOKEN" {
                             

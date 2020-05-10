@@ -26,8 +26,12 @@ internal func PDT_() -> [String: Any] {
     let time = String(intTime)
     
     let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=" + time
-    let data = GetPDTX(endpoint: endpoint, method: "PDT")
+    let data = GetPDT(endpoint: endpoint, method: "PDT")
         
+    if data == nil {
+        return ArtistSongData
+    }
+    
     let status = data?.moduleListResponse.status
     if status == 100 {
         

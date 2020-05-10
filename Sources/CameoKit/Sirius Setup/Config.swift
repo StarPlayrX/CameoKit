@@ -17,8 +17,19 @@ public func Config()  {
                     if let b = j as? NSDictionary, let streamName = b["name"] as? String, let streamUrl = b["url"] as? String {
                         hls_sources[streamName] = streamUrl
                         UserDefaults.standard.set(hls_sources, forKey: "hls_sources")
+                    } else {
+                        
+                        if let hls = UserDefaults.standard.dictionary(forKey: "hls_sources") as? Dictionary<String, String> {
+                            hls_sources = hls
+                        }
                     }
                 }
+            } else {
+                
+                if let hls = UserDefaults.standard.dictionary(forKey: "hls_sources") as? Dictionary<String, String> {
+                    hls_sources = hls
+                }
+                
             }
         }
     }

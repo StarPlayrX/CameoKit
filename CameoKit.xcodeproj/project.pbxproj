@@ -279,7 +279,6 @@
 		OBJ_660 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Routes.swift */; };
 		OBJ_661 /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* DataSync.swift */; };
 		OBJ_662 /* GetSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* GetSync.swift */; };
-		OBJ_663 /* ImageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* ImageSync.swift */; };
 		OBJ_664 /* PostSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* PostSync.swift */; };
 		OBJ_665 /* TextSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* TextSync.swift */; };
 		OBJ_703 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -859,7 +858,6 @@
 		OBJ_267 /* m_ripemd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_ripemd.c; sourceTree = "<group>"; };
 		OBJ_268 /* m_sha.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_sha.c; sourceTree = "<group>"; };
 		OBJ_269 /* m_sha1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_sha1.c; sourceTree = "<group>"; };
-		OBJ_27 /* ImageSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSync.swift; sourceTree = "<group>"; };
 		OBJ_270 /* m_sigver.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_sigver.c; sourceTree = "<group>"; };
 		OBJ_271 /* m_wp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_wp.c; sourceTree = "<group>"; };
 		OBJ_272 /* md4_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md4_.c; sourceTree = "<group>"; };
@@ -1493,7 +1491,6 @@
 			children = (
 				OBJ_25 /* DataSync.swift */,
 				OBJ_26 /* GetSync.swift */,
-				OBJ_27 /* ImageSync.swift */,
 				OBJ_28 /* PostSync.swift */,
 				OBJ_29 /* TextSync.swift */,
 			);
@@ -2446,7 +2443,6 @@
 				OBJ_660 /* Routes.swift in Sources */,
 				OBJ_661 /* DataSync.swift in Sources */,
 				OBJ_662 /* GetSync.swift in Sources */,
-				OBJ_663 /* ImageSync.swift in Sources */,
 				OBJ_664 /* PostSync.swift in Sources */,
 				OBJ_665 /* TextSync.swift in Sources */,
 			);

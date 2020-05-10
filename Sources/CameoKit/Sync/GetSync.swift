@@ -6,17 +6,13 @@ internal func GetSync(endpoint: String, method: String ) -> NSDictionary {
     //MARK: - for Sync
     let semaphore = DispatchSemaphore(value: 0)
 
-    var syncData : NSDictionary? = NSDictionary()
-    
-    let http_method = "GET"
-    let time_out = 30
-    
+    var syncData = NSDictionary()
     
     func getURLRequest() -> URLRequest? {
         if let url = URL(string: endpoint) {
             var urlReq = URLRequest(url: url)
-            urlReq.httpMethod = http_method
-            urlReq.timeoutInterval = TimeInterval(time_out)
+            urlReq.httpMethod = "GET"
+            urlReq.timeoutInterval = TimeInterval(30)
             return urlReq
         }
         
@@ -37,8 +33,6 @@ internal func GetSync(endpoint: String, method: String ) -> NSDictionary {
                 } catch {
                     print(error)
                 }
-            } else if let result = response as! HTTPURLResponse?, result.statusCode == 200  {
-                syncData = ["status": result.statusCode] as NSDictionary
             }
             
             
@@ -52,7 +46,7 @@ internal func GetSync(endpoint: String, method: String ) -> NSDictionary {
     //MARK: - for Sync
     _ = semaphore.wait(timeout: .distantFuture)
 
-    return syncData!
+    return syncData
 }
 
 extension Data {
@@ -75,58 +69,36 @@ extension URL {
 func generateJSON(data: Data) {
     
     let bytes: Data = data
-    let string = String(data: bytes, encoding: .utf8)
-        
-    let str = string!.data(using: .utf8)!.prettyPrintedJSONString
-    
-    if str!.contains(".jpg") || str!.contains(".png") {
-        debugPrint(str!)
 
+    if  let string = String(data: bytes, encoding: .utf8),
+        let str = string.data(using: .utf8)?.prettyPrintedJSONString {
+        debugPrint(str)
     }
 }
 
 //GetPDTX
-internal func GetPDTX(endpoint: String, method: String ) -> NewPDT? {
-    
+internal func GetPDT(endpoint: String, method: String ) -> NewPDT? {
+    guard let url = URL(string: endpoint) else { return nil }
+
     //MARK: for Sync
     let semaphore = DispatchSemaphore(value: 0)
     
     var syncData : NewPDT? = nil
     
-    let http_method = "GET"
-    let time_out = 30
     let decoder = JSONDecoder()
-
-    func getURLRequest() -> URLRequest! {
-        if let url = URL(string: endpoint) {
-            var urlReq = URLRequest(url: url)
-            urlReq.httpMethod = http_method
-            urlReq.timeoutInterval = TimeInterval(time_out)
-            return urlReq
-        }
-        
-        return .none
-    }
+    var urlReq = URLRequest(url: url)
+    urlReq.httpMethod = "GET"
+    urlReq.timeoutInterval = TimeInterval(10)
     
-    let task = URLSession.shared.dataTask(with: getURLRequest() ) { ( rdata, response, error ) in
+    let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
         
-        var status : Int? = 400
-        if response != nil {
-            let result = response as! HTTPURLResponse
-            status = result.statusCode
-        }
-        
-        if status == 200, let data = rdata {
-
+        if let data = data {
             do { syncData = try decoder.decode(NewPDT.self, from: data)
             } catch {
                 print(error)
             }
-            
         }
-        
-        status = nil
-        
+                
         //MARK - for Sync
         semaphore.signal()
     }

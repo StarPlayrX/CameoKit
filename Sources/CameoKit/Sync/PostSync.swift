@@ -33,28 +33,24 @@ internal func PostSync(request: Dictionary<String, Any>, endpoint: String, metho
         return nil
     }
     
+  
     
     if let urlReq = getURLRequest() {
         
-        let task = URLSession.shared.dataTask(with: urlReq ) { ( returndata, resp, error ) in
+        let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, _ ) in
             
-            if let r = resp as! HTTPURLResponse?, r.statusCode == 200, let rdata = returndata {
+            //MARK: Here we are chaining multiple if lets, you can also be lazy with names one time only for each one
+            if let response = response, let data = data, let http_url_response = response as? HTTPURLResponse {
                 
-                do { let result =
-                    try JSONSerialization.jsonObject(with: rdata, options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>
-                    
-                    syncData = (message: method + " was successful.", success: true, data: result, response: r  as HTTPURLResponse  ) as PostReturnTuple
+                //MARK: Here we are unwrapping the result directly in the try statement
+                do { if let result =
+                   
+                    try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? Dictionary<String, Any> {
+                     syncData = (message: method + " was successful.", success: true, data: result, response: http_url_response ) as PostReturnTuple
+                    }
                 } catch {
                     print(error)
-                    syncData = (message: method + " failed in do try catch.", success: false, data: ["": ""], response: r as HTTPURLResponse )
-                }
-            } else {
-                //we always require 200 on the post, anything else is a failure
-                
-                if resp != nil {
-                    syncData = (message: method + " failed, see response.", success: false, data: ["": ""], response: resp as! HTTPURLResponse ) as PostReturnTuple
-                } else {
-                    syncData = (message: method + " failed, no response.", success: false, data: ["": ""], response: HTTPURLResponse() ) as PostReturnTuple
+                    syncData = (message: method + " failed in do try catch.", success: false, data: ["": ""], response: http_url_response ) as PostReturnTuple
                 }
             }
             
