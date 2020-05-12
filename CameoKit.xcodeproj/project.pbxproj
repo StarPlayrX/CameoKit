@@ -269,18 +269,18 @@
 		OBJ_650 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Audio.swift */; };
 		OBJ_651 /* PDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PDT.swift */; };
 		OBJ_652 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Playlist.swift */; };
-		OBJ_653 /* nowPlayingLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* nowPlayingLive.swift */; };
+		OBJ_653 /* NowPlayingLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* NowPlayingLive.swift */; };
 		OBJ_654 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Channels.swift */; };
 		OBJ_655 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Login.swift */; };
 		OBJ_656 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Session.swift */; };
-		OBJ_657 /* CKNetworkability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CKNetworkability.swift */; };
+		OBJ_657 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Network.swift */; };
 		OBJ_658 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Config.swift */; };
 		OBJ_659 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Global.swift */; };
 		OBJ_660 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Routes.swift */; };
-		OBJ_661 /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* DataSync.swift */; };
-		OBJ_662 /* GetSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* GetSync.swift */; };
+		OBJ_661 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Data.swift */; };
+		OBJ_662 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Get.swift */; };
 		OBJ_664 /* PostSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* PostSync.swift */; };
-		OBJ_665 /* TextSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* TextSync.swift */; };
+		OBJ_665 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Text.swift */; };
 		OBJ_703 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_714 /* CameoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CameoKitTests.swift */; };
 		OBJ_715 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* LinuxMain.swift */; };
@@ -718,7 +718,7 @@
 		OBJ_137 /* b_print.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = b_print.c; sourceTree = "<group>"; };
 		OBJ_138 /* b_sock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = b_sock.c; sourceTree = "<group>"; };
 		OBJ_139 /* bf_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bf_.c; sourceTree = "<group>"; };
-		OBJ_14 /* nowPlayingLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nowPlayingLive.swift; sourceTree = "<group>"; };
+		OBJ_14 /* NowPlayingLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingLive.swift; sourceTree = "<group>"; };
 		OBJ_140 /* bio_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bio_.c; sourceTree = "<group>"; };
 		OBJ_141 /* bn_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_.c; sourceTree = "<group>"; };
 		OBJ_142 /* bss_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bss_.c; sourceTree = "<group>"; };
@@ -782,7 +782,7 @@
 		OBJ_197 /* e_gmp_err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_gmp_err.c; sourceTree = "<group>"; };
 		OBJ_198 /* e_gost_err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_gost_err.c; sourceTree = "<group>"; };
 		OBJ_199 /* e_idea.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_idea.c; sourceTree = "<group>"; };
-		OBJ_20 /* CKNetworkability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKNetworkability.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		OBJ_200 /* e_null.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_null.c; sourceTree = "<group>"; };
 		OBJ_201 /* e_nuron.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_nuron.c; sourceTree = "<group>"; };
 		OBJ_202 /* e_nuron_err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_nuron_err.c; sourceTree = "<group>"; };
@@ -836,7 +836,7 @@
 		OBJ_247 /* gost89.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gost89.c; sourceTree = "<group>"; };
 		OBJ_248 /* gost94_keyx.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gost94_keyx.c; sourceTree = "<group>"; };
 		OBJ_249 /* gost_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gost_.c; sourceTree = "<group>"; };
-		OBJ_25 /* DataSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSync.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		OBJ_250 /* gosthash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gosthash.c; sourceTree = "<group>"; };
 		OBJ_251 /* hm_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hm_.c; sourceTree = "<group>"; };
 		OBJ_252 /* hmac.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
@@ -847,7 +847,7 @@
 		OBJ_257 /* lh_stats.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lh_stats.c; sourceTree = "<group>"; };
 		OBJ_258 /* lhash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lhash.c; sourceTree = "<group>"; };
 		OBJ_259 /* m_dss.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_dss.c; sourceTree = "<group>"; };
-		OBJ_26 /* GetSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSync.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		OBJ_260 /* m_dss1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_dss1.c; sourceTree = "<group>"; };
 		OBJ_261 /* m_ecdsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_ecdsa.c; sourceTree = "<group>"; };
 		OBJ_262 /* m_md2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m_md2.c; sourceTree = "<group>"; };
@@ -879,7 +879,7 @@
 		OBJ_287 /* ofb64enc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ofb64enc.c; sourceTree = "<group>"; };
 		OBJ_288 /* ofb_enc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ofb_enc.c; sourceTree = "<group>"; };
 		OBJ_289 /* openbsd_hw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = openbsd_hw.c; sourceTree = "<group>"; };
-		OBJ_29 /* TextSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSync.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		OBJ_290 /* p12_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = p12_.c; sourceTree = "<group>"; };
 		OBJ_291 /* p5_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = p5_.c; sourceTree = "<group>"; };
 		OBJ_292 /* p8_pkey.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = p8_pkey.c; sourceTree = "<group>"; };
@@ -1160,7 +1160,7 @@
 				OBJ_11 /* Audio.swift */,
 				OBJ_12 /* PDT.swift */,
 				OBJ_13 /* Playlist.swift */,
-				OBJ_14 /* nowPlayingLive.swift */,
+				OBJ_14 /* NowPlayingLive.swift */,
 			);
 			path = "Sirius Audio";
 			sourceTree = "<group>";
@@ -1478,7 +1478,7 @@
 		OBJ_19 /* Sirius Setup */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_20 /* CKNetworkability.swift */,
+				OBJ_20 /* Network.swift */,
 				OBJ_21 /* Config.swift */,
 				OBJ_22 /* Global.swift */,
 				OBJ_23 /* Routes.swift */,
@@ -1486,15 +1486,15 @@
 			path = "Sirius Setup";
 			sourceTree = "<group>";
 		};
-		OBJ_24 /* Sync */ = {
+		OBJ_24 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* DataSync.swift */,
-				OBJ_26 /* GetSync.swift */,
+				OBJ_25 /* Data.swift */,
 				OBJ_28 /* PostSync.swift */,
-				OBJ_29 /* TextSync.swift */,
+				OBJ_26 /* Get.swift */,
+				OBJ_29 /* Text.swift */,
 			);
-			path = Sync;
+			path = API;
 			sourceTree = "<group>";
 		};
 		OBJ_36 /* Tests */ = {
@@ -1735,7 +1735,7 @@
 				OBJ_10 /* Sirius Audio */,
 				OBJ_15 /* Sirius Channels */,
 				OBJ_19 /* Sirius Setup */,
-				OBJ_24 /* Sync */,
+				OBJ_24 /* API */,
 			);
 			name = CameoKit;
 			path = Sources/CameoKit;
@@ -2433,18 +2433,18 @@
 				OBJ_650 /* Audio.swift in Sources */,
 				OBJ_651 /* PDT.swift in Sources */,
 				OBJ_652 /* Playlist.swift in Sources */,
-				OBJ_653 /* nowPlayingLive.swift in Sources */,
+				OBJ_653 /* NowPlayingLive.swift in Sources */,
 				OBJ_654 /* Channels.swift in Sources */,
 				OBJ_655 /* Login.swift in Sources */,
 				OBJ_656 /* Session.swift in Sources */,
-				OBJ_657 /* CKNetworkability.swift in Sources */,
+				OBJ_657 /* Network.swift in Sources */,
 				OBJ_658 /* Config.swift in Sources */,
 				OBJ_659 /* Global.swift in Sources */,
 				OBJ_660 /* Routes.swift in Sources */,
-				OBJ_661 /* DataSync.swift in Sources */,
-				OBJ_662 /* GetSync.swift in Sources */,
+				OBJ_661 /* Data.swift in Sources */,
+				OBJ_662 /* Get.swift in Sources */,
 				OBJ_664 /* PostSync.swift in Sources */,
-				OBJ_665 /* TextSync.swift in Sources */,
+				OBJ_665 /* Text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

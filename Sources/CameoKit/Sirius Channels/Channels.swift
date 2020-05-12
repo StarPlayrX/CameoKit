@@ -13,9 +13,9 @@ internal func Channels() -> ChannelsTuple {
     let method = "channels"
     let request =  ["moduleList":["modules":[["moduleArea":"Discovery","moduleType":"ChannelListing","moduleRequest":["resultTemplate":""]]]]] as Dictionary
     
-    let result = PostSync(request: request, endpoint: endpoint, method: method )
+    let result = PostSyncX(request: request, endpoint: endpoint, method: method )
     
-    if (result.response.statusCode) == 403 {
+    if (result.response?.statusCode) == 403 {
         success = false
         message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
     }

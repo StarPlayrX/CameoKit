@@ -7,28 +7,31 @@
 
 import Foundation
 
-public func Login(username: String, pass: String) -> (success: Bool, message: String, data: String) {
+public func LoginX(username: String, pass: String) -> (request: Dictionary<String, Any>, endpoint: String, method: String) {
 
+    let endpoint = http + root +  "/modify/authentication"
+    let method = "login"
+    let loginReq = ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": "US", "deviceModel": "K2WebClient", "clientDeviceId": "null", "player": "html5", "clientDeviceType": "web"], "standardAuth": ["username": username , "password": pass ]]]]]] as Dictionary
+
+    return (request: loginReq, endpoint: endpoint, method: method)
+	
+}
+
+
+func processLogin(username: String, pass: String, result: PostReturnTuple) -> (success: Bool, message: String, data: String) {
     
     var email = ""
     var success = false
     var message = "Username or password is incorrect."
     
-    let endpoint = http + root +  "/modify/authentication"
-    let method = "login"
-    let loginReq = ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": "US", "deviceModel": "K2WebClient", "clientDeviceId": "null", "player": "html5", "clientDeviceType": "web"], "standardAuth": ["username": username , "password": pass ]]]]]] as Dictionary
-    
-    
-    let result = PostSync(request: loginReq, endpoint: endpoint, method: method )
-	
-    if (result.response.statusCode) == 403 {
+    if (result.response?.statusCode) == 403 {
         success = false
         message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
         return (success: success, message: message, data: "")
     }
     
     if result.success {
-       
+        
         
         let login = { () -> (code: Int, msg: String) in
             if let r = result.data as NSDictionary?,
@@ -43,17 +46,17 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
                 return (code: 101, msg: "Bad username/password")
             }
         }
-
+        
         let loginRef = login() //Use Reference so this runs once not twice
         
         let code = loginRef.code
         let msg = loginRef.msg
-
+        
         if code == 101 || msg == "Bad username/password" {
             success = false
             message = "Bad username or password."
             return (success: success, message: message, data: "")
-
+            
         } else {
             success = true
             message = "Login successful"
@@ -68,8 +71,8 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
                 email = y
             }
             
-            if let fields = result.response.allHeaderFields as? [String : String],
-                let url = result.response.url {
+            if let fields = result.response?.allHeaderFields as? [String : String],
+                let url = result.response?.url {
                 let cookies = HTTPCookie.cookies(withResponseHeaderFields: fields, for: url)
                 HTTPCookieStorage.shared.setCookies(cookies, for: url, mainDocumentURL: URL(string:http + root) )
                 
@@ -81,7 +84,7 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
                 }
             }
             
-        
+            
             user.email = email
             
             /*saveKeys for AutoLogin */
@@ -92,14 +95,12 @@ public func Login(username: String, pass: String) -> (success: Bool, message: St
             UserDefaults.standard.set(true, forKey: "loggedin")
             
             return (success: success, message: message, data: user.gupid )
-
+            
         }
     }
     
     return (success: false, message: "To err is human. We had a login failure.", data: "")
-
 }
-
 
 
 

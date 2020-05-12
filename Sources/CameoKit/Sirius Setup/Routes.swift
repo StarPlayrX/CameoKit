@@ -25,32 +25,22 @@ internal func keyOneRoute(request: HTTPRequest, _ response: HTTPResponse) {
 
 
 internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
-    let artistSongData = PDT_()
-    let jayson = ["data": artistSongData, "message": "0000", "success": true] as [String : Any]
-    try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
-}
-
-
-//login
-internal func loginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
+    let endpoint = PDTendpoint()
     
-    if let body = request.postBodyString, let json = try? body.jsonDecode() as? [String:String], let u = json["user"], let p = json["pass"] {
+    GetPdtAsyc(endpoint: endpoint, method: "PDT") { (pdt) in
+        guard let pdt = pdt else {  response.completed(); return }
+        let artist_song_data = processPDT(data: pdt)
         
-        //Login func
-        let returnData = Login(username: u, pass: p)
-        
-        if returnData.success {
-            storeCookiesX()
+        if !artist_song_data.isEmpty {
+            let jayson = ["data": artist_song_data, "message": "0000", "success": true] as [String : Any]
+            try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
+        } else {
+            response.completed()
         }
-        
-        let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success] as [String : Any]
-        try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
-    } else {
-        let jayson = ["data": "", "message": "failure", "success": false] as [String : Any]
-        try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
     }
+    
+    
 }
-
 
 //session
 internal func sessionRoute(request: HTTPRequest, _ response: HTTPResponse) {
@@ -66,31 +56,47 @@ internal func sessionRoute(request: HTTPRequest, _ response: HTTPResponse) {
 }
 
 
-internal func autoLoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
+internal func LoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
     
-    var returnData : (success: Bool, message: String, data: String) = (success: false, message: "", data: "")
+    func runFailure() {
+        let jayson = ["data": "Failed to login.", "message": "Login failure.", "success": false] as [String : Any]
+        try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
+    }
     
-    if let body = request.postBodyString,  let json = try? body.jsonDecode() as? [String : String], let userX = json["user"], let passX = json["pass"] {
+    guard
+        let body = request.postBodyString,
+        let json = try? body.jsonDecode() as? [String:String],
+        let u = json["user"],
+        let p = json["pass"]
+        else { runFailure(); return }
+    
+    //Login func
+    let login = LoginX(username: u, pass: p)
+    
+    PostAsync(request: login.request, endpoint: login.endpoint, method: login.method) { (result) in
         
-        returnData = Login(username: userX, pass: passX)
+        guard let result = result else {runFailure(); return }
         
-        if returnData.success { storeCookiesX() }
+        let returnData = processLogin(username: u, pass: p, result: result)
+        
+        if returnData.success {
+            storeCookiesX()
+        }
+        
+        print(returnData)
         
         let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success] as [String : Any]
         try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
-        
-    } else {
-        let jayson = ["data": "", "message": "Syntax Error or invalid JSON", "success": false] as [String : Any]
-        try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
     }
 }
+
 
 
 //channels
 internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
     //Session func
     let returnData = Channels()
-  
+    
     if returnData.success { storeCookiesX()}
     
     let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success, "categories": returnData.categories] as [String : Any]
@@ -99,7 +105,7 @@ internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
 }
 
 
-//playlist
+//MARK: playlist
 internal func playlistRoute(request: HTTPRequest, _ response: HTTPResponse) {
     if let playlistRequest = request.urlVariables[routeTrailingWildcardKey],
         let filename = String?(String(playlistRequest.dropFirst())),
@@ -109,14 +115,39 @@ internal func playlistRoute(request: HTTPRequest, _ response: HTTPResponse) {
         
         user.channel = channelid
         
-        //let now = Date()
-       // let then = Date().adding(3)
-        
         _ = Session(channelid: channelid)
-
-            
-        response.setBody(string:  Playlist(channelid: channelid) ).setHeader(.contentType, value:"application/x-mpegURL").completed()
         
+        let source = Playlist(channelid: channelid)
+        
+        TextAsync(endpoint: source) { (playlist) in
+            guard let playlist = playlist else {
+                response.setBody(string: "An Error Occurred.\n\r").setHeader(.contentType, value:"text/plain").completed()
+                return
+            }
+            
+            func processPlaylist(_ playlist: String) -> String {
+                
+                var playlist = playlist
+                
+                //fix key path
+                playlist = playlist.replacingOccurrences(of:
+                    "key/1", with: "/key/1")
+                
+                //add audio and userid prefix
+                playlist = playlist.replacingOccurrences(of:
+                    channelid, with: "/audio/" + channelid)
+                
+                playlist = playlist.replacingOccurrences(of:
+                    "#EXT-X-TARGETDURATION:10", with: "#EXT-X-TARGETDURATION:9")
+                
+                //this keeps the PDT in sync
+                playlist = playlist.replacingOccurrences(of:
+                    "#EXTINF:10,", with: "#EXTINF:1,")
+                
+                return playlist
+            }
+            response.setBody(string: processPlaylist( playlist) ).setHeader(.contentType, value:"application/x-mpegURL").completed()
+        }
     } else {
         response.setBody(string: "The channel does not exist.\n\r").setHeader(.contentType, value:"text/plain").completed()
     }
@@ -132,27 +163,20 @@ internal func pingRoute(request: HTTPRequest, _ response: HTTPResponse) {
 internal func audioRoute(request: HTTPRequest, _ response: HTTPResponse) {
     let audio = request.urlVariables[routeTrailingWildcardKey]
     
-    if let audio = audio {
-        
-        let now = Date()
-      
-        let filename = String(audio.dropFirst())
-        
-        var data = [UInt8]()
-        
-        let then = Date().adding(5)
-        
-        //check and make sure we have some data
-        while (data.isEmpty && now < then) {
-            data = [UInt8]( Audio(data: filename, channelId: user.channel ) )
-        }
-        
-        response.setBody( bytes: data).setHeader(.contentType, value:"audio/aac").completed()
-    } else {
-        response.completed()
+    guard let audi = audio else { response.completed(); return }
+    
+    let filename = String(audi.dropFirst())
+    let endpoint = AudioX(data: filename, channelId: user.channel )
+    
+    //MARK: Call back
+    CommanderData(endpoint: endpoint, method: "AAC")  { (data) in
+        guard let data = data else { response.completed(); return }
+        response.setBody( bytes: [UInt8](data)).setHeader(.contentType, value:"audio/aac").completed()
     }
 }
 
+
+//MARK: Extension: Date
 extension Date {
     func adding(_ seconds: Int) -> Date {
         if let dat = Calendar.current.date(byAdding: .minute, value: seconds, to: self) {

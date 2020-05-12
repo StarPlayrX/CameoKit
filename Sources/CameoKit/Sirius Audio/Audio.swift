@@ -1,33 +1,36 @@
 //PlayList
 import Foundation
 
-func Audio(data: String, channelId: String ) -> Data {
+func AudioX(data: String, channelId: String ) -> String {
     
-    var prefix = ""
-    var audio = Data()
-    var bitrate = "64k"
+    let net = Network.ability
     
-    if ( CKnetworkIsWiFi && CKnetworkIsConnected ) {
+    guard
+        let hls_prime = hls_sources["Live_Primary_HLS"],
+        let hls_second = hls_sources["Live_Secondary_HLS"]
+        else { return "" }
+    
+    let bitrate : String
+    
+    switch (net.networkIsWiFi, net.networkIsConnected) {
+        
+    case (true, true)  :
         bitrate = "256k"
-    } else if ( !CKnetworkIsWiFi && CKnetworkIsConnected ) {
+    case (false, true) :
         bitrate = "64k"
-    } else {
+    case (_, false):
         bitrate = "32k"
     }
+    
+    let rootUrl = "/AAC_Data/\(channelId)/HLS_\(channelId)_\(bitrate)_v3/"
+     
+    let hls : String
+    
+    usePrime ? (hls = hls_prime) : (hls = hls_second)
+    
+    let prefix = "\(hls)\(rootUrl)"
+    let suffix = "\(user.consumer)&token=\(user.token)"
+    let endpoint = "\(prefix)\(data)\(suffix)"
 
-    let rootUrl = "/AAC_Data/" + channelId +
-        "/HLS_" + channelId + "_" + bitrate + "_v3/"
-    
-    if usePrime, let hls = hls_sources["Live_Primary_HLS"] {
-        prefix = hls + rootUrl
-    } else if let hls = hls_sources["Live_Secondary_HLS"] {
-        prefix = hls + rootUrl
-    }
-    
-    let suffix = user.consumer  + "&token=" + user.token
-    let endpoint = prefix + data + suffix
-    
-    audio = DataSyncX(endpoint: endpoint, method: "AAC")
-
-    return audio
+    return endpoint
 }

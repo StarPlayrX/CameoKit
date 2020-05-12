@@ -8,10 +8,8 @@
 import Foundation
 import CryptoKit
 
-var lock = false;
-internal func PDT_() -> [String: Any] {
-    lock = true
-    var ArtistSongData = [String : Any ]()
+
+internal func PDTendpoint() -> String {
     
     if !user.channel.isEmpty {
         _ = nowPlayingLive(channelid: user.channel)
@@ -26,16 +24,19 @@ internal func PDT_() -> [String: Any] {
     let time = String(intTime)
     
     let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=" + time
-    let data = GetPDT(endpoint: endpoint, method: "PDT")
-        
-    if data == nil {
-        return ArtistSongData
-    }
     
-    let status = data?.moduleListResponse.status
+    return endpoint
+}
+
+//MARK: Process Artist and Song Data
+internal func processPDT(data: NewPDT) -> [String:Any] {
+    var ArtistSongData = [String : Any ]()
+    
+    let status = data.moduleListResponse.status
     if status == 100 {
         
-        if let live = data?.moduleListResponse.moduleList.modules.first?.moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses {
+        if let live = data.moduleListResponse.moduleList.modules.first?.moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses {
+            
             for i in live {
                 let channelid = i.channelID
                 let markerLists = i.markerLists
@@ -43,26 +44,23 @@ internal func PDT_() -> [String: Any] {
                 
                 if let markers = cutlayer?.markers {
                     let item = markers.first
-                   
+                    
                     if let song = item?.cut?.title, let artist = item?.cut?.artists.first?.name, let getchannelbyId = user.ids[channelid] as? [String: Any],
-                       let channelNo = getchannelbyId["channelNumber"] as? String {
+                        let channelNo = getchannelbyId["channelNumber"] as? String {
                         
                         if let key = MD5(artist + song), let image = MemBase[key] {
                             ArtistSongData[channelNo] = ["image" : image, "artist": artist, "song" : song]
                         } else {
                             ArtistSongData[channelNo] = ["image" : "", "artist": artist, "song" : song]
                         }
-                        
-                        
                     }
                 }
             }
         }
     }
-    
     return ArtistSongData
-
 }
+
 
 //MARK: New and Improved MD5
 func MD5(_ d: String) -> String? {

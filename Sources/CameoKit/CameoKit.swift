@@ -6,8 +6,10 @@ import Foundation
 
 public func routes() -> Routes {
     
+    let net = Network.ability
+
     //start networkstr
-    CKNetworkability().start()
+    net.start()
     
     Config()
     
@@ -56,7 +58,7 @@ public func routes() -> Routes {
     routes.add(method: .get, uri:"/key/1",handler:keyOneRoute)
     
     // /api/v2/login
-    routes.add(method: .post, uri:"/api/v2/login",handler:loginRoute)
+    routes.add(method: .post, uri:"/api/v2/login",handler:LoginRoute)
     
     // /api/v2/session
     routes.add(method: .post, uri:"/api/v2/session",handler:sessionRoute)
@@ -80,7 +82,7 @@ public func routes() -> Routes {
     routes.add(method: .get, uri:"/ping",handler:pingRoute)
     
     // /api/v2/autologin
-    routes.add(method: .post, uri:"/api/v2/autologin",handler:autoLoginRoute)
+    routes.add(method: .post, uri:"/api/v2/autologin",handler:LoginRoute)
     
     // Check the console to see the logical structure of what was installed.
     //print("\(routes.navigator.description)")

@@ -65,7 +65,7 @@ internal func nowPlayingLiveSync(endpoint: String) -> NowPlayingLiveStruct? {
 }
 
 
-internal func nowPlayingLive(channelid: String) -> Bool {
+public func nowPlayingLive(channelid: String) -> Bool {
     
     let timeInterval = Date().timeIntervalSince1970
     let convert = timeInterval * 1000000 as NSNumber
@@ -418,10 +418,10 @@ struct NowPlayingLiveStruct: Codable {
     
     // MARK: - FutureAiring
     struct FutureAiring: Codable {
-        let timestamp: String
-        let satelliteOnlyChannel: Bool
-        let channelID: String
-        let duration: Int
+        let timestamp: String?
+        let satelliteOnlyChannel: Bool?
+        let channelID: String?
+        let duration: Int?
         
         enum CodingKeys: String, CodingKey {
             case timestamp, satelliteOnlyChannel
