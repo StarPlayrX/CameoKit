@@ -9,52 +9,6 @@ import Foundation
 
 //https://player.siriusxm.com/rest/v4/experience/modules/tune/now-playing-live?channelId=siriushits1&hls_output_mode=none&marker_mode=all_separate_cue_points&ccRequestType=AUDIO_VIDEO&result-template=web&time=1586139639609
 
-//MARK: Before
-internal func nowPlayingLiveSync(endpoint: String) -> NowPlayingLiveStruct? {
-    guard let url = URL(string: endpoint) else { return nil }
-    
-    //MARK: for Sync
-    let semaphore = DispatchSemaphore(value: 0)
-    
-    var syncData : NowPlayingLiveStruct? = nil
-    
-    let decoder = JSONDecoder()
-    
-    var urlReq = URLRequest(url: url)
-    urlReq.httpMethod = "GET"
-    urlReq.timeoutInterval = TimeInterval(7)
-    
-    let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
-        
-        if let response = response, let result = response as? HTTPURLResponse {
-            let status = result.statusCode
-            
-            if status == 200 {
-                
-                if let data = data {
-                    
-                    do { let nowPlayingLive = try decoder.decode(NowPlayingLiveStruct.self, from: data)
-                        syncData = nowPlayingLive
-                    } catch {
-                        print(error)
-                    }
-                    
-                }
-            }
-            
-            //MARK: for Sync
-            semaphore.signal()
-        }
-        
-    }
-    
-    task.resume()
-    //MARK: for Sync
-    _ = semaphore.wait(timeout: .distantFuture)
-    
-    return syncData
-    
-}
 
 //MARK: After
 internal func nowPlayingLiveAsync(endpoint: String, LiveHandler: @escaping LiveHandler) {
@@ -88,12 +42,9 @@ public func nowPlayingLiveX(channelid: String) -> String {
     let convert = timeInterval * 1000000 as NSNumber
     let intTime = Int(truncating: convert) / 1000
     let time = String(intTime)
-    
-    
     let endpoint = "https://player.siriusxm.com/rest/v4/experience/modules/tune/now-playing-live?channelId=\(channelid)&hls_output_mode=none&marker_mode=all_separate_cue_points&ccRequestType=AUDIO_VIDEO&result-template=web&time=" + time
     
     return endpoint
-
 }
 
 internal func processNPL(data: NowPlayingLiveStruct) {
@@ -119,9 +70,6 @@ internal func processNPL(data: NowPlayingLiveStruct) {
         }
     }
 }
-
-
-
 
 
 // MARK: - NowPlayingLiveStruct
