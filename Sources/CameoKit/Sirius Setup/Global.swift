@@ -31,14 +31,12 @@ public var user = ( email:"", pass:"", channels:  [:], ids: [:], channel: "", to
 
 typealias PostReturnTuple = (message: String, success: Bool, data: Dictionary<String, Any>, response: HTTPURLResponse? )
 
-
 //Completion Handlers
-typealias CompletionHandler   = (_ success:Bool) 			-> Void
-typealias ImageHandler        = (_ image:UIImage?) 			-> Void
-typealias PostTupleHandler    = (_ tuple:PostReturnTuple?) 	-> Void
-typealias DictionaryHandler   = (_ dict:NSDictionary?) 		-> Void
-typealias DataHandler         = (_ data:Data?) 				-> Void
-typealias TextHandler         = (_ text:String?) 			-> Void
-typealias PdtHandler          = (_ text:NewPDT?) 			-> Void
-
-
+typealias CompletionHandler   = (_ success:Bool) 			  		-> Void
+typealias ImageHandler        = (_ image:UIImage?) 			   		-> Void
+typealias PostTupleHandler    = (_ tuple:PostReturnTuple?) 	   		-> Void
+typealias DictionaryHandler   = (_ dict:NSDictionary?) 		   		-> Void
+typealias DataHandler         = (_ data:Data?) 				   		-> Void
+typealias TextHandler         = (_ text:String?) 			   		-> Void
+typealias PdtHandler          = (_ struct:NewPDT?) 			   		-> Void
+typealias LiveHandler 		  = (_ struct:NowPlayingLiveStruct?) 	-> Void

@@ -15,7 +15,7 @@ internal func largeChannelArt(request: HTTPRequest, _ response: HTTPResponse) {
 }
 
 
-//Decryption Key for main streams Sirius XM
+//MARK: Decryption Key for main streams Sirius XM
 internal func keyOneRoute(request: HTTPRequest, _ response: HTTPResponse) {
     
     if let data = Data(base64Encoded: user.key) {
@@ -25,21 +25,37 @@ internal func keyOneRoute(request: HTTPRequest, _ response: HTTPResponse) {
 
 
 internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
-    let endpoint = PDTendpoint()
     
-    GetPdtAsyc(endpoint: endpoint, method: "PDT") { (pdt) in
-        guard let pdt = pdt else {  response.completed(); return }
-        let artist_song_data = processPDT(data: pdt)
-        
-        if !artist_song_data.isEmpty {
-            let jayson = ["data": artist_song_data, "message": "0000", "success": true] as [String : Any]
-            try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
-        } else {
-            response.completed()
-        }
+    var epoint : String = ""
+    
+    if user.channel.isEmpty {
+    	epoint = nowPlayingLiveX(channelid: "siriushits1")
+    } else {
+        epoint = nowPlayingLiveX(channelid: user.channel)
     }
     
-    
+    nowPlayingLiveAsync(endpoint: epoint) { data in
+        guard let data = data else { response.completed(); return }
+        processNPL(data: data)
+        runPDT()
+    }
+     
+	//MARK: RUN PDT
+    func runPDT() {
+        let endpoint = PDTendpoint()
+        
+        GetPdtAsyc(endpoint: endpoint, method: "PDT") { (pdt) in
+            guard let pdt = pdt else {  response.completed(); return }
+            let artist_song_data = processPDT(data: pdt)
+            
+            if !artist_song_data.isEmpty {
+                let jayson = ["data": artist_song_data, "message": "0000", "success": true] as [String : Any]
+                try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
+            } else {
+                response.completed()
+            }
+        }
+    }
 }
 
 //session
@@ -56,6 +72,7 @@ internal func sessionRoute(request: HTTPRequest, _ response: HTTPResponse) {
 }
 
 
+//MARK: Login Route
 internal func LoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
     
     func runFailure() {
@@ -82,9 +99,7 @@ internal func LoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
         if returnData.success {
             storeCookiesX()
         }
-        
-        print(returnData)
-        
+                
         let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success] as [String : Any]
         try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
     }
@@ -94,14 +109,28 @@ internal func LoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
 
 //channels
 internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
-    //Session func
-    let returnData = Channels()
     
-    if returnData.success { storeCookiesX()}
+    func runFailure() {
+        let jayson = ["data": [:], "message": "Login failure.", "success": false] as [String : Any]
+        try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
+    }
     
-    let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success, "categories": returnData.categories] as [String : Any]
-    try? _ = response.setBody(json: jayson)
-    response.setHeader(.contentType, value:"application/json").completed()
+    
+    let api = Channels()
+    
+    PostAsync(request: api.request, endpoint: api.endpoint, method: api.method) { (result) in
+        guard let result = result else { runFailure(); return }
+        
+        let returnData = processChannels(result: result)
+        
+        if returnData.success { storeCookiesX() }
+        
+        let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success, "categories": returnData.categories] as [String : Any]
+    	try? _ = response.setBody(json: jayson)
+        response.setHeader(.contentType, value:"application/json").completed()
+        
+    }
+
 }
 
 

@@ -10,13 +10,6 @@ import CryptoKit
 
 
 internal func PDTendpoint() -> String {
-    
-    if !user.channel.isEmpty {
-        _ = nowPlayingLive(channelid: user.channel)
-    } else {
-        _ = nowPlayingLive(channelid: "siriushits1")
-
-    }
 
     let timeInterval = Date().timeIntervalSince1970
     let convert = timeInterval * 1000 as NSNumber

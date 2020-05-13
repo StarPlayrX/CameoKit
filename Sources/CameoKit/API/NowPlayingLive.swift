@@ -9,63 +9,80 @@ import Foundation
 
 //https://player.siriusxm.com/rest/v4/experience/modules/tune/now-playing-live?channelId=siriushits1&hls_output_mode=none&marker_mode=all_separate_cue_points&ccRequestType=AUDIO_VIDEO&result-template=web&time=1586139639609
 
+//MARK: Before
 internal func nowPlayingLiveSync(endpoint: String) -> NowPlayingLiveStruct? {
+    guard let url = URL(string: endpoint) else { return nil }
     
     //MARK: for Sync
     let semaphore = DispatchSemaphore(value: 0)
     
     var syncData : NowPlayingLiveStruct? = nil
-    let http_method = "GET"
-    let time_out = 30
-    let decoder = JSONDecoder()
-
-    func getURLRequest() -> URLRequest? {
-        if let url = URL(string: endpoint) {
-            var urlReq = URLRequest(url: url)
-            urlReq.httpMethod = http_method
-            urlReq.timeoutInterval = TimeInterval(time_out)
-            return urlReq
-        }
-        return nil
-    }
     
-    if let urlReq = getURLRequest() {
-        let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
+    let decoder = JSONDecoder()
+    
+    var urlReq = URLRequest(url: url)
+    urlReq.httpMethod = "GET"
+    urlReq.timeoutInterval = TimeInterval(7)
+    
+    let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
+        
+        if let response = response, let result = response as? HTTPURLResponse {
+            let status = result.statusCode
             
-            
-            if let response = response, let result = response as? HTTPURLResponse {
-                let status = result.statusCode
+            if status == 200 {
                 
-                if status == 200 {
+                if let data = data {
                     
-                    if let data = data {
-                        
-                        do { let nowPlayingLive = try decoder.decode(NowPlayingLiveStruct.self, from: data)
-                            syncData = nowPlayingLive
-                        } catch {
-                            print(error)
-                        }
-                        
+                    do { let nowPlayingLive = try decoder.decode(NowPlayingLiveStruct.self, from: data)
+                        syncData = nowPlayingLive
+                    } catch {
+                        print(error)
                     }
+                    
                 }
-                
-                //MARK: for Sync
-                semaphore.signal()
             }
             
+            //MARK: for Sync
+            semaphore.signal()
         }
-		
-        task.resume()
+        
     }
+    
+    task.resume()
     //MARK: for Sync
     _ = semaphore.wait(timeout: .distantFuture)
-        
+    
     return syncData
     
 }
 
+//MARK: After
+internal func nowPlayingLiveAsync(endpoint: String, LiveHandler: @escaping LiveHandler) {
+    guard let url = URL(string: endpoint) else { LiveHandler(.none); return }
+    
+    let decoder = JSONDecoder()
+    
+    var urlReq = URLRequest(url: url)
+    urlReq.httpMethod = "GET"
+    urlReq.timeoutInterval = TimeInterval(7)
+    
+    let task = URLSession.shared.dataTask(with: urlReq ) { data, _, _  in
+        guard let data = data else { LiveHandler(.none); return }
 
-public func nowPlayingLive(channelid: String) -> Bool {
+        do { let nowPlayingLive = try decoder.decode(NowPlayingLiveStruct.self, from: data)
+            	LiveHandler(nowPlayingLive)
+        } catch {
+            print(error)
+            LiveHandler(.none)
+        }
+    }
+    
+    task.resume()
+}
+
+
+
+public func nowPlayingLiveX(channelid: String) -> String {
     
     let timeInterval = Date().timeIntervalSince1970
     let convert = timeInterval * 1000000 as NSNumber
@@ -75,10 +92,14 @@ public func nowPlayingLive(channelid: String) -> Bool {
     
     let endpoint = "https://player.siriusxm.com/rest/v4/experience/modules/tune/now-playing-live?channelId=\(channelid)&hls_output_mode=none&marker_mode=all_separate_cue_points&ccRequestType=AUDIO_VIDEO&result-template=web&time=" + time
     
-    //print(endpoint)
-    let data = nowPlayingLiveSync(endpoint: endpoint)
-    
-    if let markers = data?.moduleListResponse.moduleList.modules.first?.moduleResponse.liveChannelData.markerLists {
+    return endpoint
+
+}
+
+internal func processNPL(data: NowPlayingLiveStruct) {
+    if let markers = data.moduleListResponse.moduleList.modules.first?.moduleResponse.liveChannelData.markerLists {
+        
+        MemBase = [:]
         
         for m in markers {
             
@@ -97,9 +118,9 @@ public func nowPlayingLive(channelid: String) -> Bool {
             }
         }
     }
-
-    return true
 }
+
+
 
 
 
@@ -444,5 +465,5 @@ struct NowPlayingLiveStruct: Codable {
     enum SegmentType: String, Codable {
         case soft = "SOFT"
     }
-
+    
 }

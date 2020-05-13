@@ -3,17 +3,23 @@ import Foundation
 typealias ChannelsTuple = (success: Bool, message: String, data: Dictionary<String, Any>, categories: Array<String> )
 
 //https://player.siriusxm.com/rest/v4/experience/carousels?page-name=np_aic_restricted&result-template=everest%7Cweb&channelGuid=86d52e32-09bf-a02d-1b6b-077e0aa05200&cutGuid=50be2dfa-e278-a608-5f0d-9a23db6c45c4&cacheBuster=1550883990670
-internal func Channels() -> ChannelsTuple {
-    var recordCategories = Array<String>()
-    
-    var success : Bool = false
-    var message : String = "Something's not right."
+
+internal func Channels() -> (request: [String : [String : [[String : Any]]]], endpoint: String, method: String) {
     
     let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get"
     let method = "channels"
     let request =  ["moduleList":["modules":[["moduleArea":"Discovery","moduleType":"ChannelListing","moduleRequest":["resultTemplate":""]]]]] as Dictionary
+      
+    return (request: request, endpoint: endpoint, method: method)
+}
+
+
+internal func processChannels(result: PostReturnTuple) -> (success: Bool, message: String, data: Dictionary<String,Any> , categories: Array<String>)  {
     
-    let result = PostSyncX(request: request, endpoint: endpoint, method: method )
+    var recordCategories = Array<String>()
+    
+    var success : Bool = false
+    var message : String = "Something's not right."
     
     if (result.response?.statusCode) == 403 {
         success = false
@@ -26,7 +32,7 @@ internal func Channels() -> ChannelsTuple {
             let m = r as? NSArray,
             let o = m[0] as? NSDictionary,
             let d = o.value( forKeyPath: "moduleResponse.contentData.channelListing.channels") as? NSArray {
-           
+            
             var ChannelDict : Dictionary = Dictionary<String, Any>()
             var ChannelIdDict : Dictionary = Dictionary<String, Any>()
             
@@ -136,7 +142,7 @@ internal func Channels() -> ChannelsTuple {
                 
                 UserDefaults.standard.set(ChannelDict, forKey: "channels")
                 UserDefaults.standard.set(ChannelIdDict, forKey: "ids")
-
+                
                 success = true
                 message = "Read the channels in."
                 
@@ -146,5 +152,4 @@ internal func Channels() -> ChannelsTuple {
     }
     
     return (success: success, message: message, data: Dictionary<String, Any>(), categories: recordCategories)
-    
 }
