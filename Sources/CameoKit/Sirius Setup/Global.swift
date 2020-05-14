@@ -1,5 +1,5 @@
 import Foundation
-import UIKit
+//import UIKit
 
 //Future
 //URL: https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=1548615083793
@@ -33,7 +33,7 @@ typealias PostReturnTuple = (message: String, success: Bool, data: Dictionary<St
 
 //Completion Handlers
 typealias CompletionHandler   = (_ success:Bool) 			  		-> Void
-typealias ImageHandler        = (_ image:UIImage?) 			   		-> Void
+//typealias ImageHandler        = (_ image:UIImage?) 			   		-> Void
 typealias PostTupleHandler    = (_ tuple:PostReturnTuple?) 	   		-> Void
 typealias DictionaryHandler   = (_ dict:NSDictionary?) 		   		-> Void
 typealias DataHandler         = (_ data:Data?) 				   		-> Void

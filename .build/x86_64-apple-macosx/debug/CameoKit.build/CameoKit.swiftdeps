@@ -14,7 +14,6 @@ depends-top-level:
 - !private "AnyObject"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- !private "CKNetworkability"
 - "CastingPrecedence"
 - !private "Config"
 - !private "Dictionary"
@@ -24,7 +23,8 @@ depends-top-level:
 - !private "HTTPCookieStorage"
 - !private "IntegerLiteralType"
 - !private "LoginData"
-- !private "NSURL"
+- !private "LoginRoute"
+- !private "Network"
 - !private "PDTRoute"
 - "Routes"
 - !private "String"
@@ -32,21 +32,16 @@ depends-top-level:
 - !private "URL"
 - !private "UserDefaults"
 - !private "audioRoute"
-- !private "autoLoginRoute"
 - !private "channelsRoute"
 - !private "keyOneRoute"
-- !private "loginRoute"
 - !private "pingRoute"
 - !private "playlistRoute"
-- !private "print"
 - "restoreCookiesX"
 - "routes"
 - !private "sessionRoute"
 - "storeCookiesX"
 - !private "user"
 depends-member:
-- !private ["8CameoKit16CKNetworkabilityC", "init"]
-- !private ["8CameoKit16CKNetworkabilityC", "start"]
 - !private ["s7CVarArgP", "bool"]
 - !private ["s7CVarArgP", "cookies"]
 - !private ["s7CVarArgP", "count"]
@@ -81,12 +76,9 @@ depends-member:
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
-- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "bool"]
 - !private ["s23CustomStringConvertibleP", "cookies"]
 - !private ["s23CustomStringConvertibleP", "count"]
-- !private ["s23CustomStringConvertibleP", "description"]
 - !private ["s23CustomStringConvertibleP", "dictionary"]
 - !private ["s23CustomStringConvertibleP", "get"]
 - !private ["s23CustomStringConvertibleP", "init"]
@@ -103,8 +95,6 @@ depends-member:
 - !private ["Se", "count"]
 - !private ["Se", "init"]
 - !private ["Se", "subscript"]
-- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
-- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "count"]
 - !private ["SD", "init"]
 - !private ["SD", "subscript"]
@@ -161,10 +151,6 @@ depends-member:
 - !private ["10PerfectLib15JSONConvertibleP", "count"]
 - !private ["10PerfectLib15JSONConvertibleP", "init"]
 - !private ["10PerfectLib15JSONConvertibleP", "subscript"]
-- !private ["So8NSCodingP", "init"]
-- !private ["So9NSCopyingP", "init"]
-- !private ["So21NSItemProviderReadingP", "init"]
-- !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So8NSObjectC", "bool"]
 - !private ["So8NSObjectC", "cookies"]
 - !private ["So8NSObjectC", "dictionary"]
@@ -187,26 +173,23 @@ depends-member:
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "standard"]
 - !private ["So8NSObjectP", "string"]
-- !private ["So14NSSecureCodingP", "init"]
-- !private ["So5NSURLC", "init"]
+- !private ["8CameoKit7NetworkC", "ability"]
+- !private ["8CameoKit7NetworkC", "start"]
 - !private ["Sq", "callAsFunction"]
-- !private ["11PerfectHTTP14RouteNavigatorP", "description"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["11PerfectHTTP6RoutesV", "add"]
 - !private ["11PerfectHTTP6RoutesV", "init"]
-- !private ["11PerfectHTTP6RoutesV", "navigator"]
 - !private ["ST", "count"]
 - !private ["ST", "init"]
 - !private ["ST", "subscript"]
-- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
-- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
-- !private ["s16TextOutputStreamP", "appendInterpolation"]
-- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["10Foundation3URLV", "init"]
 - !private ["So14NSUserDefaultsC", "bool"]
 - !private ["So14NSUserDefaultsC", "dictionary"]
 - !private ["So14NSUserDefaultsC", "set"]
 - !private ["So14NSUserDefaultsC", "standard"]
 - !private ["So14NSUserDefaultsC", "string"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -237,14 +220,12 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
-- !private "8CameoKit16CKNetworkabilityC"
 - !private "s7CVarArgP"
 - !private "Sl"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
 - !private "Se"
-- !private "s26DefaultStringInterpolationV"
 - !private "SD"
 - !private "SE"
 - !private "SQ"
@@ -256,22 +237,17 @@ depends-nominal:
 - !private "11PerfectHTTP10HTTPMethodO"
 - !private "SH"
 - !private "10PerfectLib15JSONConvertibleP"
-- !private "So8NSCodingP"
-- !private "So9NSCopyingP"
-- !private "So21NSItemProviderReadingP"
-- !private "So21NSItemProviderWritingP"
 - !private "So8NSObjectC"
 - !private "So8NSObjectP"
-- !private "So14NSSecureCodingP"
-- !private "So5NSURLC"
+- !private "8CameoKit7NetworkC"
 - !private "Sq"
-- !private "11PerfectHTTP14RouteNavigatorP"
+- !private "10Foundation20ReferenceConvertibleP"
 - !private "11PerfectHTTP6RoutesV"
 - !private "ST"
-- !private "s27StringInterpolationProtocolP"
-- !private "s16TextOutputStreamP"
+- !private "10Foundation3URLV"
 - !private "So14NSUserDefaultsC"
 - !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -287,6 +263,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Network.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -294,6 +271,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/os.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.swiftmodule"
 - "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../asn1.h"

@@ -5,13 +5,16 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!"
 - !private "+"
 - !private "=="
-- "AssignmentPrecedence"
-- "CastingPrecedence"
+- !private "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
 - "Config"
+- !private "Dictionary"
 - !private "FloatLiteralType"
-- !private "GetSync"
+- !private "GetAsync"
 - !private "IntegerLiteralType"
 - !private "NSArray"
 - !private "NSDictionary"
@@ -23,17 +26,20 @@ depends-top-level:
 - !private "print"
 - !private "root"
 depends-member:
+- !private ["s7CVarArgP", "dictionary"]
 - !private ["s7CVarArgP", "set"]
 - !private ["s7CVarArgP", "standard"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "value"]
 - !private ["Sl", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "dictionary"]
 - !private ["s28CustomDebugStringConvertibleP", "set"]
 - !private ["s28CustomDebugStringConvertibleP", "standard"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "value"]
+- !private ["s23CustomStringConvertibleP", "dictionary"]
 - !private ["s23CustomStringConvertibleP", "set"]
 - !private ["s23CustomStringConvertibleP", "standard"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -41,6 +47,7 @@ depends-member:
 - !private ["Se", "subscript"]
 - !private ["SD", "subscript"]
 - !private ["SE", "subscript"]
+- !private ["SQ", "dictionary"]
 - !private ["SQ", "set"]
 - !private ["SQ", "standard"]
 - !private ["SQ", "subscript"]
@@ -48,6 +55,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "value"]
+- !private ["SH", "dictionary"]
 - !private ["SH", "set"]
 - !private ["SH", "standard"]
 - !private ["SH", "subscript"]
@@ -64,10 +72,12 @@ depends-member:
 - !private ["So17NSFastEnumerationP", "value"]
 - !private ["So16NSMutableCopyingP", "subscript"]
 - !private ["So16NSMutableCopyingP", "value"]
+- !private ["So8NSObjectC", "dictionary"]
 - !private ["So8NSObjectC", "set"]
 - !private ["So8NSObjectC", "standard"]
 - !private ["So8NSObjectC", "subscript"]
 - !private ["So8NSObjectC", "value"]
+- !private ["So8NSObjectP", "dictionary"]
 - !private ["So8NSObjectP", "set"]
 - !private ["So8NSObjectP", "standard"]
 - !private ["So8NSObjectP", "subscript"]
@@ -76,14 +86,17 @@ depends-member:
 - !private ["So14NSSecureCodingP", "value"]
 - !private ["ST", "subscript"]
 - !private ["ST", "value"]
+- !private ["So14NSUserDefaultsC", "dictionary"]
 - !private ["So14NSUserDefaultsC", "set"]
 - !private ["So14NSUserDefaultsC", "standard"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dictionary"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dictionary"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscript"]

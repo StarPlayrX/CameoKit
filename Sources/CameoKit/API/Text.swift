@@ -22,5 +22,3 @@ internal func TextAsync(endpoint: String, TextHandler: @escaping TextHandler)  {
     
     task.resume()
 }
-
-

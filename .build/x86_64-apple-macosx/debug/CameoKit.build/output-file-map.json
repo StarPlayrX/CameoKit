@@ -2,6 +2,36 @@
   "": {
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/master.swiftdeps"
   },
+  "/Users/todd/CameoKit/Sources/CameoKit/API/Data.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Data.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Data.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Data~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Data.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/API/Get.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/API/NowPlayingLive.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/API/Post.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/API/Text.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Text.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Text.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Text~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Text.swiftdeps"
+  },
   "/Users/todd/CameoKit/Sources/CameoKit/CameoKit.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/CameoKit.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/CameoKit.swift.o",
@@ -26,17 +56,17 @@
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Playlist~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Playlist.swiftdeps"
   },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Audio/nowPlayingLive.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/nowPlayingLive.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/nowPlayingLive.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/nowPlayingLive~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/nowPlayingLive.swiftdeps"
-  },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/Channels.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels.swift.o",
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/Extensions.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions.swiftdeps"
   },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/Login.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Login.d",
@@ -50,12 +80,6 @@
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Session~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Session.swiftdeps"
   },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Setup/CKNetworkability.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/CKNetworkability.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/CKNetworkability.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/CKNetworkability~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/CKNetworkability.swiftdeps"
-  },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Setup/Config.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Config.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Config.swift.o",
@@ -68,70 +92,16 @@
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Global~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Global.swiftdeps"
   },
+  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Setup/Network.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Network.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Network.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Network~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Network.swiftdeps"
+  },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Setup/Routes.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Routes.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Routes.swift.o",
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Routes~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Routes.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sync/DataSync.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/DataSync.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/DataSync.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/DataSync~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/DataSync.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sync/GetSync.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/GetSync.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/GetSync.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/GetSync~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/GetSync.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sync/ImageSync.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/ImageSync.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/ImageSync.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/ImageSync~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/ImageSync.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sync/PostSync.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/PostSync.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/PostSync.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/PostSync~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/PostSync.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sync/TextSync.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/TextSync.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/TextSync.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/TextSync~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/TextSync.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Xtra Channels/XtraAudio.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraAudio.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraAudio.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraAudio~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraAudio.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Xtra Channels/XtraPlaylist.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraPlaylist.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraPlaylist.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraPlaylist~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraPlaylist.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Xtra Channels/XtraRoutes.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraRoutes.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraRoutes.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraRoutes~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraRoutes.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Xtra Channels/XtraSession.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraSession.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraSession.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraSession~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraSession.swiftdeps"
-  },
-  "/Users/todd/CameoKit/Sources/CameoKit/Xtra Channels/XtraTune.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraTune.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraTune.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraTune~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraTune.swiftdeps"
   }
 }

@@ -1,6 +1,7 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "Login"
+- "LoginX"
+- "processLogin"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
@@ -11,20 +12,22 @@ depends-top-level:
 - "Bool"
 - !private "BooleanLiteralType"
 - "CastingPrecedence"
-- !private "Dictionary"
+- "Dictionary"
 - !private "FloatLiteralType"
 - !private "HTTPCookie"
 - !private "HTTPCookieStorage"
 - !private "Int"
 - !private "IntegerLiteralType"
-- "Login"
+- "LoginX"
 - !private "NSArray"
 - !private "NSDictionary"
-- !private "PostSync"
+- "PostReturnTuple"
 - "String"
 - !private "StringLiteralType"
+- !private "URL"
 - !private "UserDefaults"
 - !private "http"
+- "processLogin"
 - !private "root"
 - !private "user"
 - !private "||"
@@ -42,6 +45,7 @@ depends-member:
 - !private ["Sl", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "allHeaderFields"]
 - !private ["s28CustomDebugStringConvertibleP", "cookies"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "set"]
 - !private ["s28CustomDebugStringConvertibleP", "setCookies"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
@@ -54,6 +58,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "value"]
 - !private ["s23CustomStringConvertibleP", "allHeaderFields"]
 - !private ["s23CustomStringConvertibleP", "cookies"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "set"]
 - !private ["s23CustomStringConvertibleP", "setCookies"]
 - !private ["s23CustomStringConvertibleP", "shared"]
@@ -62,11 +67,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "url"]
 - !private ["s23CustomStringConvertibleP", "value"]
+- !private ["Se", "init"]
 - !private ["Se", "subscript"]
 - !private ["SD", "subscript"]
+- !private ["SE", "init"]
 - !private ["SE", "subscript"]
 - !private ["SQ", "allHeaderFields"]
 - !private ["SQ", "cookies"]
+- !private ["SQ", "init"]
 - !private ["SQ", "set"]
 - !private ["SQ", "setCookies"]
 - !private ["SQ", "shared"]
@@ -86,6 +94,7 @@ depends-member:
 - !private ["So17NSHTTPURLResponseC", "url"]
 - !private ["SH", "allHeaderFields"]
 - !private ["SH", "cookies"]
+- !private ["SH", "init"]
 - !private ["SH", "set"]
 - !private ["SH", "setCookies"]
 - !private ["SH", "shared"]
@@ -136,13 +145,17 @@ depends-member:
 - !private ["So14NSSecureCodingP", "subscript"]
 - !private ["So14NSSecureCodingP", "url"]
 - !private ["So14NSSecureCodingP", "value"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["ST", "subscript"]
 - !private ["ST", "value"]
+- !private ["10Foundation3URLV", "init"]
 - !private ["So13NSURLResponseC", "allHeaderFields"]
 - !private ["So13NSURLResponseC", "statusCode"]
 - !private ["So13NSURLResponseC", "url"]
 - !private ["So14NSUserDefaultsC", "set"]
 - !private ["So14NSUserDefaultsC", "standard"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "allHeaderFields"]
@@ -165,6 +178,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscript"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "url"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "value"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
 - !private "s7CVarArgP"
@@ -192,9 +206,13 @@ depends-nominal:
 - !private "So8NSObjectC"
 - !private "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "10Foundation20ReferenceConvertibleP"
 - !private "ST"
+- !private "10Foundation3URLV"
 - !private "So13NSURLResponseC"
 - !private "So14NSUserDefaultsC"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -295,4 +313,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0166fc5006751768ad6c930f4b30c282"
+interface-hash: "daa922944a004ed4e8ecac6648555055"

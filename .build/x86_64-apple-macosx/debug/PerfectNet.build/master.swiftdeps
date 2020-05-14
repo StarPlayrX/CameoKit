@@ -1,11 +1,11 @@
 version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
 options: "acf9a090bcd978cce2dcbdabe5255821"
-build_time: [1587277030, 27355000]
+build_time: [1589416715, 224943000]
 inputs:
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/Net.swift": [1587274718, 839358148]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetAddress.swift": [1587274718, 839594556]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetEvent.swift": [1587274718, 839759126]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetNamedPipe.swift": [1587274718, 839905431]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetTCP.swift": [1587274718, 840075837]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetTCPSSL.swift": [1587274718, 840321334]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetUDP.swift": [1587274718, 840447529]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/Net.swift": [1589416663, 243819660]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetAddress.swift": [1589416663, 243931156]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetEvent.swift": [1589416663, 244116006]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetNamedPipe.swift": [1589416663, 244277436]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetTCP.swift": [1589416663, 244472574]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetTCPSSL.swift": [1589416663, 244747265]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Net/Sources/PerfectNet/NetUDP.swift": [1589416663, 244949782]

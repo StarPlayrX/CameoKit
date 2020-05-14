@@ -1,7 +1,7 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "lock"
-- "PDT_"
+- "PDTendpoint"
+- "processPDT"
 - "MD5"
 - "NewPDT"
 provides-nominal:
@@ -62,7 +62,6 @@ provides-member:
 - ["8CameoKit6NewPDTV9TimestampV", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "!"
 - !private "*"
 - !private "+"
 - !private "+="
@@ -70,7 +69,6 @@ depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
 - "Bool"
-- "BooleanLiteralType"
 - "CastingPrecedence"
 - "Codable"
 - "CodingKey"
@@ -78,7 +76,6 @@ depends-top-level:
 - !private "Date"
 - "Double"
 - !private "FloatLiteralType"
-- !private "GetPDTX"
 - !private "Insecure"
 - "Int"
 - !private "IntegerLiteralType"
@@ -86,12 +83,11 @@ depends-top-level:
 - !private "MemBase"
 - !private "NSNumber"
 - "NewPDT"
-- "PDT_"
+- "PDTendpoint"
 - "String"
 - "StringLiteralType"
 - !private "_findStringSwitchCase"
-- "lock"
-- !private "nowPlayingLive"
+- "processPDT"
 - !private "user"
 - !private "~="
 depends-member:
@@ -110,12 +106,10 @@ depends-member:
 - !private ["SK", "data"]
 - !private ["SK", "first"]
 - !private ["SK", "init"]
-- !private ["SK", "isEmpty"]
 - !private ["Sz", "init"]
 - !private ["s7CVarArgP", "data"]
 - !private ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "subscript"]
 - ["s9CodingKeyP", "=="]
 - ["s9CodingKeyP", "RawValue"]
@@ -233,11 +227,9 @@ depends-member:
 - !private ["Sl", "data"]
 - !private ["Sl", "first"]
 - !private ["Sl", "init"]
-- !private ["Sl", "isEmpty"]
 - !private ["Sl", "subscript"]
 - !private ["SL", "data"]
 - !private ["SL", "init"]
-- !private ["SL", "isEmpty"]
 - !private ["SL", "timeIntervalSince1970"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
 - !private ["10Foundation15ContiguousBytesP", "init"]
@@ -255,7 +247,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "hashValue"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "intValue"]
-- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - ["s28CustomDebugStringConvertibleP", "rawValue"]
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
@@ -263,7 +254,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "data"]
 - !private ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "timeIntervalSince1970"]
 - ["s23CustomStringConvertibleP", "=="]
@@ -280,7 +270,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "hashValue"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "intValue"]
-- !private ["s23CustomStringConvertibleP", "isEmpty"]
 - ["s23CustomStringConvertibleP", "rawValue"]
 - ["s23CustomStringConvertibleP", "stringValue"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -372,7 +361,6 @@ depends-member:
 - ["Se", "hashValue"]
 - !private ["Se", "id"]
 - ["Se", "init"]
-- !private ["Se", "isEmpty"]
 - !private ["Se", "isLiveVideoEligible"]
 - !private ["Se", "isPlaceholderShow"]
 - !private ["Se", "layer"]
@@ -449,7 +437,6 @@ depends-member:
 - ["SE", "hashValue"]
 - !private ["SE", "id"]
 - ["SE", "init"]
-- !private ["SE", "isEmpty"]
 - !private ["SE", "isLiveVideoEligible"]
 - !private ["SE", "isPlaceholderShow"]
 - !private ["SE", "layer"]
@@ -514,7 +501,6 @@ depends-member:
 - ["SQ", "hashValue"]
 - ["SQ", "init"]
 - ["SQ", "intValue"]
-- !private ["SQ", "isEmpty"]
 - ["SQ", "rawValue"]
 - ["SQ", "stringValue"]
 - !private ["SQ", "subscript"]
@@ -525,17 +511,13 @@ depends-member:
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s32ExpressibleByStringInterpolationP", "data"]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- !private ["s32ExpressibleByStringInterpolationP", "isEmpty"]
 - !private ["s26ExpressibleByStringLiteralP", "data"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
 - ["8CameoKit6NewPDTV10ExternalIDV", "ID"]
 - ["8CameoKit6NewPDTV10ExternalIDV", "String"]
 - ["8CameoKit6NewPDTV10ExternalIDV", "deinit"]
@@ -560,7 +542,6 @@ depends-member:
 - ["SH", "hashValue"]
 - ["SH", "init"]
 - ["SH", "intValue"]
-- !private ["SH", "isEmpty"]
 - ["SH", "rawValue"]
 - ["SH", "stringValue"]
 - !private ["SH", "subscript"]
@@ -584,7 +565,6 @@ depends-member:
 - !private ["10PerfectLib15JSONConvertibleP", "data"]
 - !private ["10PerfectLib15JSONConvertibleP", "first"]
 - !private ["10PerfectLib15JSONConvertibleP", "init"]
-- !private ["10PerfectLib15JSONConvertibleP", "isEmpty"]
 - !private ["10PerfectLib15JSONConvertibleP", "subscript"]
 - !private ["s22KeyedDecodingContainerV", "decode"]
 - !private ["s22KeyedDecodingContainerV", "decodeIfPresent"]
@@ -630,7 +610,6 @@ depends-member:
 - ["8CameoKit6NewPDTV26LiveChannelResponseElementV", "markerLists"]
 - !private ["s25LosslessStringConvertibleP", "data"]
 - !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s25LosslessStringConvertibleP", "isEmpty"]
 - !private ["9CryptoKit8InsecureO3MD5V", "hash"]
 - ["8CameoKit6NewPDTV6MarkerV", "Cut"]
 - ["8CameoKit6NewPDTV6MarkerV", "Double"]
@@ -667,7 +646,6 @@ depends-member:
 - ["8CameoKit6NewPDTV7MessageV", "message"]
 - !private ["s10MirrorPathP", "data"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s10MirrorPathP", "isEmpty"]
 - ["8CameoKit6NewPDTV6ModuleV", "Int"]
 - ["8CameoKit6NewPDTV6ModuleV", "ModuleResponse"]
 - ["8CameoKit6NewPDTV6ModuleV", "String"]
@@ -713,23 +691,14 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "first"]
 - !private ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["So8NSCodingP", "data"]
-- !private ["So8NSCodingP", "isEmpty"]
 - !private ["So9NSCopyingP", "data"]
-- !private ["So9NSCopyingP", "isEmpty"]
 - !private ["So21NSItemProviderReadingP", "data"]
-- !private ["So21NSItemProviderReadingP", "isEmpty"]
 - !private ["So21NSItemProviderWritingP", "data"]
-- !private ["So21NSItemProviderWritingP", "isEmpty"]
 - !private ["So16NSMutableCopyingP", "data"]
-- !private ["So16NSMutableCopyingP", "isEmpty"]
 - !private ["So8NSObjectC", "data"]
-- !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectP", "data"]
-- !private ["So8NSObjectP", "isEmpty"]
 - !private ["So14NSSecureCodingP", "data"]
-- !private ["So14NSSecureCodingP", "isEmpty"]
 - !private ["So8NSStringC", "data"]
-- !private ["So8NSStringC", "isEmpty"]
 - ["8CameoKit6NewPDTV", "Album"]
 - ["8CameoKit6NewPDTV", "Artist"]
 - ["8CameoKit6NewPDTV", "Bool"]
@@ -769,7 +738,6 @@ depends-member:
 - !private ["Sm", "data"]
 - !private ["Sm", "first"]
 - !private ["Sm", "init"]
-- !private ["Sm", "isEmpty"]
 - ["SY", "=="]
 - ["SY", "RawValue"]
 - ["SY", ""]
@@ -792,7 +760,6 @@ depends-member:
 - !private ["ST", "data"]
 - !private ["ST", "first"]
 - !private ["ST", "init"]
-- !private ["ST", "isEmpty"]
 - !private ["ST", "subscript"]
 - ["8CameoKit6NewPDTV4ShowV", "Bool"]
 - ["8CameoKit6NewPDTV4ShowV", "CodingKey"]
@@ -818,16 +785,12 @@ depends-member:
 - !private ["Sx", "init"]
 - !private ["SS", "data"]
 - !private ["SS", "init"]
-- !private ["SS", "isEmpty"]
 - !private ["Sy", "data"]
 - !private ["Sy", "init"]
-- !private ["Sy", "isEmpty"]
 - !private ["s16TextOutputStreamP", "data"]
 - !private ["s16TextOutputStreamP", "init"]
-- !private ["s16TextOutputStreamP", "isEmpty"]
 - !private ["s20TextOutputStreamableP", "data"]
 - !private ["s20TextOutputStreamableP", "init"]
-- !private ["s20TextOutputStreamableP", "isEmpty"]
 - ["8CameoKit6NewPDTV9TimestampV", "String"]
 - ["8CameoKit6NewPDTV9TimestampV", "absolute"]
 - ["8CameoKit6NewPDTV9TimestampV", "deinit"]
@@ -836,36 +799,27 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "data"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince1970"]
 - !private ["s24_DestructorSafeContainerP", "first"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s19_HasContiguousBytesP", "data"]
 - !private ["s19_HasContiguousBytesP", "first"]
 - !private ["s19_HasContiguousBytesP", "init"]
-- !private ["s19_HasContiguousBytesP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "data"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
 depends-nominal:
@@ -1160,4 +1114,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a89207a564edfdc3304e79bac2f14fbe"
+interface-hash: "8ce3a6ae68abcf5695d98c6c272a3c85"

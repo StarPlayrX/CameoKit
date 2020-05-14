@@ -2,6 +2,7 @@
 provides-top-level:
 - "ChannelsTuple"
 - "Channels"
+- "processChannels"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
@@ -23,12 +24,11 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - !private "NSArray"
 - !private "NSDictionary"
-- !private "PostSync"
+- "PostReturnTuple"
 - "String"
 - !private "StringLiteralType"
-- !private "UnicodeScalarType"
 - !private "UserDefaults"
-- !private "print"
+- "processChannels"
 - !private "user"
 - !private "~="
 depends-member:
@@ -421,4 +421,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d45a2a8d372ffdd99322ebb61f3a7ef2"
+interface-hash: "17552b0e32882a3b77c52c59284ac24e"

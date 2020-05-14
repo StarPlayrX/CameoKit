@@ -17,7 +17,7 @@ func AudioX(data: String, channelId: String ) -> String {
     case (true, true)  :
         bitrate = "256k"
     case (false, true) :
-        bitrate = "64k"
+        bitrate = "256k"
     case (_, false):
         bitrate = "32k"
     }

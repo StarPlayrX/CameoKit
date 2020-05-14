@@ -10,12 +10,10 @@ depends-top-level:
 - !private "+"
 - !private "??"
 - "AssignmentPrecedence"
-- !private "CKnetworkIsConnected"
-- !private "CKnetworkIsWiFi"
+- !private "Network"
 - "Playlist"
 - "String"
 - !private "StringLiteralType"
-- !private "TextSync"
 - !private "UnicodeScalarType"
 - !private "hls_sources"
 - !private "usePrime"
@@ -78,6 +76,9 @@ depends-member:
 - !private ["So8NSObjectP", "replacingOccurrences"]
 - !private ["So14NSSecureCodingP", "replacingOccurrences"]
 - !private ["So8NSStringC", "replacingOccurrences"]
+- !private ["8CameoKit7NetworkC", "ability"]
+- !private ["8CameoKit7NetworkC", "networkIsConnected"]
+- !private ["8CameoKit7NetworkC", "networkIsWiFi"]
 - !private ["Sm", "init"]
 - !private ["Sm", "replacingOccurrences"]
 - !private ["ST", "init"]
@@ -138,6 +139,7 @@ depends-nominal:
 - !private "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
+- !private "8CameoKit7NetworkC"
 - !private "Sm"
 - !private "ST"
 - !private "SS"

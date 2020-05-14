@@ -17,7 +17,7 @@ func Playlist(channelid: String) -> String  {
     if ( net.networkIsWiFi && net.networkIsConnected ) {
         bitrate = "256k"
     } else if ( !net.networkIsWiFi && net.networkIsConnected ) {
-        bitrate = "64k"
+        bitrate = "256k"
     } else {
         bitrate = "32k"
     }

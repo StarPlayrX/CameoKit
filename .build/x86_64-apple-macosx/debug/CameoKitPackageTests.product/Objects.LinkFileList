@@ -231,28 +231,23 @@
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/COpenSSL.build/x_.c.o
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/COpenSSL.build/xcbc_enc.c.o
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/COpenSSL.build/xts128.c.o
+/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Data.swift.o
+/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get.swift.o
+/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.swift.o
+/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post.swift.o
+/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Text.swift.o
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/CameoKit.swift.o
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Audio.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/PDT.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Playlist.swift.o'
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/nowPlayingLive.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels.swift.o'
+'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Login.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Session.swift.o'
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/CKNetworkability.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Config.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Global.swift.o'
+'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Network.swift.o'
 '/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Setup/Routes.swift.o'
-/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/DataSync.swift.o
-/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/GetSync.swift.o
-/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/ImageSync.swift.o
-/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/PostSync.swift.o
-/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sync/TextSync.swift.o
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraAudio.swift.o'
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraPlaylist.swift.o'
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraRoutes.swift.o'
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraSession.swift.o'
-'/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Xtra Channels/XtraTune.swift.o'
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKitTests.build/CameoKitTests.swift.o
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKitTests.build/LinuxMain.swift.o
 /Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKitTests.build/XCTestManifests.swift.o
