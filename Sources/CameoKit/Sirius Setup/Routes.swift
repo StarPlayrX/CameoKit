@@ -26,21 +26,7 @@ internal func keyOneRoute(request: HTTPRequest, _ response: HTTPResponse) {
 
 internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
     
-    var epoint : String = ""
-    
-    if user.channel.isEmpty {
-    	epoint = nowPlayingLiveX(channelid: "siriushits1")
-    } else {
-        epoint = nowPlayingLiveX(channelid: user.channel)
-    }
-    
-    nowPlayingLiveAsync(endpoint: epoint) { data in
-        guard let data = data else { response.completed(); return }
-        processNPL(data: data)
-        runPDT()
-    }
-     
-	//MARK: RUN PDT
+    //MARK: RUN PDT
     func runPDT() {
         let endpoint = PDTendpoint()
         
@@ -56,6 +42,20 @@ internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
             }
         }
     }
+    
+    runPDT()
+
+    
+    if !user.channel.isEmpty {
+        let epoint = nowPlayingLiveX(channelid: user.channel)
+        
+        nowPlayingLiveAsync(endpoint: epoint) { data in
+            if let data = data {
+                processNPL(data: data)
+            }
+        }
+    }
+
 }
 
 //session
@@ -97,6 +97,7 @@ internal func LoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
         let returnData = processLogin(username: u, pass: p, result: result)
         
         if returnData.success {
+
             storeCookiesX()
         }
                 
@@ -110,12 +111,20 @@ internal func LoginRoute(request: HTTPRequest, _ response: HTTPResponse)  {
 //channels
 internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
     
-    func runFailure() {
+    
+    let _ = Session(channelid: "siriushits1")
+    let returnData = Channels2()
+    let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success, "categories": returnData.categories] as [String : Any]
+    try? _ = response.setBody(json: jayson)
+    response.setHeader(.contentType, value:"application/json").completed()
+    
+    
+  /*  func runFailure() {
         let jayson = ["data": [:], "message": "Login failure.", "success": false] as [String : Any]
         try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
     }
     
-    
+
     let api = Channels()
     
     PostAsync(request: api.request, endpoint: api.endpoint, method: api.method) { (result) in
@@ -129,7 +138,7 @@ internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
     	try? _ = response.setBody(json: jayson)
         response.setHeader(.contentType, value:"application/json").completed()
         
-    }
+    }*/
 
 }
 
@@ -215,3 +224,234 @@ extension Date {
         }
     }
 }
+
+
+
+
+//https://player.siriusxm.com/rest/v4/experience/carousels?page-name=np_aic_restricted&result-template=everest%7Cweb&channelGuid=86d52e32-09bf-a02d-1b6b-077e0aa05200&cutGuid=50be2dfa-e278-a608-5f0d-9a23db6c45c4&cacheBuster=1550883990670
+internal func Channels2() -> ChannelsTuple {
+    var recordCategories = Array<String>()
+    
+    var success : Bool = false
+    var message : String = "Something's not right."
+    
+    let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get"
+    let method = "channels"
+    let request =  ["moduleList":["modules":[["moduleArea":"Discovery","moduleType":"ChannelListing","moduleRequest":["resultTemplate":""]]]]] as Dictionary
+    
+    let result = PostSync(request: request, endpoint: endpoint, method: method )
+    
+    if (result.response?.statusCode) == 403 {
+        success = false
+        message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
+    }
+    
+    if result.success {
+        let result = result.data as NSDictionary
+        if let r = result.value(forKeyPath: "ModuleListResponse.moduleList.modules") {
+            let m = r as? NSArray
+            let o = m![0] as! NSDictionary
+            let d = o.value( forKeyPath: "moduleResponse.contentData.channelListing.channels") as! NSArray
+            
+            var ChannelDict : Dictionary = Dictionary<String, Any>()
+            var ChannelIdDict : Dictionary = Dictionary<String, Any>()
+            
+            
+            for i in d {
+                if let dict = i as? NSDictionary,
+                    let channelId = dict.value( forKeyPath: "channelId") as? String {
+                    
+                    //let channelGuid = dict.value( forKeyPath: "channelGuid") as? String
+                    
+                    let categories = dict.value( forKeyPath: "categories.categories") as? NSArray
+                    
+                    if let cats = categories?.firstObject as? NSDictionary,
+                        let channelNumber = dict.value( forKeyPath: "channelNumber") as? String,
+                        var category = cats.value( forKeyPath: "name") as? String {
+                        
+                        switch category {
+                            case "MLB Play-by-Play":
+                                category = "MLB"
+                            case "NBA Play-by-Play":
+                                category = "NBA"
+                            case "NFL Play-by-Play":
+                                category = "NFL"
+                            case "NHL Play-by-Play":
+                                category = "NHL"
+                            case "Sports Play-by-Play":
+                                category = "Play-by-Play"
+                            default:
+                                _ = category
+                        }
+                        
+                        let chNumber = Int(channelNumber)
+                        switch chNumber {
+                            case 20,18,19,22,23,24,31,29,30,38,176,700,711:
+                                category = "Artists"
+                            case 11,12:
+                                category = "Pop"
+                            case 4,7,8,28,301,302:
+                                category = "Rock"
+                            case 13:
+                                category = "Dance/Electronic"
+                            case 9,21,33,34,35,36,173,359,714,758:
+                                category = "Alternative"
+                            case 37,39,40,41:
+                                category = "Heavy Metal"
+                            case 5,6,701,703,776:
+                                category = "Oldies"
+                            case 314,712,713:
+                                category = "Punk"
+                            case 165,169:
+                                category = "Canadian"
+                            case 172:
+                                category = "Sports"
+                            case 171:
+                                category = "Country"
+                            case 141, 142, 706:
+                                category = "Jazz/Standards/Classical"
+                            case 152, 158:
+                                category = "Latino"
+                            default:
+                                _ = category
+                            //category = category
+                        }
+                        
+                        // append it to the categorieshit
+                        if !recordCategories.contains(category) {
+                            recordCategories.append(category)
+                        }
+                        
+                        var mediumImage = ""
+                        
+                        if let images = dict.value( forKeyPath: "images.images") as? NSArray,
+                            let name = dict.value( forKeyPath: "name") as? String {
+                            
+                            let a = 4 //low
+                            let b = 8 //high
+                            
+                            for img in images.reversed()[a...b] {
+                                
+                                if let g = img as? NSDictionary, let height = g["height"] as? Int, let name = g["name"] as? String {
+                                    
+                                    if height == 720 && name == "color channel logo (on dark)" {
+                                        if let mi = g["url"] as? String {
+                                            mediumImage = mi
+                                            
+                                            break
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            let cl = [ "channelId": channelId, "channelNumber": channelNumber, "name": name,
+                                       "mediumImage": mediumImage, "category": category, "preset": false ] as [String : Any]
+                            
+                            if channelNumber == "2" {
+                                print(cl)
+                            }
+                            let ids = ["channelNumber": channelNumber] as [String : String]
+                            
+                            ChannelDict[channelNumber] = cl
+                            ChannelIdDict[channelId] = ids
+                            
+                        }
+                        
+                        
+                    }
+                }
+            }
+            
+            user.channels = ChannelDict
+            //user.ids = ChannelIdDict
+            
+            if !user.channels.isEmpty {
+                
+                UserDefaults.standard.set(ChannelDict, forKey: "channels")
+                UserDefaults.standard.set(ChannelIdDict, forKey: "ids")
+                
+                success = true
+                message = "Read the channels in."
+                
+                return (success: success, message: message, data: ChannelDict, recordCategories)
+            }
+            
+        }
+    }
+    
+    return (success: success, message: message, data: Dictionary<String, Any>(), categories: recordCategories)
+    
+}
+
+
+//
+//  PostSync.swift
+//  Camouflage
+//
+//  Created by Todd on 1/25/19.
+//  Copyright © 2019 Todd Bruss. All rights reserved.
+//
+
+
+
+internal func PostSync(request: Dictionary<String, Any>, endpoint: String, method: String) -> PostReturnTuple  {
+    
+    //MARK - for Sync
+    let semaphore = DispatchSemaphore(value: 0)
+    var syncData : PostReturnTuple? = (message: "", success: false, data: Dictionary<String, Any>(), response: HTTPURLResponse() )
+    let http_method = "POST"
+    let time_out = 30
+    let url = URL(string: endpoint)
+    var urlReq : URLRequest? = URLRequest(url: url!)
+    
+    if urlReq != nil {
+        urlReq!.httpBody = try? JSONSerialization.data(withJSONObject: request, options: .prettyPrinted)
+        urlReq!.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlReq!.httpMethod = http_method
+        urlReq!.timeoutInterval = TimeInterval(time_out)
+        urlReq!.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15", forHTTPHeaderField: "User-Agent")
+        let task = URLSession.shared.dataTask(with: urlReq! ) { ( rData, resp, error ) in
+            
+            if resp != nil && (resp as? HTTPURLResponse)!.statusCode == 200 {
+                
+                var result : Dictionary? = Dictionary<String, Any>()
+                var myData : Data? = Data()
+                myData = rData
+                
+                do {
+                    result = try? JSONSerialization.jsonObject(with: myData!, options: JSONSerialization.ReadingOptions.allowFragments) as? Dictionary<String, Any> ?? nil
+                }
+                
+                
+                syncData = ((message: method + " was successful.", success: true, data: result, response: resp as! HTTPURLResponse ) as! PostReturnTuple)
+                
+                myData = nil
+                result = nil
+            } else {
+                //we always require 200 on the post, anything else is a failure
+                
+                if resp != nil {
+                    syncData = (message: method + " failed, see response.", success: false, data: ["": ""], response: resp as! HTTPURLResponse ) as PostReturnTuple
+                } else {
+                    syncData = (message: method + " failed, no response.", success: false, data: ["": ""], response: HTTPURLResponse() ) as PostReturnTuple
+                }
+            }
+            
+            //MARK - for Sync
+            semaphore.signal()
+        }
+        
+        task.resume()
+        _ = semaphore.wait(timeout: .distantFuture)
+    }
+    
+    urlReq = nil
+    
+    if syncData != nil {
+        return syncData!
+    }
+    
+    return (message: method + " failed!", success: false, data: ["Error": "Fatal Error"], response: HTTPURLResponse() ) as PostReturnTuple
+}
+
+

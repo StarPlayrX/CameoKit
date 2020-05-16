@@ -21,13 +21,16 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
     var success : Bool = false
     var message : String = "Something's not right."
     
+    print(result.response?.statusCode)
     if (result.response?.statusCode) == 403 {
         success = false
         message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
     }
     
+    print(result)
     if result.success {
         let result = result.data as NSDictionary
+        
         if let r = result.value(forKeyPath: "ModuleListResponse.moduleList.modules"),
             let m = r as? NSArray,
             let o = m[0] as? NSDictionary,
@@ -36,6 +39,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
             var ChannelDict : Dictionary = Dictionary<String, Any>()
             var ChannelIdDict : Dictionary = Dictionary<String, Any>()
             
+            print(d.count)
             for i in d {
                 if let dict = i as? NSDictionary,
                     let channelId = dict.value( forKeyPath: "channelId") as? String {

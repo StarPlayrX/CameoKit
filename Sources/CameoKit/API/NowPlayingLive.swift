@@ -20,11 +20,12 @@ internal func nowPlayingLiveAsync(endpoint: String, LiveHandler: @escaping LiveH
     urlReq.httpMethod = "GET"
     urlReq.timeoutInterval = TimeInterval(7)
     
-    let task = URLSession.shared.dataTask(with: urlReq ) { data, _, _  in
+    let task = URLSession.shared.dataTask(with: urlReq ) { data, r, e  in
         guard let data = data else { LiveHandler(.none); return }
-
+        
         do { let nowPlayingLive = try decoder.decode(NowPlayingLiveStruct.self, from: data)
-            	LiveHandler(nowPlayingLive)
+            LiveHandler(nowPlayingLive)
+
         } catch {
             print(error)
             LiveHandler(.none)
