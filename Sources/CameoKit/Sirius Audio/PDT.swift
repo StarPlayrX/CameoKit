@@ -31,6 +31,10 @@ internal func processPDT(data: NewPDT) -> [String:Any] {
         if let live = data.moduleListResponse.moduleList.modules.first?.moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses {
             
             for i in live {
+                
+                
+                
+            
                 let channelid = i.channelID
                 let markerLists = i.markerLists
                 let cutlayer = markerLists.first
@@ -38,15 +42,19 @@ internal func processPDT(data: NewPDT) -> [String:Any] {
                 if let markers = cutlayer?.markers {
                     let item = markers.first
                     
-                    if let song = item?.cut?.title, let artist = item?.cut?.artists.first?.name, let getchannelbyId = user.ids[channelid] as? [String: Any],
-                        let channelNo = getchannelbyId["channelNumber"] as? String {
+                    
+                    
+                    
+                    if let song = item?.cut?.title, let artist = item?.cut?.artists.first?.name, let getchannelbyId = userX.ids[channelid] as? [String: Any],
                         
+                        let channelNo = getchannelbyId["channelNumber"] as? String {
+
                         if let key = MD5(artist + song), let image = MemBase[key] {
                             ArtistSongData[channelNo] = ["image" : image, "artist": artist, "song" : song]
                         } else {
                             ArtistSongData[channelNo] = ["image" : "", "artist": artist, "song" : song]
                         }
-                    }
+                    } 
                 }
             }
         }

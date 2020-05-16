@@ -21,13 +21,11 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
     var success : Bool = false
     var message : String = "Something's not right."
     
-    print(result.response?.statusCode)
     if (result.response?.statusCode) == 403 {
         success = false
         message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
     }
     
-    print(result)
     if result.success {
         let result = result.data as NSDictionary
         
@@ -39,10 +37,10 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
             var ChannelDict : Dictionary = Dictionary<String, Any>()
             var ChannelIdDict : Dictionary = Dictionary<String, Any>()
             
-            print(d.count)
             for i in d {
                 if let dict = i as? NSDictionary,
                     let channelId = dict.value( forKeyPath: "channelId") as? String {
+                    
                     
                     //let channelGuid = dict.value( forKeyPath: "channelGuid") as? String
                     
@@ -130,19 +128,24 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                             let cl = [ "channelId": channelId, "channelNumber": channelNumber, "name": name,
                                        "mediumImage": mediumImage, "category": category, "preset": false ] as [String : Any]
                             let ids = ["channelNumber": channelNumber] as [String : String]
-                            
+                          
+
                             ChannelDict[channelNumber] = cl
                             ChannelIdDict[channelId] = ids
+                            
                             
                         }
                     }
                 }
             }
             
-            user.channels = ChannelDict
-            user.ids = ChannelIdDict
+            userX.channels = ChannelDict
+            userX.ids = ChannelIdDict
             
-            if !user.channels.isEmpty {
+            
+            
+            
+            if !userX.channels.isEmpty {
                 
                 UserDefaults.standard.set(ChannelDict, forKey: "channels")
                 UserDefaults.standard.set(ChannelIdDict, forKey: "ids")

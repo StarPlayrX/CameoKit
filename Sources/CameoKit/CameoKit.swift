@@ -13,7 +13,6 @@ public func routes() -> Routes {
     
     Config()
     
-    //print("Config Success")
     //process cached data in the background
     
     let logindata = (email:"", pass:"", channels: [:], ids: [:], channel: "", token: "", loggedin: false, gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
@@ -36,18 +35,18 @@ public func routes() -> Routes {
         let autoKey = UserDefaults.standard.string(forKey: "key") 				?? ""
         let autoKeyurl = UserDefaults.standard.string(forKey: "keyurl")			?? ""
         
-        user = logindata
-        user.email = autoUser
-        user.channels = autoChannels
-        user.ids = autoIds
-        user.channel = autoChannel
-        user.token = autoToken
-        user.loggedin = autoLoggedin
-        user.gupid = autoGupid
-        user.consumer = autoConsumer
-        user.key = autoKey
-        user.keyurl = autoKeyurl
-        user.pass = autoPass
+        userX = logindata
+        userX.email = autoUser
+        userX.channels = autoChannels
+        userX.ids = autoIds
+        userX.channel = autoChannel
+        userX.token = autoToken
+        userX.loggedin = autoLoggedin
+        userX.gupid = autoGupid
+        userX.consumer = autoConsumer
+        userX.key = autoKey
+        userX.keyurl = autoKeyurl
+        userX.pass = autoPass
     }
     
     restoreCookiesX()

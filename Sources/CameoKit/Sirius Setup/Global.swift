@@ -26,7 +26,7 @@ public var smallChannelLineUp = Data()
 
 public typealias LoginData = ( email:String, pass:String, channels:  Dictionary<String, Any>,
     ids:  Dictionary<String, Any>, channel: String, token: String, loggedin: Bool,  gupid: String, consumer: String, key: String, keyurl: String )
-public var user = ( email:"", pass:"", channels:  [:], ids: [:], channel: "", token: "", loggedin: false,  gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
+internal var userX = ( email:"", pass:"", channels:  [:], ids: [:], channel: "", token: "", loggedin: false,  gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
 
 typealias PostReturnTuple = (message: String, success: Bool, data: Dictionary<String, Any>, response: HTTPURLResponse? )
 

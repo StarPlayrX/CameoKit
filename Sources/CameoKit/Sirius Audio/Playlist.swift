@@ -28,7 +28,7 @@ func Playlist(channelid: String) -> String  {
     let ext = ".m3u8"
     
     let tail = channelid + underscore + bitrate + underscore + size + underscore + version + ext
-    var source = user.keyurl
+    var source = userX.keyurl
     
     let primary = String(hls_sources["Live_Primary_HLS"] ?? "")
     let secondary = String(hls_sources["Live_Secondary_HLS"] ?? "")
@@ -41,7 +41,7 @@ func Playlist(channelid: String) -> String  {
     
     source = source.replacingOccurrences(of: "32k", with: bitrate)
     source = source.replacingOccurrences(of: "key/1", with: tail)
-    source = source + user.consumer + "&token=" + user.token
+    source = source + userX.consumer + "&token=" + userX.token
     
 	return source
 }

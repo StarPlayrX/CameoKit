@@ -24,7 +24,6 @@ internal func PostAsync(request: Dictionary<String, Any>, endpoint: String, meth
     urlReq.timeoutInterval = TimeInterval(30)
     urlReq.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15", forHTTPHeaderField: "User-Agent")
     
-    print(request)
     let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, _ ) in
         
         //MARK: Here we are chaining multiple if lets, you can also be lazy with names one time only for each one
@@ -35,7 +34,6 @@ internal func PostAsync(request: Dictionary<String, Any>, endpoint: String, meth
                 
                 try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? Dictionary<String, Any> {
                 let return_tuple = (message: method + " was successful.", success: true, data: result, response: http_url_response ) as PostReturnTuple
-                print(result)
                 
                 PostTupleHandler(return_tuple)
                 }

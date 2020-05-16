@@ -60,7 +60,7 @@ internal func Session(channelid: String) -> String {
                             if t.count > 44 {
                                 let startIndex = t.index(t.startIndex, offsetBy: 3)
                                 let endIndex = t.index(t.startIndex, offsetBy: 45)
-                                user.token = String(t[startIndex...endIndex])
+                                userX.token = String(t[startIndex...endIndex])
                                 break
                             }
                            
@@ -86,13 +86,13 @@ internal func Session(channelid: String) -> String {
                        let keyurl = d.value( forKeyPath: "keyUrl") as? String,
                        let consumer = x?.value( forKeyPath: "moduleResponse.liveChannelData.hlsConsumptionInfo" ) as? String {
                        
-                        user.key = key
-                        user.keyurl = keyurl
-                        user.consumer = consumer
+                        userX.key = key
+                        userX.keyurl = keyurl
+                        userX.consumer = consumer
                     
-                        UserDefaults.standard.set(user.key, forKey: "key")
-                        UserDefaults.standard.set(user.keyurl, forKey: "keyurl")
-                        UserDefaults.standard.set(user.consumer, forKey: "consumer")
+                        UserDefaults.standard.set(userX.key, forKey: "key")
+                        UserDefaults.standard.set(userX.keyurl, forKey: "keyurl")
+                        UserDefaults.standard.set(userX.consumer, forKey: "consumer")
                     }
                     
                 } catch {
@@ -111,7 +111,7 @@ internal func Session(channelid: String) -> String {
     task.resume()
     _ = semaphore.wait(timeout: .distantFuture)
     
-    UserDefaults.standard.set(user.token, forKey: "token")
+    UserDefaults.standard.set(userX.token, forKey: "token")
     
     return String(channelLineUpId)
 }

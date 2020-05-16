@@ -29,7 +29,7 @@ func AudioX(data: String, channelId: String ) -> String {
     usePrime ? (hls = hls_prime) : (hls = hls_second)
     
     let prefix = "\(hls)\(rootUrl)"
-    let suffix = "\(user.consumer)&token=\(user.token)"
+    let suffix = "\(userX.consumer)&token=\(userX.token)"
     let endpoint = "\(prefix)\(data)\(suffix)"
 
     return endpoint

@@ -78,23 +78,23 @@ func processLogin(username: String, pass: String, result: PostReturnTuple) -> (s
                 
                 //SiriusXM changed this key
                 if let gupid = fields["gupid"] {
-                    user.gupid = gupid
+                    userX.gupid = gupid
                 } else if let gupid = fields["GupId"] {
-                    user.gupid = gupid
+                    userX.gupid = gupid
                 }
             }
             
             
-            user.email = email
+            userX.email = email
             
             /*saveKeys for AutoLogin */
             UserDefaults.standard.set(username, forKey: "user")
             UserDefaults.standard.set(pass, forKey: "pass")
             UserDefaults.standard.set(email, forKey: "email")
-            UserDefaults.standard.set(user.gupid, forKey: "gupid")
+            UserDefaults.standard.set(userX.gupid, forKey: "gupid")
             UserDefaults.standard.set(true, forKey: "loggedin")
             
-            return (success: success, message: message, data: user.gupid )
+            return (success: success, message: message, data: userX.gupid )
             
         }
     }

@@ -18,7 +18,7 @@ internal func largeChannelArt(request: HTTPRequest, _ response: HTTPResponse) {
 //MARK: Decryption Key for main streams Sirius XM
 internal func keyOneRoute(request: HTTPRequest, _ response: HTTPResponse) {
     
-    if let data = Data(base64Encoded: user.key) {
+    if let data = Data(base64Encoded: userX.key) {
         response.setBody(bytes: [UInt8](data)).setHeader(.contentType, value:"application/octet-stream").completed()
     }
 }
@@ -26,12 +26,25 @@ internal func keyOneRoute(request: HTTPRequest, _ response: HTTPResponse) {
 
 internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
     
+    
+    if !userX.channel.isEmpty {
+        let epoint = nowPlayingLiveX(channelid: userX.channel)
+        
+        nowPlayingLiveAsync(endpoint: epoint) { data in
+            if let data = data {
+                processNPL(data: data)
+            }
+        }
+    }
+    
+    
     //MARK: RUN PDT
     func runPDT() {
         let endpoint = PDTendpoint()
         
-        GetPdtAsyc(endpoint: endpoint, method: "PDT") { (pdt) in
+        GetPdtAsyc(endpoint: endpoint, method: "PDT") { pdt in
             guard let pdt = pdt else {  response.completed(); return }
+            
             let artist_song_data = processPDT(data: pdt)
             
             if !artist_song_data.isEmpty {
@@ -46,15 +59,6 @@ internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
     runPDT()
 
     
-    if !user.channel.isEmpty {
-        let epoint = nowPlayingLiveX(channelid: user.channel)
-        
-        nowPlayingLiveAsync(endpoint: epoint) { data in
-            if let data = data {
-                processNPL(data: data)
-            }
-        }
-    }
 
 }
 
@@ -148,10 +152,10 @@ internal func playlistRoute(request: HTTPRequest, _ response: HTTPResponse) {
     if let playlistRequest = request.urlVariables[routeTrailingWildcardKey],
         let filename = String?(String(playlistRequest.dropFirst())),
         let channel = String?(String(filename.split(separator: ".")[0])),
-        let ch = user.channels[channel] as? NSDictionary,
+        let ch = userX.channels[channel] as? NSDictionary,
         let channelid = ch["channelId"] as? String{
         
-        user.channel = channelid
+        userX.channel = channelid
         
         _ = Session(channelid: channelid)
         
@@ -204,7 +208,7 @@ internal func audioRoute(request: HTTPRequest, _ response: HTTPResponse) {
     guard let audi = audio else { response.completed(); return }
     
     let filename = String(audi.dropFirst())
-    let endpoint = AudioX(data: filename, channelId: user.channel )
+    let endpoint = AudioX(data: filename, channelId: userX.channel )
     
     //MARK: Call back
     CommanderData(endpoint: endpoint, method: "AAC")  { (data) in
@@ -347,11 +351,10 @@ internal func Channels2() -> ChannelsTuple {
                             let cl = [ "channelId": channelId, "channelNumber": channelNumber, "name": name,
                                        "mediumImage": mediumImage, "category": category, "preset": false ] as [String : Any]
                             
-                            if channelNumber == "2" {
-                                print(cl)
-                            }
+                            
                             let ids = ["channelNumber": channelNumber] as [String : String]
                             
+                           
                             ChannelDict[channelNumber] = cl
                             ChannelIdDict[channelId] = ids
                             
@@ -362,10 +365,10 @@ internal func Channels2() -> ChannelsTuple {
                 }
             }
             
-            user.channels = ChannelDict
-            //user.ids = ChannelIdDict
+            userX.channels = ChannelDict
+            userX.ids = ChannelIdDict
             
-            if !user.channels.isEmpty {
+            if !userX.channels.isEmpty {
                 
                 UserDefaults.standard.set(ChannelDict, forKey: "channels")
                 UserDefaults.standard.set(ChannelIdDict, forKey: "ids")

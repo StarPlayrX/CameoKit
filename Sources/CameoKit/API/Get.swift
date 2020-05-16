@@ -35,6 +35,7 @@ internal func GetPdtAsyc(endpoint: String, method: String, PdtHandler: @escaping
     urlReq.timeoutInterval = TimeInterval(10)
     
     let task = URLSession.shared.dataTask(with: urlReq ) { ( data, response, error ) in
+        
         if let data = data {
             do { let pdtData = try decoder.decode(NewPDT.self, from: data)
                 
