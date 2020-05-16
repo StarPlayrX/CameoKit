@@ -434,7 +434,7 @@ internal func PostSync(request: Dictionary<String, Any>, endpoint: String, metho
                 //we always require 200 on the post, anything else is a failure
                 
                 if resp != nil {
-                    syncData = (message: method + " failed, see response.", success: false, data: ["": ""], response: resp as! HTTPURLResponse ) as PostReturnTuple
+                    syncData = (message: method + " failed, see response.", success: false, data: ["": ""], response: resp as? HTTPURLResponse ) as PostReturnTuple
                 } else {
                     syncData = (message: method + " failed, no response.", success: false, data: ["": ""], response: HTTPURLResponse() ) as PostReturnTuple
                 }
