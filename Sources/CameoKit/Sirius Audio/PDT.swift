@@ -185,6 +185,7 @@ struct NewPDT: Codable {
             case clipGUID, album, firstCutOfSpotBlock
             case spotBlockID = "spotBlockId"
             case contentInfo
+
         }
     }
     
@@ -210,6 +211,8 @@ struct NewPDT: Codable {
         case song = "Song"
         case spot = "Spot"
         case talk = "Talk"
+        case interstitial = "Interstitial"
+        case unknown = ""
     }
     
     // MARK: - ExternalID
@@ -262,6 +265,13 @@ struct NewPDT: Codable {
     struct Timestamp: Codable {
         let absolute: String
     }
+    
+    
 }
 
 
+/*
+ 
+ dataCorrupted(Swift.DecodingError.Context(codingPath: [CodingKeys(stringValue: "ModuleListResponse", intValue: nil), CodingKeys(stringValue: "moduleList", intValue: nil), CodingKeys(stringValue: "modules", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "moduleResponse", intValue: nil), CodingKeys(stringValue: "moduleDetails", intValue: nil), CodingKeys(stringValue: "liveChannelResponse", intValue: nil), CodingKeys(stringValue: "liveChannelResponses", intValue: nil), _JSONKey(stringValue: "Index 164", intValue: 164), CodingKeys(stringValue: "markerLists", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "markers", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "cut", intValue: nil), CodingKeys(stringValue: "cutContentType", intValue: nil)], debugDescription: "Cannot initialize CutContentType from invalid String value Interstitial", underlyingError: nil))
+ 
+ */
