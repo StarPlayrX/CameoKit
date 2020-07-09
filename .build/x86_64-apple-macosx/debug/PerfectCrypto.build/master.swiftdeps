@@ -1,12 +1,12 @@
-version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "a5d26bbdaaadb78e1165d832ac432594"
-build_time: [1589416714, 82330000]
+build_time: [1594263321, 350497000]
 inputs:
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Algorithms.swift": [1589416664, 454669496]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/ByteIO.swift": [1589416664, 454844959]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Extensions.swift": [1589416664, 455073968]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/JWK.swift": [1589416664, 455255938]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/JWT.swift": [1589416664, 455352274]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Keys.swift": [1589416664, 455482616]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/OpenSSLInternal.swift": [1589416664, 455744050]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/PerfectCrypto.swift": [1589416664, 455884873]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Algorithms.swift": [1594263261, 664246257]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/ByteIO.swift": [1594263261, 709250517]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Extensions.swift": [1594263261, 709766347]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/JWK.swift": [1594263261, 665042164]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/JWT.swift": [1594263261, 710151541]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/Keys.swift": [1594263261, 710506282]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/OpenSSLInternal.swift": [1594263261, 711086231]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-Crypto/Sources/PerfectCrypto/PerfectCrypto.swift": [1594263261, 666060779]

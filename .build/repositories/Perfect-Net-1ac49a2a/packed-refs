@@ -1,6 +1,7 @@
 # pack-refs with: peeled fully-peeled sorted 
 ef35e528706b420a9cc76fe1a8a677858cc69685 refs/heads/betterdiscossl
-72c5ff64caec6bd3ea0e58ee94978b424f418a0e refs/heads/master
+72c5ff64caec6bd3ea0e58ee94978b424f418a0e refs/heads/maintain-v3
+5707dccfe39c57f61c9c172e766590cf5ae22bf8 refs/heads/master
 c8d0aeb2f133eee4f60e26d9c3920a69e80e4046 refs/pull/1/head
 160555833d7e978c4b4e4aa88f12ea7e167d76a3 refs/pull/10/head
 975e994cc100b8dd0e252066a6124bbc304e4370 refs/pull/11/head
@@ -86,3 +87,4 @@ e51b4174be4aea4d2a18cdc4053783ef8d5c403c refs/tags/3.1.2
 a04974a9abf20adea2082e802e20ee9cce829eeb refs/tags/3.2.1
 ff9d3bed8d8ea936968ace4c38dd77825123c0d0 refs/tags/3.2.2
 d00b2b9f4cccb4c398e1bcf18f767d6b8add6af7 refs/tags/3.3.0
+5707dccfe39c57f61c9c172e766590cf5ae22bf8 refs/tags/4.0.0

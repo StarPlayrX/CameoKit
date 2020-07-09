@@ -40,7 +40,7 @@ depends-top-level:
 - "routes"
 - !private "sessionRoute"
 - "storeCookiesX"
-- !private "user"
+- !private "userX"
 depends-member:
 - !private ["s7CVarArgP", "bool"]
 - !private ["s7CVarArgP", "cookies"]

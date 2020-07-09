@@ -36,7 +36,7 @@ depends-top-level:
 - !private "http"
 - !private "print"
 - !private "root"
-- !private "user"
+- !private "userX"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["SK", "count"]

@@ -17,7 +17,7 @@ depends-top-level:
 - !private "UnicodeScalarType"
 - !private "hls_sources"
 - !private "usePrime"
-- !private "user"
+- !private "userX"
 depends-member:
 - !private ["SK", "init"]
 - !private ["SK", "replacingOccurrences"]

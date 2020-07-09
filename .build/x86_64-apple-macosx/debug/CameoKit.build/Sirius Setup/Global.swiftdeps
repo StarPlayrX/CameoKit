@@ -12,7 +12,7 @@ provides-top-level:
 - "largeChannelLineUp"
 - "smallChannelLineUp"
 - "LoginData"
-- "user"
+- "userX"
 - "PostReturnTuple"
 - "CompletionHandler"
 - "PostTupleHandler"
@@ -59,7 +59,7 @@ depends-top-level:
 - "smallChannelLineUp"
 - "streaming"
 - "usePrime"
-- "user"
+- "userX"
 depends-member:
 - ["SK", "init"]
 - ["s7CVarArgP", "init"]
@@ -206,4 +206,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e70f1526608d92e253a0f232fab8f2b5"
+interface-hash: "7972ed184366284af84f969d9b37b52a"

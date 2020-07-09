@@ -29,7 +29,7 @@ depends-top-level:
 - !private "StringLiteralType"
 - !private "UserDefaults"
 - "processChannels"
-- !private "user"
+- !private "userX"
 - !private "~="
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]

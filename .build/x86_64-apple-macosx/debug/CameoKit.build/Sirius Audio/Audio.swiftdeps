@@ -16,7 +16,7 @@ depends-top-level:
 - !private "UnicodeScalarType"
 - !private "hls_sources"
 - !private "usePrime"
-- !private "user"
+- !private "userX"
 depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["Sl", "subscript"]

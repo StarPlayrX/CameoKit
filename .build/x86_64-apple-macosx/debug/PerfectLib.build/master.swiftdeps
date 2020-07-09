@@ -1,13 +1,13 @@
-version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "dc0e117295403e48c134894561a2f4ac"
-build_time: [1589416706, 900225000]
+build_time: [1594263305, 79885000]
 inputs:
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Bytes.swift": [1589416663, 707262539]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Dir.swift": [1589416663, 707412670]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/File.swift": [1589416663, 707627706]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/JSONConvertible.swift": [1589416663, 707881048]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Log.swift": [1589416663, 708065466]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/PerfectError.swift": [1589416663, 708200885]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/PerfectServer.swift": [1589416663, 708356729]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/SysProcess.swift": [1589416663, 708521737]
-  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Utilities.swift": [1589416663, 708858406]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Bytes.swift": [1594263260, 384142439]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Dir.swift": [1594263260, 435771076]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/File.swift": [1594263260, 436247375]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/JSONConvertible.swift": [1594263260, 385245879]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Log.swift": [1594263260, 385533085]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/PerfectError.swift": [1594263260, 385758649]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/PerfectServer.swift": [1594263260, 386009190]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/SysProcess.swift": [1594263260, 436671474]
+  "/Users/todd/CameoKit/.build/checkouts/PerfectLib/Sources/PerfectLib/Utilities.swift": [1594263260, 437170318]

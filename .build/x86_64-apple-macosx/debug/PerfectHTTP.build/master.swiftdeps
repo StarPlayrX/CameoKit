@@ -1,14 +1,14 @@
-version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "6e555333d79a274e8703aaef59fc81ac"
-build_time: [1589416716, 622869000]
+build_time: [1594263327, 254891000]
 inputs:
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPFilter.swift": [1589416663, 890000882]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPHeaders.swift": [1589416663, 890173202]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPMethod.swift": [1589416663, 890327347]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPRequest.swift": [1589416663, 890481022]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPResponse.swift": [1589416663, 890721898]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/MimeReader.swift": [1589416663, 890907546]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/MimeType.swift": [1589416663, 891352368]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/Routing.swift": [1589416663, 891579075]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/StaticFileHandler.swift": [1589416663, 891757684]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/TypedRoutes.swift": [1589416663, 891987777]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPFilter.swift": [1594263260, 19196403]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPHeaders.swift": [1594263260, 19523696]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPMethod.swift": [1594263260, 19836116]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPRequest.swift": [1594263260, 20126574]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/HTTPResponse.swift": [1594263260, 20539580]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/MimeReader.swift": [1594263260, 20887427]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/MimeType.swift": [1594263260, 21773534]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/Routing.swift": [1594263260, 22212384]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/StaticFileHandler.swift": [1594263260, 22541537]
+  "/Users/todd/CameoKit/.build/checkouts/Perfect-HTTP/Sources/PerfectHTTP/TypedRoutes.swift": [1594263260, 23004862]
