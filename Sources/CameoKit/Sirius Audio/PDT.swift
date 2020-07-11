@@ -10,7 +10,7 @@ import CryptoKit
 
 
 internal func PDTendpoint() -> String {
-
+    
     let timeInterval = Date().timeIntervalSince1970
     let convert = timeInterval * 1000 as NSNumber
     let intTime = (Int(truncating: convert))
@@ -25,42 +25,46 @@ internal func PDTendpoint() -> String {
 internal func processPDT(data: NewPDT) -> [String:Any] {
     var ArtistSongData = [String : Any ]()
     
-    let status = data.moduleListResponse.status
-    if status == 100 {
+    //let status = data.moduleListResponse.status //100
+    if let live = data.moduleListResponse.moduleList?.modules.first?.moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses {
         
-        if let live = data.moduleListResponse.moduleList.modules.first?.moduleResponse.moduleDetails.liveChannelResponse.liveChannelResponses {
+        for i in live {
             
-            for i in live {
-                
-                
-                
+            let channelid = i.channelID
+            let markerLists = i.markerLists
+            let cutlayer = markerLists.first
             
-                let channelid = i.channelID
-                let markerLists = i.markerLists
-                let cutlayer = markerLists.first
+            if let markers = cutlayer?.markers, let item = markers.first, let song = item.cut?.title, let artist = item.cut?.artists.first?.name, let getchannelbyId = userX.ids[channelid] as? [String: Any], let channelNo = getchannelbyId["channelNumber"] as? String {
                 
-                if let markers = cutlayer?.markers {
-                    let item = markers.first
-                    
-                    
-                    
-                    
-                    if let song = item?.cut?.title, let artist = item?.cut?.artists.first?.name, let getchannelbyId = userX.ids[channelid] as? [String: Any],
-                        
-                        let channelNo = getchannelbyId["channelNumber"] as? String {
-
-                        if let key = MD5(artist + song), let image = MemBase[key] {
-                            ArtistSongData[channelNo] = ["image" : image, "artist": artist, "song" : song]
-                        } else {
-                            ArtistSongData[channelNo] = ["image" : "", "artist": artist, "song" : song]
-                        }
-                    } 
+                if let key = MD5(artist + song), let image = MemBase[key] {
+                    ArtistSongData[channelNo] = ["image" : image, "artist" : artist, "song" : song]
+                } else {
+                    ArtistSongData[channelNo] = ["image" : "", "artist" : artist, "song" : song]
                 }
+            } else if let getchannelbyId = userX.ids[channelid] as? [String: Any], let channelNo = getchannelbyId["channelNumber"] as? String {
+                ArtistSongData[channelNo] = ["image" : "", "artist" : "Don't be a Slacker", "song" : "Be a Star Player. StarPlayrX"]
+            }
+        }
+        
+    } else {
+        if userX.channels.count > 1 {
+            for ( key, value ) in userX.channels {
+                
+                let v = value as! [String: Any]
+                let name = v["name"] as! String
+                
+                //Substitute text for when channel guide is offline
+                ArtistSongData[key] = ["image" : "", "artist": key, "song" : name]
+            }
+        } else {
+            for i in 0...1000 {
+                ArtistSongData["\(i)"] = ["image" : "", "artist" : "StarPlayrX", "song" : "iOS Best SiriusXM Radio Player"]
             }
         }
     }
     return ArtistSongData
 }
+
 
 
 //MARK: New and Improved MD5
@@ -69,7 +73,7 @@ func MD5(_ d: String) -> String? {
     var str = String()
     
     for byte in Insecure.MD5.hash(data: d.data(using: .utf8) ?? Data() ) {
-         str += String(format: "%02x", byte)
+        str += String(format: "%02x", byte)
     }
     
     return str
@@ -87,9 +91,9 @@ struct NewPDT: Codable {
     
     // MARK: - ModuleListResponse
     struct ModuleListResponse: Codable {
-        let status: Int
-        let moduleList: ModuleList
-        let messages: [Message]
+        let status: Int?
+        let moduleList: ModuleList?
+        let messages: [Message?]?
     }
     
     // MARK: - Message
@@ -185,7 +189,7 @@ struct NewPDT: Codable {
             case clipGUID, album, firstCutOfSpotBlock
             case spotBlockID = "spotBlockId"
             case contentInfo
-
+            
         }
     }
     
@@ -265,13 +269,4 @@ struct NewPDT: Codable {
     struct Timestamp: Codable {
         let absolute: String
     }
-    
-    
 }
-
-
-/*
- 
- dataCorrupted(Swift.DecodingError.Context(codingPath: [CodingKeys(stringValue: "ModuleListResponse", intValue: nil), CodingKeys(stringValue: "moduleList", intValue: nil), CodingKeys(stringValue: "modules", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "moduleResponse", intValue: nil), CodingKeys(stringValue: "moduleDetails", intValue: nil), CodingKeys(stringValue: "liveChannelResponse", intValue: nil), CodingKeys(stringValue: "liveChannelResponses", intValue: nil), _JSONKey(stringValue: "Index 164", intValue: 164), CodingKeys(stringValue: "markerLists", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "markers", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "cut", intValue: nil), CodingKeys(stringValue: "cutContentType", intValue: nil)], debugDescription: "Cannot initialize CutContentType from invalid String value Interstitial", underlyingError: nil))
- 
- */
