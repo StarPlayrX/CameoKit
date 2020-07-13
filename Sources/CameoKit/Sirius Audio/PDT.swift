@@ -198,25 +198,28 @@ struct NewPDT: Codable {
         let title: String?
     }
     
-    // MARK: - Artist
+    // MARK: - Artistt
     struct Artist: Codable {
         let name: String
     }
     
     enum CutContentType: String, Codable {
-        case exp = "Exp"
-        case fill = "Fill"
-        case link = "Link"
-        case link_ = "Link "
+        case Exp = "Exp"
+        case Fill = "Fill"
+        case Link = "Link"
+        case Link_ = "Link "
         case mpds = "mpds"
-        case pgmSegement = "PGM_Segement"
-        case pgmSegment = "PGM_Segment"
-        case promo = "Promo"
-        case song = "Song"
-        case spot = "Spot"
-        case talk = "Talk"
-        case interstitial = "Interstitial"
-        case unknown = ""
+        case PgmSegement = "PGM_Segement"
+        case PgmSegment = "PGM_Segment"
+        case Promo = "Promo"
+        case Song = "Song"
+        case Spot = "Spot"
+        case Talk = "Talk"
+        case interstitial = "interstitial"
+        case Interstitial = "Interstitial"
+        case unknown = "unknown"
+        case Unknown = "Unknown"
+
     }
     
     // MARK: - ExternalID
@@ -268,5 +271,14 @@ struct NewPDT: Codable {
     // MARK: - Timestamp
     struct Timestamp: Codable {
         let absolute: String
+    }
+}
+
+protocol CaseIterableDefaultsLast: Decodable & CaseIterable & RawRepresentable
+where RawValue: Decodable, AllCases: BidirectionalCollection { }
+
+extension CaseIterableDefaultsLast {
+    init(from decoder: Decoder) throws {
+        self = try Self(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? Self.allCases.last!
     }
 }
