@@ -26,7 +26,7 @@ extension URL {
 
 
 //maybe shorten this down sometime
-func generateJSON(data: Data) {
+/*func generateJSON(data: Data) {
     
     let bytes: Data = data
     
@@ -34,4 +34,4 @@ func generateJSON(data: Data) {
         let str = string.data(using: .utf8)?.prettyPrintedJSONString {
         debugPrint(str)
     }
-}
+}*/

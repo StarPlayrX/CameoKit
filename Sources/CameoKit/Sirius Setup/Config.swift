@@ -25,7 +25,7 @@ public func Config()  {
             let s = config.value( forKeyPath: "ModuleListResponse.moduleList.modules" ),
             let p = s as? NSArray, let x = p[0] as? NSDictionary,
             let customAudioInfos = x.value( forKeyPath: "moduleResponse.configuration.components" ) as? NSArray
-            else { print("reading config cache A."); readCache(); return }
+            else { readCache(); return }
         
         
         for i in customAudioInfos {
@@ -42,7 +42,6 @@ public func Config()  {
         }
         
         if !success {
-            print("reading config cache B.")
             readCache()
         } else {
             UserDefaults.standard.set(hls_sources, forKey: sources_key )

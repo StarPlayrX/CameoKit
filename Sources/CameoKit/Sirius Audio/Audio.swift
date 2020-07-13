@@ -17,11 +17,11 @@ func AudioX(data: String, channelId: String ) -> String {
     case (true, true)  :
         bitrate = "256k"
     case (false, true) :
-        bitrate = "256k"
+        bitrate = "64k"
     case (_, false):
         bitrate = "32k"
     }
-    
+        
     let rootUrl = "/AAC_Data/\(channelId)/HLS_\(channelId)_\(bitrate)_v3/"
      
     let hls : String
