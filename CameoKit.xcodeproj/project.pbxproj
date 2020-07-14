@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5F29031124BE2D4D00C5B163 /* DiscoverChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F29031024BE2D4D00C5B163 /* DiscoverChannelList.swift */; };
 		OBJ_399 /* a_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* a_.c */; };
 		OBJ_400 /* aes_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* aes_.c */; };
 		OBJ_401 /* ameth_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* ameth_lib.c */; };
@@ -679,6 +680,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F29031024BE2D4D00C5B163 /* DiscoverChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChannelList.swift; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CameoKit::CameoKit::Product" /* CameoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CameoKit::CameoKitTests::Product" /* CameoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CameoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1461,7 +1463,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_17 /* Audio.swift */,
-				OBJ_18 /* PDT.swift */,
 				OBJ_19 /* Playlist.swift */,
 			);
 			path = "Sirius Audio";
@@ -1470,6 +1471,9 @@
 		OBJ_20 /* Sirius Channels */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_12 /* NowPlayingLive.swift */,
+				OBJ_18 /* PDT.swift */,
+				5F29031024BE2D4D00C5B163 /* DiscoverChannelList.swift */,
 				OBJ_21 /* Channels.swift */,
 				OBJ_22 /* Extensions.swift */,
 				OBJ_23 /* Login.swift */,
@@ -1761,7 +1765,6 @@
 			children = (
 				OBJ_10 /* Data.swift */,
 				OBJ_11 /* Get.swift */,
-				OBJ_12 /* NowPlayingLive.swift */,
 				OBJ_13 /* Post.swift */,
 				OBJ_14 /* Text.swift */,
 			);
@@ -2436,6 +2439,7 @@
 				OBJ_648 /* Text.swift in Sources */,
 				OBJ_649 /* CameoKit.swift in Sources */,
 				OBJ_650 /* Audio.swift in Sources */,
+				5F29031124BE2D4D00C5B163 /* DiscoverChannelList.swift in Sources */,
 				OBJ_651 /* PDT.swift in Sources */,
 				OBJ_652 /* Playlist.swift in Sources */,
 				OBJ_653 /* Channels.swift in Sources */,
