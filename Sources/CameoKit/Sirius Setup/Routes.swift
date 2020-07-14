@@ -37,28 +37,46 @@ internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
         }
     }
     
+    func fallback() {
+        var artist_song_data = [String : Any ]()
+        if userX.channels.count > 1 {
+            for ( key, value ) in userX.channels {
+                
+                let v = value as! [String: Any]
+                let name = v["name"] as! String
+                
+                //Substitute text for when channel guide is offline
+                artist_song_data[key] = ["image" : "", "artist": key, "song" : name]
+            }
+        } else {
+            for i in 0...1000 {
+                artist_song_data["\(i)"] = ["image" : "", "artist" : "StarPlayrX", "song" : "iOS Best SiriusXM Radio Player"]
+            }
+        }
+        
+        let jayson = ["data": artist_song_data, "message": "0000", "success": true] as [String : Any]
+        try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
+    }
     
     //MARK: RUN PDT
     func runPDT() {
         let endpoint = PDTendpoint()
         
         GetPdtAsyc(endpoint: endpoint, method: "PDT") { pdt in
-            guard let pdt = pdt else {  response.completed(); return }
+            guard let pdt = pdt else { fallback(); return }
             
             let artist_song_data = processPDT(data: pdt)
             
             if !artist_song_data.isEmpty {
-                let jayson = ["data": artist_song_data, "message": "0000", "success": true] as [String : Any]
+                let jayson = ["data": artist_song_data, "message": "0001", "success": true] as [String : Any]
                 try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
             } else {
-                response.completed()
+                fallback()
             }
         }
     }
     
     runPDT()
-
-    
 
 }
 

@@ -36,5 +36,5 @@ typealias PostTupleHandler    = (_ tuple:PostReturnTuple?) 	   		-> Void
 typealias DictionaryHandler   = (_ dict:NSDictionary?) 		   		-> Void
 typealias DataHandler         = (_ data:Data?) 				   		-> Void
 typealias TextHandler         = (_ text:String?) 			   		-> Void
-typealias PdtHandler          = (_ struct:NewPDT?) 			   		-> Void
+typealias PdtHandler          = (_ struct:DiscoverChannelList?)     -> Void
 typealias LiveHandler 		  = (_ struct:NowPlayingLiveStruct?) 	-> Void
