@@ -18,7 +18,11 @@ internal func PostAsync(request: Dictionary<String, Any>, endpoint: String, meth
     guard let url = URL(string: endpoint) else { PostTupleHandler(dummy); return }
 
     var urlReq = URLRequest(url: url)
-    urlReq.httpBody = try? JSONSerialization.data(withJSONObject: request, options: .prettyPrinted)
+    
+    if method != "channels" {
+        urlReq.httpBody = try? JSONSerialization.data(withJSONObject: request, options: .prettyPrinted)
+    }
+    
     urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
     urlReq.httpMethod = "POST"
     urlReq.timeoutInterval = TimeInterval(30)

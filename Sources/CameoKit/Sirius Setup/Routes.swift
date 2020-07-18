@@ -135,13 +135,13 @@ internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
     
     
     let _ = Session(channelid: "siriushits1")
-    let returnData = Channels2()
+    /*let returnData = Channels2()
     let jayson = ["data": returnData.data, "message": returnData.message, "success": returnData.success, "categories": returnData.categories] as [String : Any]
     try? _ = response.setBody(json: jayson)
-    response.setHeader(.contentType, value:"application/json").completed()
+    response.setHeader(.contentType, value:"application/json").completed()*/
     
     
-  /*  func runFailure() {
+func runFailure() {
         let jayson = ["data": [:], "message": "Login failure.", "success": false] as [String : Any]
         try? _ = response.setBody(json: jayson).setHeader(.contentType, value:"application/json").completed()
     }
@@ -160,7 +160,7 @@ internal func channelsRoute(request: HTTPRequest, _ response: HTTPResponse) {
     	try? _ = response.setBody(json: jayson)
         response.setHeader(.contentType, value:"application/json").completed()
         
-    }*/
+    }
 
 }
 
@@ -248,7 +248,9 @@ extension Date {
 }
 
 
+// https://player.siriusxm.com/rest/v4/experience/modules/get?type=2&cacheBuster=1595033362033
 
+// https://player.siriusxm.com/rest/v2/experience/modules/get?cacheBuster=1595033362033
 
 //https://player.siriusxm.com/rest/v4/experience/carousels?page-name=np_aic_restricted&result-template=everest%7Cweb&channelGuid=86d52e32-09bf-a02d-1b6b-077e0aa05200&cutGuid=50be2dfa-e278-a608-5f0d-9a23db6c45c4&cacheBuster=1550883990670
 internal func Channels2() -> ChannelsTuple {
@@ -257,12 +259,14 @@ internal func Channels2() -> ChannelsTuple {
     var success : Bool = false
     var message : String = "Something's not right."
     
-    let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get"
+    //  https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=1595032187803
+    let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get?cacheBuster=1595033362033"
     let method = "channels"
     let request =  ["moduleList":["modules":[["moduleArea":"Discovery","moduleType":"ChannelListing","moduleRequest":["resultTemplate":""]]]]] as Dictionary
     
     let result = PostSync(request: request, endpoint: endpoint, method: method )
     
+    print(result)
     if (result.response?.statusCode) == 403 {
         success = false
         message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
@@ -432,7 +436,7 @@ internal func PostSync(request: Dictionary<String, Any>, endpoint: String, metho
         urlReq!.timeoutInterval = TimeInterval(time_out)
         urlReq!.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15", forHTTPHeaderField: "User-Agent")
         let task = URLSession.shared.dataTask(with: urlReq! ) { ( rData, resp, error ) in
-            
+            print(rData, resp, error)
             if resp != nil && (resp as? HTTPURLResponse)!.statusCode == 200 {
                 
                 var result : Dictionary? = Dictionary<String, Any>()
