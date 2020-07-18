@@ -55,8 +55,8 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                                 category = "Canada Talk"
                             case "Canada & More":
                                 category = "Canada Music"
-                            case "Sports Talk":
-                                category = "Sports"
+                            case "Sports":
+                                category = "Sports Talk"
                             case "MLB Play-by-Play":
                                 category = "MLB"
                             case "NBA Play-by-Play":
@@ -65,6 +65,8 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                                 category = "NFL"
                             case "NHL Play-by-Play":
                                 category = "NHL"
+                            case "Sports Play-by-Play":
+                                category = "Play-by-Play"
                             case "Other Play-by-Play":
                                 category = "Play-by-Play"
                             default:
@@ -73,7 +75,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                         
                         let chNumber = Int(channelNumber)
                         switch chNumber {
-                            case 20,18,19,22,23,24,27,28,29,30,31,32,38,176,700,711:
+                            case 20,18,19,22,23,24,27,28,29,30,31,32,35,38,42,50,176,700,711,743:
                                 category = "Artists"
                             case 4,11,12,769:
                                 category = "Pop"
@@ -81,7 +83,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                                 category = "Rock"
                             case 13:
                                 category = "Dance/Electronic"
-                            case 9,21,33,34,35,36,173,359,714,758:
+                            case 9,21,33,34,36,173:
                                 category = "Alternative"
                             case 37,39,40,41:
                                 category = "Metal"
@@ -119,7 +121,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                             for img in images.reversed() {
                                 if let g = img as? NSDictionary, let height = g["height"] as? Int, let name = g["name"] as? String {
                                     
-                                    if height == 720 && name == "color channel logo (on dark) ~ square" {
+                                    if height == 720 && name == "color channel logo (on dark)" {
                                         if let mi = g["url"] as? String {
                                             mediumImage = mi
                                             break
@@ -132,11 +134,8 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                                        "mediumImage": mediumImage, "category": category, "preset": false ] as [String : Any]
                             let ids = ["channelNumber": channelNumber] as [String : String]
                           
-
                             ChannelDict[channelNumber] = cl
                             ChannelIdDict[channelId] = ids
-                            
-                            
                         }
                     }
                 }

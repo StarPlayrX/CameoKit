@@ -200,7 +200,6 @@ struct NowPlayingLiveStruct: Codable {
     
     // MARK: - Cut
     struct Cut: Codable {
-        let cutContentType: CutContentType?
         let galaxyAssetID: String?
         let legacyIDS: CutLegacyIDS?
         let title: String
@@ -213,7 +212,6 @@ struct NowPlayingLiveStruct: Codable {
         let contentInfo: String?
         
         enum CodingKeys: String, CodingKey {
-            case cutContentType
             case galaxyAssetID = "galaxyAssetId"
             case legacyIDS = "legacyIds"
             case title, memberOfSpotBlock, artists, mref, clipGUID, album
@@ -256,20 +254,6 @@ struct NowPlayingLiveStruct: Codable {
         let name: String
     }
     
-    enum CutContentType: String, Codable {
-        case exp = "Exp"
-        case fill = "Fill"
-        case link = "Link"
-        case link_ = "Link "
-        case mpds = "mpds"
-        case pgmSegement = "PGM_Segement"
-        case pgmSegment = "PGM_Segment"
-        case promo = "Promo"
-        case song = "Song"
-        case spot = "Spot"
-        case talk = "Talk"
-    }
-    
     // MARK: - ExternalID
     struct ExternalID: Codable {
         let id, value: String
@@ -293,7 +277,6 @@ struct NowPlayingLiveStruct: Codable {
         let longDescription: String?
         let live: Bool?
         let host: [String]?
-        let dmcaInfo: DMCAInfo?
         let entities: Entities?
         let featuredTweetCoordinate: FeaturedTweetCoordinate?
         let hot: Bool?
@@ -312,19 +295,10 @@ struct NowPlayingLiveStruct: Codable {
         enum CodingKeys: String, CodingKey {
             case isLiveVideoEligible
             case legacyIDS = "legacyIds"
-            case longDescription, live, host, dmcaInfo, entities, featuredTweetCoordinate, hot, keywords
+            case longDescription, live, host, entities, featuredTweetCoordinate, hot, keywords
             case episodeRepeat = "repeat"
             case highlighted, mref, mediumTitle, show, longTitle, originalAirDate, shortDescription, episodeGUID, topics, dataSiftFilterName, valuable
         }
-    }
-    
-    // MARK: - DMCAInfo
-    struct DMCAInfo: Codable {
-        let fwdSkipDur, maxBackSkips, maxSkipDur, backSkipDur: Int
-        let maxFwdSkips: Int
-        let playOnSelect, channelContentType: String
-        let maxTotalSkips: Int
-        let irNavClass: String
     }
     
     // MARK: - Entities
