@@ -9,6 +9,7 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "CastingPrecedence"
 - "DictionaryHandler"
+- !private "DiscoverChannelList"
 - !private "FloatLiteralType"
 - "GetAsync"
 - "GetPdtAsyc"
@@ -16,7 +17,6 @@ depends-top-level:
 - !private "JSONDecoder"
 - !private "JSONSerialization"
 - !private "NSDictionary"
-- !private "NewPDT"
 - "PdtHandler"
 - "String"
 - !private "StringLiteralType"
@@ -58,6 +58,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "timeoutInterval"]
 - !private ["Se", "init"]
 - !private ["Se", "none"]
+- !private ["8CameoKit19DiscoverChannelListV", "deinit"]
 - !private ["SE", "init"]
 - !private ["SE", "none"]
 - !private ["SQ", "ReadingOptions"]
@@ -101,7 +102,6 @@ depends-member:
 - !private ["So8NSObjectP", "jsonObject"]
 - !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "shared"]
-- !private ["8CameoKit6NewPDTV", "deinit"]
 - !private ["s9OptionSetP", "mutableContainers"]
 - !private ["Sq", "none"]
 - !private ["So19NSProgressReportingP", "resume"]
@@ -148,6 +148,7 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
 - !private "Se"
+- !private "8CameoKit19DiscoverChannelListV"
 - !private "SE"
 - !private "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
@@ -159,7 +160,6 @@ depends-nominal:
 - !private "So9NSCopyingP"
 - !private "So8NSObjectC"
 - !private "So8NSObjectP"
-- !private "8CameoKit6NewPDTV"
 - !private "s9OptionSetP"
 - !private "Sq"
 - !private "So19NSProgressReportingP"
@@ -189,7 +189,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Network.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -197,7 +196,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/os.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CryptoKit.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.swiftmodule"
 - "/Users/todd/CameoKit/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/../asn1.h"

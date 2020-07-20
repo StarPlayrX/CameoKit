@@ -24,14 +24,16 @@ depends-top-level:
 - !private "+"
 - !private "..."
 - !private "=="
+- !private ">"
 - !private "??"
 - !private "Array"
 - "AssignmentPrecedence"
 - !private "AudioX"
 - !private "Bool"
-- "BooleanLiteralType"
+- !private "BooleanLiteralType"
 - !private "Calendar"
 - "CastingPrecedence"
+- !private "Channels"
 - "Channels2"
 - "ChannelsTuple"
 - !private "CommanderData"
@@ -78,6 +80,8 @@ depends-top-level:
 - !private "nowPlayingLiveX"
 - "pingRoute"
 - "playlistRoute"
+- !private "print"
+- !private "processChannels"
 - !private "processLogin"
 - !private "processNPL"
 - !private "processPDT"
@@ -108,6 +112,7 @@ depends-member:
 - !private ["s7CVarArgP", "ReadingOptions"]
 - !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "data"]
 - !private ["s7CVarArgP", "dataTask"]
 - !private ["s7CVarArgP", "dropFirst"]
@@ -132,6 +137,7 @@ depends-member:
 - !private ["10Foundation8CalendarV", "date"]
 - !private ["Sl", "append"]
 - !private ["Sl", "contains"]
+- !private ["Sl", "count"]
 - !private ["Sl", "dropFirst"]
 - !private ["Sl", "init"]
 - !private ["Sl", "isEmpty"]
@@ -159,6 +165,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "addValue"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "data"]
 - !private ["s28CustomDebugStringConvertibleP", "dataTask"]
@@ -190,6 +197,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "addValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "current"]
 - !private ["s17CustomReflectableP", "date"]
 - !private ["s17CustomReflectableP", "dropFirst"]
@@ -211,7 +219,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "ReadingOptions"]
 - !private ["s23CustomStringConvertibleP", "addValue"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "data"]
 - !private ["s23CustomStringConvertibleP", "dataTask"]
@@ -252,6 +263,7 @@ depends-member:
 - !private ["Se", "Date"]
 - !private ["Se", "append"]
 - !private ["Se", "contains"]
+- !private ["Se", "count"]
 - !private ["Se", "current"]
 - !private ["Se", "date"]
 - !private ["Se", "dropFirst"]
@@ -261,6 +273,9 @@ depends-member:
 - !private ["Se", "replacingOccurrences"]
 - !private ["Se", "split"]
 - !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "count"]
 - !private ["SD", "init"]
 - !private ["SD", "isEmpty"]
 - !private ["SD", "subscript"]
@@ -276,6 +291,7 @@ depends-member:
 - !private ["SE", "Date"]
 - !private ["SE", "append"]
 - !private ["SE", "contains"]
+- !private ["SE", "count"]
 - !private ["SE", "current"]
 - !private ["SE", "date"]
 - !private ["SE", "dropFirst"]
@@ -293,6 +309,7 @@ depends-member:
 - !private ["SQ", "append"]
 - !private ["SQ", "contains"]
 - !private ["SQ", "contentType"]
+- !private ["SQ", "count"]
 - !private ["SQ", "current"]
 - !private ["SQ", "data"]
 - !private ["SQ", "dataTask"]
@@ -330,6 +347,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "prettyPrinted"]
 - !private ["s25ExpressibleByArrayLiteralP", "reversed"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "count"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "isEmpty"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
@@ -377,6 +395,7 @@ depends-member:
 - !private ["SH", "append"]
 - !private ["SH", "contains"]
 - !private ["SH", "contentType"]
+- !private ["SH", "count"]
 - !private ["SH", "current"]
 - !private ["SH", "data"]
 - !private ["SH", "dataTask"]
@@ -407,6 +426,7 @@ depends-member:
 - !private ["Si", "init"]
 - !private ["10PerfectLib15JSONConvertibleP", "append"]
 - !private ["10PerfectLib15JSONConvertibleP", "contains"]
+- !private ["10PerfectLib15JSONConvertibleP", "count"]
 - !private ["10PerfectLib15JSONConvertibleP", "dropFirst"]
 - !private ["10PerfectLib15JSONConvertibleP", "init"]
 - !private ["10PerfectLib15JSONConvertibleP", "isEmpty"]
@@ -584,6 +604,7 @@ depends-member:
 - !private ["s10SIMDScalarP", "init"]
 - !private ["ST", "append"]
 - !private ["ST", "contains"]
+- !private ["ST", "count"]
 - !private ["ST", "dropFirst"]
 - !private ["ST", "firstObject"]
 - !private ["ST", "init"]
@@ -605,12 +626,16 @@ depends-member:
 - !private ["SS", "jsonDecode"]
 - !private ["SS", "replacingOccurrences"]
 - !private ["SS", "split"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["Sy", "dropFirst"]
 - !private ["Sy", "init"]
 - !private ["Sy", "isEmpty"]
 - !private ["Sy", "jsonDecode"]
 - !private ["Sy", "replacingOccurrences"]
 - !private ["Sy", "split"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "dropFirst"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
@@ -689,6 +714,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "dropFirst"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "firstObject"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
@@ -746,6 +772,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "addValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "current"]
 - !private ["s21_ObjectiveCBridgeableP", "date"]
 - !private ["s21_ObjectiveCBridgeableP", "dropFirst"]
@@ -778,6 +805,7 @@ depends-nominal:
 - !private "10Foundation12DataProtocolP"
 - "10Foundation4DateV"
 - !private "Se"
+- !private "s26DefaultStringInterpolationV"
 - !private "SD"
 - !private "So18OS_dispatch_objectC"
 - !private "So21OS_dispatch_semaphoreC"
@@ -837,6 +865,7 @@ depends-nominal:
 - !private "s13SignedNumericP"
 - !private "Sx"
 - !private "SS"
+- !private "s27StringInterpolationProtocolP"
 - !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"

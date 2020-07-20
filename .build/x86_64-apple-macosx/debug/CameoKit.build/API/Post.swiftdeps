@@ -5,6 +5,7 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!="
 - !private "+"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"

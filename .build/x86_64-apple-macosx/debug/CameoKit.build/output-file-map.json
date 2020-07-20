@@ -14,12 +14,6 @@
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Get.swiftdeps"
   },
-  "/Users/todd/CameoKit/Sources/CameoKit/API/NowPlayingLive.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/NowPlayingLive.swiftdeps"
-  },
   "/Users/todd/CameoKit/Sources/CameoKit/API/Post.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/API/Post.swift.o",
@@ -44,12 +38,6 @@
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Audio~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Audio.swiftdeps"
   },
-  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Audio/PDT.swift": {
-    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/PDT.d",
-    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/PDT.swift.o",
-    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/PDT~partial.swiftmodule",
-    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/PDT.swiftdeps"
-  },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Audio/Playlist.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Playlist.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Audio/Playlist.swift.o",
@@ -62,6 +50,12 @@
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Channels.swiftdeps"
   },
+  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/DiscoverChannelList.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/DiscoverChannelList.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/DiscoverChannelList.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/DiscoverChannelList~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/DiscoverChannelList.swiftdeps"
+  },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/Extensions.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions.d",
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Extensions.swift.o",
@@ -73,6 +67,18 @@
     "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Login.swift.o",
     "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Login~partial.swiftmodule",
     "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Login.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/NowPlayingLive.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/NowPlayingLive.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/NowPlayingLive.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/NowPlayingLive~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/NowPlayingLive.swiftdeps"
+  },
+  "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/PDT.swift": {
+    "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/PDT.d",
+    "object": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/PDT.swift.o",
+    "swiftmodule": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/PDT~partial.swiftmodule",
+    "swift-dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/PDT.swiftdeps"
   },
   "/Users/todd/CameoKit/Sources/CameoKit/Sirius Channels/Session.swift": {
     "dependencies": "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/CameoKit.build/Sirius Channels/Session.d",

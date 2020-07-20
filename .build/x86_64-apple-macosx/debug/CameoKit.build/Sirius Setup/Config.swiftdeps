@@ -23,7 +23,6 @@ depends-top-level:
 - !private "UserDefaults"
 - !private "hls_sources"
 - !private "http"
-- !private "print"
 - !private "root"
 depends-member:
 - !private ["s7CVarArgP", "dictionary"]
