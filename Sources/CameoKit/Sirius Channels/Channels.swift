@@ -75,11 +75,11 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                         
                         let chNumber = Int(channelNumber)
                         switch chNumber {
-                            case 20,18,19,22,23,24,27,28,29,30,31,32,35,38,42,50,176,700,711,743:
+                            case 20,18,19,22,23,24,29,30,31,32,35,38,42,50,176,700,711,717,726,730,743:
                                 category = "Artists"
                             case 4,11,12,769:
                                 category = "Pop"
-                            case 7,8,301,302:
+                            case 7,8,27,28,301,302:
                                 category = "Rock"
                             case 13:
                                 category = "Dance/Electronic"
@@ -97,7 +97,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                                 category = "Sports"
                             case 171:
                                 category = "Country"
-                            case 141, 142, 706:
+                            case 141, 142, 706, 721:
                                 category = "Jazz/Standards/Classical"
                             case 169:
                                 category = "Canada Talk"
