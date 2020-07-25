@@ -94,7 +94,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                             case 165:
                                 category = "Canada Music"
                             case 172:
-                                category = "Sports"
+                                category = "Sports Talk"
                             case 171:
                                 category = "Country"
                             case 141, 142, 706, 721:
