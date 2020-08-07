@@ -50,7 +50,7 @@ internal func PDTRoute(request: HTTPRequest, _ response: HTTPResponse) {
             }
         } else {
             for i in 0...1000 {
-                artist_song_data["\(i)"] = ["image" : "", "artist" : "StarPlayrX", "song" : "iOS Best SiriusXM Radio Player"]
+                artist_song_data["\(i)"] = ["image" : "", "artist" : "StarPlayrX", "song" : "iOS Best Sat Radio Player"]
             }
         }
         
@@ -269,7 +269,7 @@ internal func Channels2() -> ChannelsTuple {
     print(result)
     if (result.response?.statusCode) == 403 {
         success = false
-        message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
+        message = "Too many incorrect logins, your Sat Radio provider has blocked your IP for 24 hours."
     }
     
     if result.success {

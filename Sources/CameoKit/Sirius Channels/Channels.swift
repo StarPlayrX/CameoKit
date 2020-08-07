@@ -22,7 +22,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
     
     if (result.response?.statusCode) == 403 {
         success = false
-        message = "Too many incorrect logins, Sirius XM has blocked your IP for 24 hours."
+        message = "Too many incorrect logins, your Sat Radio provider has blocked your IP for 24 hours."
     }
     
     if result.success {
@@ -75,9 +75,9 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                         
                         let chNumber = Int(channelNumber)
                         switch chNumber {
-                            case 20,18,19,22,23,24,29,30,31,32,38,42,50,104,176,700,711,717,726,730,743:
+                            case 20,18,19,22,23,24,29,30,31,32,38,42,104,176,700,711,717,726,730,743:
                                 category = "Artists"
-                            case 4,11,12,769:
+                            case 4,11,769:
                                 category = "Pop"
                             case 7,8,27,28,301,302:
                                 category = "Rock"
@@ -85,7 +85,7 @@ internal func processChannels(result: PostReturnTuple) -> (success: Bool, messag
                                 category = "Dance/Electronic"
                             case 9,21,33,34,36,173:
                                 category = "Alternative"
-                            case 35,37,39,40,41:
+                            case 12,35,37,39,40,41:
                                 category = "Metal"
                             case 5,6,701,703,776:
                                 category = "Oldies"

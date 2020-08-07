@@ -58,7 +58,7 @@ internal func processPDT(data: DiscoverChannelList) -> [String:Any] {
             }
         } else {
             for i in 0...1000 {
-                ArtistSongData["\(i)"] = ["image" : "", "artist" : "StarPlayrX", "song" : "iOS Best SiriusXM Radio Player"]
+                ArtistSongData["\(i)"] = ["image" : "", "artist" : "StarPlayrX", "song" : "iOS Best Sat Radio Player"]
             }
         }
     }
