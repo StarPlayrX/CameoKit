@@ -27,7 +27,6 @@ internal func GetAsync(endpoint: String, DictionaryHandler: @escaping Dictionary
 //MARK: - GetPdtAsyc
 internal func GetPdtAsyc(endpoint: String, method: String, PdtHandler: @escaping PdtHandler) {
     guard let url = URL(string: endpoint) else { PdtHandler(nil); return }
-
     let decoder = JSONDecoder()
     
     var urlReq = URLRequest(url: url)
@@ -42,6 +41,7 @@ internal func GetPdtAsyc(endpoint: String, method: String, PdtHandler: @escaping
                 PdtHandler(pdtData)
             } catch {
                 PdtHandler(nil)
+                print("1")
                 print(error)
             }
         }

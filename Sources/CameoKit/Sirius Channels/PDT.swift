@@ -35,7 +35,6 @@ internal func processPDT(data: DiscoverChannelList) -> [String:Any] {
             let cutlayer = markerLists?.first
             
             if let markers = cutlayer?.markers, let item = markers.first, let song = item.cut?.title, let artist = item.cut?.artists?.first?.name, let getchannelbyId = userX.ids[channelid ?? ""] as? [String: Any], let channelNo = getchannelbyId["channelNumber"] as? String {
-                
                 if let key = MD5(artist + song), let image = MemBase[key] {
                     ArtistSongData[channelNo] = ["image" : image, "artist" : artist, "song" : song]
                 } else {

@@ -97,6 +97,7 @@ internal func Session(channelid: String) -> String {
                     
                 } catch {
                     //fail on any errors
+                    print("4")
                     print(error)
                 }
             }

@@ -1,4 +1,0 @@
-module PerfectCrypto {
-    header "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectCrypto.build/PerfectCrypto-Swift.h"
-    requires objc
-}

@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "6ecbbaa69af51e57452906dc11da14c7"
-build_time: [1595131638, 458212000]
-inputs:
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Thread/Sources/PerfectThread/Promise.swift": [1595131620, 978211733]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Thread/Sources/PerfectThread/ThreadQueue.swift": [1595131620, 978692760]
-  "/Users/todd/CameoKit/.build/checkouts/Perfect-Thread/Sources/PerfectThread/Threading.swift": [1595131620, 979078714]

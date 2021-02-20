@@ -1,4 +1,0 @@
-module PerfectNet {
-    header "/Users/todd/CameoKit/.build/x86_64-apple-macosx/debug/PerfectNet.build/PerfectNet-Swift.h"
-    requires objc
-}
