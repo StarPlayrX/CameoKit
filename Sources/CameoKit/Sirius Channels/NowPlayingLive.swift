@@ -37,7 +37,7 @@ public func nowPlayingLiveXX(channelid: String) -> String {
     let convert = timeInterval * 1000000 as NSNumber
     let intTime = Int(truncating: convert) / 1000
     let time = String(intTime)
-    let endpoint = "https://player.siriusxm.com/rest/v4/experience/modules/tune/now-playing-live?channelId=\(channelid)&hls_output_mode=none&marker_mode=all_separate_cue_points&ccRequestType=AUDIO_VIDEO&result-template=web&time=" + time
+    let endpoint = "https://\(playerDomain)/rest/v4/experience/modules/tune/now-playing-live?channelId=\(channelid)&hls_output_mode=none&marker_mode=all_separate_cue_points&ccRequestType=AUDIO_VIDEO&result-template=web&time=" + time
     
     return endpoint
 }

@@ -17,7 +17,7 @@ internal func Session(channelid: String) -> String {
     let time = String(intTime)
 
     let endpoint = http + root + "/resume?channelId=" + channelid + "&contentType=live&timestamp=" + time + "&cacheBuster=" + time
-    let request =  ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "clientDeviceType": "web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": "US", "deviceModel": "K2WebClient", "player": "html5", "clientDeviceId": "null"]]]]]] as Dictionary
+    let request =  ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "clientDeviceType": "web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": appRegion, "deviceModel": "K2WebClient", "player": "html5", "clientDeviceId": "null"]]]]]] as Dictionary
     
     guard let url = URL(string: endpoint) else { return "305" }
 
@@ -35,10 +35,8 @@ internal func Session(channelid: String) -> String {
     
         if let r = resp as? HTTPURLResponse, let d = data {
             if r.statusCode == 200 {
-                
                 do { let result =
                     try JSONSerialization.jsonObject(with: d, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
-                    
                     let getCookies = { () -> [HTTPCookie] in
                         
                     	 if let fields = r.allHeaderFields as? [String : String], let url = r.url {
@@ -55,7 +53,6 @@ internal func Session(channelid: String) -> String {
                     for cookie in cookies {
                         //This token changes on every pull and expires in about 480 seconds or less
                         if cookie.name == "SXMAKTOKEN" {
-                            
                             let t = cookie.value as String
                             if t.count > 44 {
                                 let startIndex = t.index(t.startIndex, offsetBy: 3)

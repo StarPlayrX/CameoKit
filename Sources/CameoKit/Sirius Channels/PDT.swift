@@ -16,7 +16,7 @@ internal func PDTendpoint() -> String {
     let intTime = (Int(truncating: convert))
     let time = String(intTime)
     
-    let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=" + time
+    let endpoint = "https://\(playerDomain)/rest/v2/experience/modules/get/discover-channel-list?type=2&batch-mode=true&format=json&request-option=discover-channel-list-withpdt&result-template=web&time=" + time
     
     return endpoint
 }

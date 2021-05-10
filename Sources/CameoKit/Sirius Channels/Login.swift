@@ -9,9 +9,12 @@ import Foundation
 
 public func LoginX(username: String, pass: String) -> (request: Dictionary<String, Any>, endpoint: String, method: String) {
 
+    print(root)
+    
+    //https://player.siriusxm.ca/rest/v2/experience/modules/modify/authentication
     let endpoint = http + root +  "/modify/authentication"
     let method = "login"
-    let loginReq = ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": "US", "deviceModel": "K2WebClient", "clientDeviceId": "null", "player": "html5", "clientDeviceType": "web"], "standardAuth": ["username": username , "password": pass ]]]]]] as Dictionary
+    let loginReq = ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": appRegion, "deviceModel": "K2WebClient", "clientDeviceId": "null", "player": "html5", "clientDeviceType": "web"], "standardAuth": ["username": username , "password": pass ]]]]]] as Dictionary
 
     return (request: loginReq, endpoint: endpoint, method: method)
 	

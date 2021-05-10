@@ -5,7 +5,7 @@ typealias ChannelsTuple = (success: Bool, message: String, data: Dictionary<Stri
 internal func Channels() -> (request: [String : [String : [[String : Any]]]], endpoint: String, method: String) {
  
 
-    let endpoint = "https://player.siriusxm.com/rest/v4/experience/modules/get?type=2"
+    let endpoint = "https://\(playerDomain)/rest/v4/experience/modules/get?type=2"
     let method = "channels"
     let request =  ["moduleList":["modules":[["moduleArea":"Discovery","moduleType":"ChannelListing","moduleRequest":["resultTemplate":""]]]]] as Dictionary
       
@@ -168,7 +168,7 @@ internal func Channels2() -> ChannelsTuple {
     
     var success : Bool = false
     var message : String = "Something's not right."
-    let endpoint = "https://player.siriusxm.com/rest/v2/experience/modules/get?cacheBuster=1595033362033"
+    let endpoint = "https://\(playerDomain)/rest/v2/experience/modules/get?cacheBuster=1595033362033"
     let method = "channels"
     let request =  ["moduleList":["modules":[["moduleArea":"Discovery","moduleType":"ChannelListing","moduleRequest":["resultTemplate":""]]]]] as Dictionary
     

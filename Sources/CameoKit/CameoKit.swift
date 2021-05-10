@@ -11,47 +11,17 @@ public func routes() -> Routes {
     //start networkstr
     net.start()
     
-    Config()
-    
-    //process cached data in the background
-    
-    let logindata = (email:"", pass:"", channels: [:], ids: [:], channel: "", token: "", loggedin: false, gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
-    
-    //AutoLogin Routine to save time
-    //check for cached data
-    let autoUser = UserDefaults.standard.string(forKey: "user") 			?? ""
-    let autoPass = UserDefaults.standard.string(forKey: "pass") 			?? ""
-    let autoGupid = UserDefaults.standard.string(forKey: "gupid") 			?? ""
-    let autoChannels = UserDefaults.standard.dictionary(forKey: "channels") ?? Dictionary<String, Any>()
-    let autoIds = UserDefaults.standard.dictionary(forKey: "ids")  			?? Dictionary<String, Any>()
-    
-    if autoGupid != "" && autoChannels.count > 1 {
-        
-        let autoLoggedin = UserDefaults.standard.bool(forKey: "loggedin")
-        
-        let autoChannel = UserDefaults.standard.string(forKey: "channel") 		?? ""
-        let autoToken = UserDefaults.standard.string(forKey: "token") 			?? ""
-        let autoConsumer = UserDefaults.standard.string(forKey: "consumer")		?? ""
-        let autoKey = UserDefaults.standard.string(forKey: "key") 				?? ""
-        let autoKeyurl = UserDefaults.standard.string(forKey: "keyurl")			?? ""
-        
-        userX = logindata
-        userX.email = autoUser
-        userX.channels = autoChannels
-        userX.ids = autoIds
-        userX.channel = autoChannel
-        userX.token = autoToken
-        userX.loggedin = autoLoggedin
-        userX.gupid = autoGupid
-        userX.consumer = autoConsumer
-        userX.key = autoKey
-        userX.keyurl = autoKeyurl
-        userX.pass = autoPass
-    }
-    
-    restoreCookiesX()
-    
+   // TestDrive()
+
     var routes = Routes()
+    
+    let locale = Locale.current
+    
+    if locale.regionCode == "CA" || locale.regionCode == "CAN" {
+        preflightConfig(location: "CA")
+    } else {
+        preflightConfig(location: "US")
+    }
     
     // /key/1/{userid}
     routes.add(method: .get, uri:"/key/1",handler:keyOneRoute)
@@ -80,6 +50,12 @@ public func routes() -> Routes {
     // /ping (return is pong) This is way of checking if server is running
     routes.add(method: .get, uri:"/ping",handler:pingRoute)
     
+    // /ping (return is pong) This is way of checking if server is running
+    routes.add(method: .get, uri:"/ca",handler:caRoute)
+    
+    // /ping (return is pong) This is way of checking if server is running
+    routes.add(method: .get, uri:"/us",handler:usRoute)
+    
     // /api/v2/autologin
     routes.add(method: .post, uri:"/api/v2/autologin",handler:LoginRoute)
     
@@ -91,11 +67,64 @@ public func routes() -> Routes {
     
 }
 
+func preflightConfig(location: String = "US") {
+    
+    if location == "CA" {
+        playerDomain = "player.siriusxm.ca"
+        root = "\(playerDomain)/rest/v2/experience/modules"
+    } else {
+        playerDomain = "player.siriusxm.com"
+        root = "\(playerDomain)/rest/v2/experience/modules"
+    }
+    
+    appRegion = location
+    
+    Config()
+    
+    //process cached data in the background
+    
+    let logindata = (email:"", pass:"", channels: [:], ids: [:], channel: "", token: "", loggedin: false, gupid: "", consumer: "", key: "", keyurl: "" ) as LoginData
+    
+    //AutoLogin Routine to save time
+    //check for cached data
+    let autoUser = UserDefaults.standard.string(forKey: "user") ?? ""
+    let autoPass = UserDefaults.standard.string(forKey: "pass") ?? ""
+    let autoGupid = UserDefaults.standard.string(forKey: "gupid")  ?? ""
+    let autoChannels = UserDefaults.standard.dictionary(forKey: "channels") ?? Dictionary<String, Any>()
+    let autoIds = UserDefaults.standard.dictionary(forKey: "ids") ?? Dictionary<String, Any>()
+    
+    if autoGupid != "" && autoChannels.count > 1 {
+        
+        let autoLoggedin = UserDefaults.standard.bool(forKey: "loggedin")
+        
+        let autoChannel = UserDefaults.standard.string(forKey: "channel") ?? ""
+        let autoToken = UserDefaults.standard.string(forKey: "token") ?? ""
+        let autoConsumer = UserDefaults.standard.string(forKey: "consumer") ?? ""
+        let autoKey = UserDefaults.standard.string(forKey: "key") ?? ""
+        let autoKeyurl = UserDefaults.standard.string(forKey: "keyurl") ?? ""
+        
+        userX = logindata
+        userX.email = autoUser
+        userX.channels = autoChannels
+        userX.ids = autoIds
+        userX.channel = autoChannel
+        userX.token = autoToken
+        userX.loggedin = autoLoggedin
+        userX.gupid = autoGupid
+        userX.consumer = autoConsumer
+        userX.key = autoKey
+        userX.keyurl = autoKeyurl
+        userX.pass = autoPass
+    }
+    
+    restoreCookiesX()
+}
+
 func storeCookiesX() {
     
     let cookiesStorage = HTTPCookieStorage.shared
     let userDefaults = UserDefaults.standard
-    let serverBaseUrl = "https://player.siriusxm.com"
+    let serverBaseUrl = "https://\(root)"
     
     guard
         let url = URL(string: serverBaseUrl),

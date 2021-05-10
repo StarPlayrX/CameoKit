@@ -183,19 +183,15 @@ internal func playlistRoute(request: HTTPRequest, _ response: HTTPResponse) {
                 var playlist = playlist
                 
                 //fix key path
-                playlist = playlist.replacingOccurrences(of:
-                                                            "key/1", with: "/key/1")
+                playlist = playlist.replacingOccurrences(of: "key/1", with: "/key/1")
                 
                 //add audio and userid prefix
-                playlist = playlist.replacingOccurrences(of:
-                                                            channelid, with: "/audio/" + channelid)
+                playlist = playlist.replacingOccurrences(of: channelid, with: "/audio/" + channelid)
                 
-                playlist = playlist.replacingOccurrences(of:
-                                                            "#EXT-X-TARGETDURATION:10", with: "#EXT-X-TARGETDURATION:9")
+                playlist = playlist.replacingOccurrences(of: "#EXT-X-TARGETDURATION:10", with: "#EXT-X-TARGETDURATION:9")
                 
                 //this keeps the PDT in sync
-                playlist = playlist.replacingOccurrences(of:
-                                                            "#EXTINF:10,", with: "#EXTINF:1,")
+                playlist = playlist.replacingOccurrences(of: "#EXTINF:10,", with: "#EXTINF:1,")
                 
                 return playlist
             }
@@ -207,9 +203,29 @@ internal func playlistRoute(request: HTTPRequest, _ response: HTTPResponse) {
 }
 
 
-//ping
+//MARK: ping
 internal func pingRoute(request: HTTPRequest, _ response: HTTPResponse) {
     response.setBody(string: "pong").setHeader(.contentType, value:"text/plain").completed()
+}
+
+//MARK: Canada/.CA Route
+internal func caRoute(request: HTTPRequest, _ response: HTTPResponse) {
+
+    playerDomain = "player.siriusxm.ca"
+    root = "\(playerDomain)/rest/v2/experience/modules"
+    appRegion = "CA"
+
+    response.setBody(string: appRegion).setHeader(.contentType, value:"text/plain").completed()
+}
+
+//MARK: USA/.COM Route
+internal func usRoute(request: HTTPRequest, _ response: HTTPResponse) {
+    
+    playerDomain = "player.siriusxm.com"
+    root = "\(playerDomain)/rest/v2/experience/modules"
+    appRegion = "US"
+
+    response.setBody(string: appRegion).setHeader(.contentType, value:"text/plain").completed()
 }
 
 
