@@ -17,7 +17,28 @@ internal func Session(channelid: String) -> String {
     let time = String(intTime)
 
     let endpoint = http + root + "/resume?channelId=" + channelid + "&contentType=live&timestamp=" + time + "&cacheBuster=" + time
-    let request =  ["moduleList": ["modules": [["moduleRequest": ["resultTemplate": "web", "deviceInfo": ["osVersion": "Mac", "platform": "Web", "clientDeviceType": "web", "sxmAppVersion": "3.1802.10011.0", "browser": "Safari", "browserVersion": "11.0.3", "appRegion": appRegion, "deviceModel": "K2WebClient", "player": "html5", "clientDeviceId": "null"]]]]]] as Dictionary
+    let request =
+        ["moduleList":
+            ["modules":
+                [
+                    ["moduleRequest":
+                        ["resultTemplate": "web", "deviceInfo":
+                            ["osVersion": "Mac",
+                             "platform": "Web",
+                             "clientDeviceType": "web",
+                             "sxmAppVersion": "3.1802.10011.0",
+                             "browser": "Safari",
+                             "browserVersion": "11.0.3",
+                             "appRegion": appRegion,
+                             "deviceModel": "K2WebClient",
+                             "player": "html5",
+                             "clientDeviceId": "null"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ] as Dictionary
     
     guard let url = URL(string: endpoint) else { return "305" }
 
