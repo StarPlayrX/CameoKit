@@ -3,7 +3,7 @@ HTTP Live Streaming Engine, SXM middleware and framework that I wrote for StarPl
 
 Does the heavy lifting for StarPlayrX 1.0 - 1.2.9
 
-CameoKit which runs on Perfect 4 by Perfectly Soft is now deprecated. StarPlayrX 1.3.0 and later will use a new and improved middleware that's easier to compile and its binary will be 1/2 to 1/3 the original size.
+CameoKit which runs on Perfect 4 by PerfectlySoft is now deprecated. StarPlayrX 1.3.0 and later will use a new and improved middleware that's easier to compile and its binary will be 1/2 to 1/3 the original size.
 
 It's replacement framework is on going and is currently dubbed staRadioKit, name subject to change and is currently within StarPlayrX_iOS's 1.3.0 branch.
 
