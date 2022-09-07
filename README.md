@@ -7,4 +7,6 @@ CameoKit which runs on Perfect 4 by PerfectlySoft is now deprecated. StarPlayrX 
 
 It's replacement framework is on going and is currently dubbed staRadioKit, name subject to change and is currently within StarPlayrX_iOS's 1.3.0 branch.
 
-For http m3u8 embedded streaming 1.3.0 uses a slimmed down fork of Swifter called Swifter Embedded Lite, name subject change.
+For http m3u8 embedded streaming 1.3.0 uses a slimmed down fork of Swifter called, Swifter Embedded Lite, name subject change.
+
+Swifter Embedded Lite may become its own Swift Package upon release of StaPlayrX 1.3.0 to the app store.
