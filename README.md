@@ -1,5 +1,5 @@
 # CameoKit (deprecated)
-HTTP Live Streaming Engine, SXM middleware and framework that for StarPlayrX.
+HTTP Live Streaming Engine, SXM middleware and framework.
 
 Does the heavy lifting for StarPlayrX 1.0 - 1.2.9
 
